@@ -17,13 +17,15 @@
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "check-types": "tsc --noEmit",
-    "lint": "prettier --check src"
+    "lint": "prettier --check src",
+    "test": "vitest run"
   },
   "dependencies": {
     "@elearning/contracts": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.5.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "^4.1.8"
   }
 }

@@ -1,11 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { AsyncLocalStorage } from 'async_hooks';
 
-export interface RequestUser {
-  id: string;
-  email: string;
-  sessionId: string;
-}
+import type { RequestUser } from './interfaces/request-user.interface';
 
 export class HttpRequestContext {
   constructor(

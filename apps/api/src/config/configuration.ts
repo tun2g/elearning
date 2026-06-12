@@ -32,6 +32,15 @@ export interface AppConfig {
     /** MinIO and most non-AWS S3 require path-style addressing. */
     forcePathStyle: boolean;
   };
+  /**
+   * Generative-AI providers — power speaking (voice) evaluation. `provider`
+   * selects the active one; it stays inert (503) until that provider has a key.
+   */
+  ai: {
+    provider: string;
+    gemini: { apiKey: string; model: string };
+    openai: { apiKey: string; model: string };
+  };
 }
 
 export const configuration = (): AppConfig => ({
@@ -64,5 +73,16 @@ export const configuration = (): AppConfig => ({
     secretKey: process.env.S3_SECRET_KEY ?? 'elearning-secret',
     publicUrl: process.env.S3_PUBLIC_URL ?? 'http://localhost:9000/soundwell-audio',
     forcePathStyle: process.env.S3_FORCE_PATH_STYLE !== 'false',
+  },
+  ai: {
+    provider: process.env.AI_PROVIDER ?? 'gemini',
+    gemini: {
+      apiKey: process.env.GEMINI_API_KEY ?? '',
+      model: process.env.GEMINI_MODEL ?? 'gemini-2.5-flash',
+    },
+    openai: {
+      apiKey: process.env.OPENAI_API_KEY ?? '',
+      model: process.env.OPENAI_MODEL ?? 'gpt-4o-mini',
+    },
   },
 });

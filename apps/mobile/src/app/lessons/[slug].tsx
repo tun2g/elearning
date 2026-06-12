@@ -1,7 +1,7 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
 import * as React from 'react';
 
-import { PracticeScreen } from '@/features/lessons/practice-screen';
+import { PracticeContainer } from '@/components/practice/practice-container';
 
 const DASH_REGEX = /-/g;
 
@@ -10,7 +10,7 @@ export default function LessonDetailPage() {
   return (
     <>
       <Stack.Screen options={{ title: slug?.replace(DASH_REGEX, ' ') ?? 'Lesson' }} />
-      <PracticeScreen slug={slug} />
+      <PracticeContainer slug={slug} />
     </>
   );
 }

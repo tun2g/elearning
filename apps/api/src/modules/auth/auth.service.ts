@@ -11,19 +11,7 @@ import { UserService } from 'src/modules/user/user.service';
 
 import { AuthTokensResponseDto } from './dtos/auth.dto';
 import { SessionEntity } from './entities/session.entity';
-
-/** Where the request came from — recorded on the session for device management. */
-export interface SessionContext {
-  ipAddress?: string | null;
-  userAgent?: string | null;
-}
-
-interface AccessClaims {
-  sub: string;
-  email: string;
-  sessionId: string;
-  type: 'access' | 'refresh';
-}
+import type { AccessClaims, SessionContext } from './interfaces/session-context.interface';
 
 @Injectable()
 export class AuthService {

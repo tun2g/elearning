@@ -1,3 +1,4 @@
+import type { PronunciationAssessment } from '@elearning/contracts';
 import { Column, Entity, Index, JoinColumn, ManyToOne } from 'typeorm';
 
 import { SentenceEntity } from 'src/modules/content/entities/sentence.entity';
@@ -46,8 +47,9 @@ export class AttemptEntity extends AuditableEntity {
   @JoinColumn({ name: 'recording_object_id' })
   recordingObject!: StorageObjectEntity | null;
 
+  /** Full speaking-evaluation result (voice mode only); null for listen/shadow. */
   @Column({ name: 'ai_score', type: 'jsonb', nullable: true })
-  aiScore!: Record<string, number> | null;
+  aiScore!: PronunciationAssessment | null;
 
   @Column({ name: 'attempted_at', type: 'timestamptz' })
   attemptedAt!: Date;

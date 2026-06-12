@@ -2,9 +2,9 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
-import { RequestUser } from 'src/shared/modules/http-request-context/http-request-context.service';
+import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
-import { CreateAttemptDto } from './dtos/practice.dto';
+import { CreateAttemptDto, VoiceAttemptDto } from './dtos/practice.dto';
 import { PracticeService } from './practice.service';
 
 @ApiTags('practice')
@@ -16,6 +16,12 @@ export class PracticeController {
   @ApiOperation({ summary: 'Save a practice attempt for a sentence' })
   saveAttempt(@CurrentUser() user: RequestUser, @Body() dto: CreateAttemptDto) {
     return this.practiceService.saveAttempt(user.id, dto);
+  }
+
+  @Post('voice-attempt')
+  @ApiOperation({ summary: 'Evaluate a spoken sentence and save the attempt (auth required)' })
+  saveVoiceAttempt(@CurrentUser() user: RequestUser, @Body() dto: VoiceAttemptDto) {
+    return this.practiceService.saveVoiceAttempt(user.id, dto);
   }
 
   @Get('due')

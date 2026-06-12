@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
-import { RequestUser } from 'src/shared/modules/http-request-context/http-request-context.service';
+import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
 import { UserResponseDto } from './dtos/user-response.dto';
 import { UserService } from './user.service';

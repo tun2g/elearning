@@ -1,1 +1,1 @@
-export { LoginScreen as default } from '@/features/auth/login-screen';
+export { LoginContainer as default } from '@/components/auth/login-container';

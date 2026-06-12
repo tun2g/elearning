@@ -10,14 +10,17 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
 
-    const status = exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
+    const isHttp = exception instanceof HttpException;
+    const status = isHttp ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
+    const payload = isHttp ? exception.getResponse() : null;
 
-    const payload = exception instanceof HttpException ? exception.getResponse() : null;
-
+    // Only surface developer-controlled messages (HttpExceptions). For any
+    // unexpected/internal error, return a generic message — never leak raw
+    // error details (provider names, stack traces, DB errors) to the client.
     const message =
       typeof payload === 'object' && payload !== null && 'message' in payload
         ? (payload as { message: unknown }).message
-        : exception instanceof Error
+        : isHttp
           ? exception.message
           : 'Internal server error';
 

@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
-import { RequestUser } from 'src/shared/modules/http-request-context/http-request-context.service';
+import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
 import { VocabAttemptDto } from './dtos/vocab.dto';
 import { VocabularyService } from './vocabulary.service';

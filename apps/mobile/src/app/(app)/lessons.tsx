@@ -1,1 +1,1 @@
-export { LessonsScreen as default } from '@/features/lessons/lessons-screen';
+export { LessonsContainer as default } from '@/components/lessons/lessons-container';

@@ -4,17 +4,8 @@ import { Repository } from 'typeorm';
 
 import { StorageService } from 'src/shared/modules/storage/storage.service';
 
-import { StorageObjectEntity, type StorageObjectMetadata } from './entities/storage-object.entity';
-
-export interface UploadMediaInput {
-  key: string;
-  body: Buffer;
-  contentType: string;
-  /** Provenance, e.g. "crawler:voa", "tts", "recording". */
-  source?: string;
-  /** Media-type-specific specs (dimensions, duration, bitrate, …). */
-  metadata?: StorageObjectMetadata;
-}
+import { StorageObjectEntity } from './entities/storage-object.entity';
+import type { UploadMediaInput } from './interfaces/upload-media-input.interface';
 
 /**
  * Business layer for stored media. Owns the `storage_objects` table (all DB

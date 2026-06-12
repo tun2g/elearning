@@ -8,7 +8,7 @@ import {
   Settings as SettingsIcon,
   Language as VocabIcon,
 } from '@/components/ui/icons';
-import { useAuthStore as useAuth } from '@/features/auth/use-auth-store';
+import { useAuthStore as useAuth } from '@/lib/auth/use-auth-store';
 import { useIsFirstTime } from '@/lib/hooks/use-is-first-time';
 
 export default function TabLayout() {

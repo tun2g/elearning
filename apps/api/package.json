@@ -26,6 +26,7 @@
     "@aws-sdk/s3-request-presigner": "^3.1067.0",
     "@elearning/contracts": "workspace:*",
     "@elearning/core": "workspace:*",
+    "@google/genai": "^2.8.0",
     "@nestjs/common": "11.1.26",
     "@nestjs/config": "4.0.4",
     "@nestjs/core": "11.1.26",

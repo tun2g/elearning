@@ -1,1 +1,1 @@
-export { HomeScreen as default } from '@/features/home/home-screen';
+export { HomeContainer as default } from '@/components/home/home-container';

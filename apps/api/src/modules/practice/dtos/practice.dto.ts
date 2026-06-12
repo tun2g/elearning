@@ -9,3 +9,10 @@ export class CreateAttemptDto {
   @ApiProperty({ enum: ['again', 'hard', 'easy'] }) @IsEnum(['again', 'hard', 'easy']) selfAssessment!: SelfAssessment;
   @ApiProperty({ required: false }) @IsString() @IsOptional() recordingUrl?: string;
 }
+
+export class VoiceAttemptDto {
+  @ApiProperty() @IsString() sentenceId!: string;
+  /** Base64-encoded recording. Analyzed transiently and never stored. */
+  @ApiProperty() @IsString() audioBase64!: string;
+  @ApiProperty() @IsString() mimeType!: string;
+}

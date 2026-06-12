@@ -4,10 +4,11 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { UserService } from 'src/modules/user/user.service';
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
 import { Public } from 'src/shared/decorators/public.decorator';
-import { RequestUser } from 'src/shared/modules/http-request-context/http-request-context.service';
+import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
-import { AuthService, type SessionContext } from './auth.service';
+import { AuthService } from './auth.service';
 import { AuthTokensResponseDto, LoginDto, RefreshDto, RegisterDto } from './dtos/auth.dto';
+import type { SessionContext } from './interfaces/session-context.interface';
 
 @ApiTags('auth')
 @Controller('auth')

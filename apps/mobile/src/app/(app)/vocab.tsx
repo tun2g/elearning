@@ -1,1 +1,1 @@
-export { VocabScreen as default } from '@/features/vocab/vocab-screen';
+export { VocabContainer as default } from '@/components/vocab/vocab-container';
