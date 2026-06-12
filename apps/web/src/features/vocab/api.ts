@@ -1,6 +1,8 @@
 import { createMutation, createQuery } from 'react-query-kit';
 
-import { getVocabReview, postVocabAttempt, type Assessment, type VocabCard } from '@/lib/api';
+import { getVocabReview, postVocabAttempt, type VocabCard } from '@/services/vocab';
+
+import type { Assessment } from '@/services/types';
 import { getAccessToken } from '@/lib/auth';
 import { queryKeys } from '@/lib/query-keys';
 

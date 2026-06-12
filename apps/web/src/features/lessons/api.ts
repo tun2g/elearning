@@ -1,7 +1,7 @@
 import type { LessonDetail, LessonSummary } from '@elearning/contracts';
 import { createQuery } from 'react-query-kit';
 
-import { getLesson, getLessons } from '@/lib/api';
+import { getLesson, getLessons } from '@/services/lessons';
 import { queryKeys } from '@/lib/query-keys';
 
 export const useLessons = createQuery<LessonSummary[]>({

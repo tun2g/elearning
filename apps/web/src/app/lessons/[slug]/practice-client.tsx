@@ -8,10 +8,10 @@ import { useEffect, useState } from 'react';
 
 import { Waveform } from '@/components/waveform';
 import { useLessonState, usePracticeAttempt } from '@/features/practice/api';
-import type { Assessment } from '@/lib/api';
 import { getAccessToken } from '@/lib/auth';
 import { queryKeys } from '@/lib/query-keys';
 import { cn } from '@/lib/utils';
+import type { Assessment } from '@/services/types';
 
 function speak(text: string, audioUrl: string | null) {
   if (audioUrl) {

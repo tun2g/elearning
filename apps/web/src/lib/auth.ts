@@ -1,6 +1,6 @@
 'use client';
 
-import { loginApi, logoutApi, refreshApi, registerApi } from './api';
+import { loginApi, logoutApi, refreshApi, registerApi } from '@/services/auth';
 
 const ACCESS_TOKEN_KEY = 'el_access_token';
 const REFRESH_TOKEN_KEY = 'el_refresh_token';

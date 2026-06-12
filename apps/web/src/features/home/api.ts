@@ -1,6 +1,6 @@
 import { createQuery } from 'react-query-kit';
 
-import { getHome, type HomeData } from '@/lib/api';
+import { getHome, type HomeData } from '@/services/home';
 import { getAccessToken } from '@/lib/auth';
 import { queryKeys } from '@/lib/query-keys';
 

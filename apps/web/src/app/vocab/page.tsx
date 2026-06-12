@@ -8,10 +8,10 @@ import { useEffect, useState } from 'react';
 
 import { Waveform } from '@/components/waveform';
 import { useVocabAttempt, useVocabReview } from '@/features/vocab/api';
-import type { Assessment } from '@/lib/api';
 import { getAccessToken } from '@/lib/auth';
 import { queryKeys } from '@/lib/query-keys';
 import { cn } from '@/lib/utils';
+import type { Assessment } from '@/services/types';
 
 function speak(word: string) {
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {

@@ -1,7 +1,8 @@
 import { createMutation, createQuery } from 'react-query-kit';
 
-import { getLessonState, postPracticeAttempt, type Assessment, type LessonState } from '@/lib/api';
 import { getAccessToken } from '@/lib/auth';
+import { getLessonState, postPracticeAttempt, type LessonState } from '@/services/practice';
+import type { Assessment } from '@/services/types';
 import { queryKeys } from '@/lib/query-keys';
 
 export const usePracticeAttempt = createMutation({
