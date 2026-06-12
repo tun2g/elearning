@@ -1,0 +1,230 @@
+{
+  "lessons": [
+    {
+      "slug": "greetings-and-introductions",
+      "title": "Greetings and Introductions",
+      "description": "Everyday phrases for meeting someone new.",
+      "level": "beginner",
+      "topic": "small talk",
+      "source": "Soundwell Editorial",
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Hi, it's nice to meet you.",
+          "ipa": "/haɪ ɪts naɪs tə miːt juː/",
+          "translation": "Chào, rất vui được gặp bạn."
+        },
+        {
+          "order": 2,
+          "text": "What's your name?",
+          "ipa": "/wɒts jɔː neɪm/",
+          "translation": "Bạn tên là gì?"
+        },
+        {
+          "order": 3,
+          "text": "Where are you from?",
+          "ipa": "/weər ɑː juː frɒm/",
+          "translation": "Bạn đến từ đâu?"
+        },
+        {
+          "order": 4,
+          "text": "I'm from Vietnam.",
+          "ipa": "/aɪm frɒm ˌvjetˈnɑːm/",
+          "translation": "Tôi đến từ Việt Nam."
+        },
+        {
+          "order": 5,
+          "text": "It was great talking to you.",
+          "ipa": "/ɪt wɒz ɡreɪt ˈtɔːkɪŋ tə juː/",
+          "translation": "Rất vui được nói chuyện với bạn."
+        }
+      ]
+    },
+    {
+      "slug": "ordering-at-a-cafe",
+      "title": "Ordering at a Café",
+      "description": "Order drinks and food politely.",
+      "level": "beginner",
+      "topic": "food and drink",
+      "source": "Soundwell Editorial",
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Could I have a coffee, please?",
+          "ipa": "/kʊd aɪ hæv ə ˈkɒfi pliːz/",
+          "translation": "Cho tôi một ly cà phê được không?"
+        },
+        {
+          "order": 2,
+          "text": "Would you like anything to eat?",
+          "ipa": "/wʊd juː laɪk ˈeniθɪŋ tʊ iːt/",
+          "translation": "Bạn có muốn ăn gì không?"
+        },
+        {
+          "order": 3,
+          "text": "I'll have a sandwich, thanks.",
+          "ipa": "/aɪl hæv ə ˈsænwɪdʒ θæŋks/",
+          "translation": "Cho tôi một chiếc bánh mì kẹp, cảm ơn."
+        },
+        {
+          "order": 4,
+          "text": "How much is that?",
+          "ipa": "/haʊ mʌtʃ ɪz ðæt/",
+          "translation": "Cái đó giá bao nhiêu?"
+        },
+        {
+          "order": 5,
+          "text": "Can I pay by card?",
+          "ipa": "/kæn aɪ peɪ baɪ kɑːd/",
+          "translation": "Tôi trả bằng thẻ được không?"
+        }
+      ]
+    },
+    {
+      "slug": "weekend-small-talk",
+      "title": "Weekend Small Talk",
+      "description": "Chat naturally about your weekend plans.",
+      "level": "intermediate",
+      "topic": "small talk",
+      "source": "Soundwell Editorial",
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Do you have any plans for the weekend?",
+          "ipa": "/duː juː hæv ˈeni plænz fɔː ðə ˈwiːkend/",
+          "translation": "Cuối tuần bạn có kế hoạch gì không?"
+        },
+        {
+          "order": 2,
+          "text": "I'm thinking of going hiking on Saturday.",
+          "ipa": "/aɪm ˈθɪŋkɪŋ əv ˈɡəʊɪŋ ˈhaɪkɪŋ ɒn ˈsætədeɪ/",
+          "translation": "Tôi đang định đi leo núi vào thứ Bảy."
+        },
+        {
+          "order": 3,
+          "text": "That sounds like a lot of fun.",
+          "ipa": "/ðæt saʊndz laɪk ə lɒt əv fʌn/",
+          "translation": "Nghe có vẻ rất vui."
+        },
+        {
+          "order": 4,
+          "text": "We should catch up sometime next week.",
+          "ipa": "/wiː ʃʊd kætʃ ʌp ˈsʌmtaɪm nekst wiːk/",
+          "translation": "Tuần sau mình nên gặp nhau lúc nào đó."
+        },
+        {
+          "order": 5,
+          "text": "Have a great weekend!",
+          "ipa": "/hæv ə ɡreɪt ˈwiːkend/",
+          "translation": "Chúc bạn cuối tuần vui vẻ!"
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "word": "introduce",
+      "meaningVn": "giới thiệu",
+      "meaningEn": "to tell someone another person's name when they first meet",
+      "ipa": "/ˌɪntrəˈdjuːs/",
+      "synonyms": ["present", "acquaint"],
+      "exampleSentences": ["Let me introduce my colleague."],
+      "topic": "small talk",
+      "level": "beginner",
+      "sourceLessonSlug": "greetings-and-introductions"
+    },
+    {
+      "word": "polite",
+      "meaningVn": "lịch sự",
+      "meaningEn": "behaving in a respectful and considerate way",
+      "ipa": "/pəˈlaɪt/",
+      "synonyms": ["courteous", "respectful"],
+      "exampleSentences": ["It's polite to say thank you."],
+      "topic": "small talk",
+      "level": "beginner"
+    },
+    {
+      "word": "order",
+      "meaningVn": "gọi món",
+      "meaningEn": "to ask for food or drinks in a restaurant or café",
+      "ipa": "/ˈɔːdə/",
+      "synonyms": ["request", "ask for"],
+      "exampleSentences": ["I'd like to order a coffee."],
+      "topic": "food and drink",
+      "level": "beginner",
+      "sourceLessonSlug": "ordering-at-a-cafe"
+    },
+    {
+      "word": "delicious",
+      "meaningVn": "ngon",
+      "meaningEn": "having a very pleasant taste",
+      "ipa": "/dɪˈlɪʃəs/",
+      "synonyms": ["tasty", "yummy"],
+      "exampleSentences": ["This sandwich is delicious."],
+      "topic": "food and drink",
+      "level": "beginner"
+    },
+    {
+      "word": "afford",
+      "meaningVn": "đủ khả năng chi trả",
+      "meaningEn": "to have enough money to pay for something",
+      "ipa": "/əˈfɔːd/",
+      "synonyms": ["manage", "spare"],
+      "exampleSentences": ["I can't afford a new phone right now."],
+      "topic": "money",
+      "level": "intermediate"
+    },
+    {
+      "word": "plan",
+      "meaningVn": "kế hoạch",
+      "meaningEn": "something you intend to do",
+      "ipa": "/plæn/",
+      "synonyms": ["arrangement", "intention"],
+      "exampleSentences": ["What are your plans for tonight?"],
+      "topic": "small talk",
+      "level": "beginner",
+      "sourceLessonSlug": "weekend-small-talk"
+    },
+    {
+      "word": "hiking",
+      "meaningVn": "đi bộ đường dài / leo núi",
+      "meaningEn": "the activity of walking in the countryside or mountains",
+      "ipa": "/ˈhaɪkɪŋ/",
+      "synonyms": ["trekking", "rambling"],
+      "exampleSentences": ["We went hiking in the hills."],
+      "topic": "hobbies",
+      "level": "intermediate",
+      "sourceLessonSlug": "weekend-small-talk"
+    },
+    {
+      "word": "relax",
+      "meaningVn": "thư giãn",
+      "meaningEn": "to rest and become less worried or tense",
+      "ipa": "/rɪˈlæks/",
+      "synonyms": ["unwind", "rest"],
+      "exampleSentences": ["I just want to relax this weekend."],
+      "topic": "hobbies",
+      "level": "beginner"
+    },
+    {
+      "word": "convenient",
+      "meaningVn": "thuận tiện",
+      "meaningEn": "easy to use or suiting your needs and plans",
+      "ipa": "/kənˈviːniənt/",
+      "synonyms": ["handy", "suitable"],
+      "exampleSentences": ["Is tomorrow convenient for you?"],
+      "topic": "small talk",
+      "level": "intermediate"
+    },
+    {
+      "word": "fluent",
+      "meaningVn": "trôi chảy / lưu loát",
+      "meaningEn": "able to speak a language easily and well",
+      "ipa": "/ˈfluːənt/",
+      "synonyms": ["articulate", "proficient"],
+      "exampleSentences": ["She is fluent in three languages."],
+      "topic": "language",
+      "level": "intermediate"
+    }
+  ]
+}

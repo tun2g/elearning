@@ -1,0 +1,42 @@
+{
+  "lessons": {
+    "api_error": "تعذّر الوصول إلى الخادم. هل يعمل @elearning/api؟",
+    "level": "المستوى",
+    "no_lessons": "لا توجد دروس بعد. شغّل أمر تهيئة البيانات.",
+    "practiced": "تمّت ممارسته",
+    "sentences_count": "جُمل",
+    "subtitle": "اختر درسًا، استمع إلى كل جملة، ثم أعِدها.",
+    "title": "التدرّب بالصوت"
+  },
+  "onboarding": {
+    "message": "مرحبا بكم في موقع تطبيق obytes"
+  },
+  "settings": {
+    "about": "حول التطبيق ",
+    "app_name": "اسم التطبيق",
+    "arabic": "عربي",
+    "english": "إنجليزي",
+    "generale": "عام",
+    "github": "جيثب",
+    "language": "لغة",
+    "links": "الروابط",
+    "logout": "تسجيل خروج",
+    "more": "أكثر",
+    "privacy": "سياسة الخصوصية",
+    "rate": "تقييم",
+    "share": "شارك",
+    "support": "الدعم",
+    "support_us": "ادعمنا",
+    "terms": "شروط الخدمة",
+    "theme": {
+      "dark": "مظلم",
+      "light": "خفيفة",
+      "system": "System",
+      "title": "سمة"
+    },
+    "title": "إعدادات",
+    "version": "إصدار",
+    "website": "موقع الكتروني"
+  },
+  "welcome": "test arabic"
+}

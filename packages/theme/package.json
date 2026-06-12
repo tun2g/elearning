@@ -1,0 +1,14 @@
+{
+  "name": "@elearning/theme",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Single source of truth for the design tokens (colors, fonts, radii, shadows, motion). Imported by every app's globals.css.",
+  "exports": {
+    "./theme.css": "./theme.css",
+    "./colors": "./colors.js"
+  },
+  "files": [
+    "theme.css",
+    "colors.js"
+  ]
+}

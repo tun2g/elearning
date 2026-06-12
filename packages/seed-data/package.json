@@ -1,0 +1,9 @@
+{
+  "name": "@elearning/seed-data",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Curated, reviewed content batches (lessons + vocabulary) committed for reliable prod seeding. Each file in batches/ matches ImportBatchSchema from @elearning/contracts.",
+  "files": [
+    "batches"
+  ]
+}

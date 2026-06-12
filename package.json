@@ -1,0 +1,37 @@
+{
+  "name": "elearning",
+  "private": true,
+  "packageManager": "pnpm@10.16.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "build:packages": "pnpm --filter @elearning/contracts --filter @elearning/core build",
+    "dev": "turbo run dev",
+    "dev:api": "pnpm --filter @elearning/api dev",
+    "dev:web": "pnpm --filter @elearning/web dev",
+    "dev:landing": "pnpm --filter @elearning/landing dev",
+    "dev:mobile": "pnpm --filter @elearning/mobile start",
+    "seed": "pnpm --filter @elearning/api seed",
+    "seed:import": "pnpm --filter @elearning/api seed:import",
+    "seed:content": "pnpm --filter @elearning/api seed:import packages/seed-data/batches",
+    "seed:content:check": "pnpm --filter @elearning/api seed:import packages/seed-data/batches --dry",
+    "crawl": "pnpm --filter @elearning/crawler crawl --",
+    "db:up": "docker compose -f apps/api/docker-compose.yml up -d",
+    "db:down": "docker compose -f apps/api/docker-compose.yml down",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,json}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "21.0.2",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.7",
+    "prettier": "3.8.4",
+    "turbo": "2.9.16",
+    "typescript": "5.9.3"
+  }
+}

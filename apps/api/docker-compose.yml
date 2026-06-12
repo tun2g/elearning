@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: elearning_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: elearning
+      POSTGRES_PASSWORD: elearning
+      POSTGRES_DB: elearning
+    ports:
+      - '5432:5432'
+    volumes:
+      - elearning_pg_data:/var/lib/postgresql/data
+
+  # S3-compatible object storage for downloaded native audio (and future TTS).
+  minio:
+    image: minio/minio:latest
+    container_name: elearning_minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: elearning
+      MINIO_ROOT_PASSWORD: elearning-secret
+    ports:
+      - '9000:9000' # S3 API
+      - '9001:9001' # web console
+    volumes:
+      - elearning_minio_data:/data
+
+volumes:
+  elearning_pg_data:
+  elearning_minio_data:

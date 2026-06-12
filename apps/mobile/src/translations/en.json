@@ -1,0 +1,42 @@
+{
+  "lessons": {
+    "api_error": "Could not reach the API. Is @elearning/api running?",
+    "level": "Level",
+    "no_lessons": "No lessons yet. Run the API seed command.",
+    "practiced": "practiced",
+    "sentences_count": "sentences",
+    "subtitle": "Pick a lesson, listen to each line, then say it back.",
+    "title": "Practice by Sound"
+  },
+  "onboarding": {
+    "message": "Practice English by sound — listen, shadow, speak."
+  },
+  "settings": {
+    "about": "About",
+    "app_name": "App Name",
+    "arabic": "Arabic",
+    "english": "English",
+    "generale": "General",
+    "github": "Github",
+    "language": "Language",
+    "links": "Links",
+    "logout": "Logout",
+    "more": "More",
+    "privacy": "Privacy Policy",
+    "rate": "Rate",
+    "share": "Share",
+    "support": "Support",
+    "support_us": "Support Us",
+    "terms": "Terms of Service",
+    "theme": {
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System",
+      "title": "Theme"
+    },
+    "title": "Settings",
+    "version": "Version",
+    "website": "Website"
+  },
+  "welcome": "Welcome to obytes app site"
+}
