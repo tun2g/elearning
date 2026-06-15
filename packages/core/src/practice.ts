@@ -122,3 +122,11 @@ export function scoreToGrade(overall: number): SelfAssessment {
   if (overall < 85) return 'hard';
   return 'easy';
 }
+
+/** Minimum overall pronunciation score (0–100) that counts as "passing" a sentence. */
+export const PASS_SCORE = 70;
+
+/** Whether an overall pronunciation score clears the pass bar. */
+export function isPassing(overall: number): boolean {
+  return overall >= PASS_SCORE;
+}

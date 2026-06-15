@@ -2,22 +2,23 @@ import { createMutation, createQuery } from 'react-query-kit';
 
 import { getAccessToken } from '@/lib/auth';
 import {
+  getLessonProgress,
   getLessonState,
-  postPracticeAttempt,
   postVoiceEvaluate,
   postVoiceTranscribe,
+  type LessonProgress,
   type LessonState,
   type VoiceAttemptResult,
   type VoiceTranscriptionResult,
 } from '@/services/practice';
-import type { Assessment } from '@/services/types';
 import { queryKeys } from '@/lib/query-keys';
 
-export const usePracticeAttempt = createMutation({
-  mutationFn: (input: { sentenceId: string; assessment: Assessment }) => {
+export const useLessonProgress = createQuery<LessonProgress[]>({
+  queryKey: queryKeys.lessonProgress,
+  fetcher: () => {
     const token = getAccessToken();
-    if (!token) return Promise.resolve(undefined); // guest — no persistence
-    return postPracticeAttempt(token, input);
+    if (!token) throw new Error('Not authenticated');
+    return getLessonProgress(token);
   },
 });
 

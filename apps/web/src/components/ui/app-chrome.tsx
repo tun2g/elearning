@@ -33,8 +33,12 @@ export function AppChrome({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen">
+      {/* Atmospheric backdrop + film grain — sits behind all app screens */}
+      <div className="bg-sunrise pointer-events-none fixed inset-0 -z-10" aria-hidden="true" />
+      <span className="grain" aria-hidden="true" />
+
       {/* Top bar */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link href="/home" aria-label="Soundwell home">
             <Logo className="hidden sm:inline-flex" />
@@ -49,7 +53,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
                 className={cn(
                   'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors',
                   isActive(t.href)
-                    ? 'bg-primary-soft text-primary-deep'
+                    ? 'bg-linear-to-br from-primary to-primary-deep text-white shadow-(--shadow-primary)'
                     : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                 )}
               >
@@ -86,7 +90,7 @@ export function AppChrome({ children }: { children: ReactNode }) {
                 <span
                   className={cn(
                     'grid h-9 w-14 place-items-center rounded-full transition-colors',
-                    active && 'bg-primary-soft'
+                    active && 'bg-linear-to-br from-primary to-primary-deep text-white shadow-(--shadow-primary)'
                   )}
                 >
                   <t.icon size={20} />

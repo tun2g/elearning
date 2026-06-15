@@ -2,10 +2,11 @@ import dynamic from 'next/dynamic';
 
 import { Preloader } from '@/components/ui/preloader';
 
-const VocabContainer = dynamic(() => import('@/components/vocab/vocab-container').then((m) => m.VocabContainer), {
-  loading: () => <Preloader />,
-});
+const VocabCatalogContainer = dynamic(
+  () => import('@/components/vocab/vocab-catalog-container').then((m) => m.VocabCatalogContainer),
+  { loading: () => <Preloader /> }
+);
 
 export default function VocabPage() {
-  return <VocabContainer />;
+  return <VocabCatalogContainer />;
 }

@@ -22,7 +22,12 @@ export class TaxonomyController {
   @ApiOperation({ summary: 'List topics with counts, optionally filtered by category/level' })
   @ApiQuery({ name: 'category', required: false })
   @ApiQuery({ name: 'level', required: false })
-  listTopics(@Query('category') category?: string, @Query('level') level?: string): Promise<Topic[]> {
-    return this.taxonomyService.listTopics({ category, level });
+  @ApiQuery({ name: 'hasVocab', required: false, type: Boolean })
+  listTopics(
+    @Query('category') category?: string,
+    @Query('level') level?: string,
+    @Query('hasVocab') hasVocab?: string
+  ): Promise<Topic[]> {
+    return this.taxonomyService.listTopics({ category, level, hasVocab: hasVocab === 'true' });
   }
 }

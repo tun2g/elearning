@@ -1,7 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { alignWords, scoreToGrade, srsDueDate, SRS_DEFAULTS, srsNextInterval } from '@elearning/core';
-import type { PronunciationAssessment, VoiceAttemptResult, VoiceTranscriptionResult } from '@elearning/contracts';
+import { alignWords, PASS_SCORE, scoreToGrade, srsDueDate, SRS_DEFAULTS, srsNextInterval } from '@elearning/core';
+import type {
+  LessonProgress,
+  PronunciationAssessment,
+  VoiceAttemptResult,
+  VoiceTranscriptionResult,
+} from '@elearning/contracts';
 import { Not, Repository } from 'typeorm';
 
 import { SentenceEntity } from 'src/modules/content/entities/sentence.entity';
@@ -106,13 +111,14 @@ export class PracticeService {
   /**
    * Score a previously-transcribed attempt on demand. The audio is re-sent and
    * analyzed transiently; the existing attempt is updated in place with the
-   * assessment, and its SRS schedule is re-derived from the real score. No XP or
-   * progress is re-awarded — that already happened at the transcribe step.
+   * assessment, and its SRS schedule is re-derived from the real score. XP is not
+   * re-awarded (that happened at transcribe), but lesson progress IS recomputed —
+   * a sentence only counts as passed once it has a real score.
    */
   async evaluateVoiceAttempt(userId: string, dto: VoiceEvaluateDto): Promise<VoiceAttemptResult> {
     const attempt = await this.attemptRepo.findOne({
       where: { id: dto.attemptId, user: { id: userId } },
-      relations: { sentence: true },
+      relations: { sentence: { lesson: true } },
     });
     if (!attempt) throw new NotFoundException('Attempt not found');
 
@@ -144,6 +150,9 @@ export class PracticeService {
     attempt.srsDueAt = dueAt;
     attempt.aiScore = assessment;
     await this.attemptRepo.save(attempt);
+
+    // Now that the sentence has a real score, recompute whether it counts as passed.
+    await this.updateLessonProgress(userId, attempt.sentence.lesson.id);
 
     return {
       assessment,
@@ -231,6 +240,21 @@ export class PracticeService {
     };
   }
 
+  /** Progress across every lesson the user has started — for the lessons list. */
+  async getAllLessonProgress(userId: string): Promise<LessonProgress[]> {
+    const rows = await this.progressRepo.find({
+      where: { user: { id: userId } },
+      relations: { lesson: true },
+    });
+    return rows.map((p) => ({
+      lessonId: p.lesson.id,
+      status: p.status,
+      completionPct: p.completionPct,
+      lastPracticedAt: p.lastPracticedAt?.toISOString() ?? null,
+      xpEarned: p.xpEarned,
+    }));
+  }
+
   private async updateLessonProgress(userId: string, lessonId: string): Promise<void> {
     const lesson = await this.lessonRepo.findOne({
       where: { id: lessonId },
@@ -241,17 +265,20 @@ export class PracticeService {
     const totalSentences = lesson.sentences.length;
     if (totalSentences === 0) return;
 
-    // Count unique sentences attempted by this user in this lesson
-    const attempted = await this.attemptRepo
+    // Count unique sentences the user has *passed* — a voice attempt scoring at or
+    // above the pass bar, or a manual attempt self-rated 'easy' (mobile). Merely
+    // attempting (listening, or a low score) no longer marks a sentence complete.
+    const passed = await this.attemptRepo
       .createQueryBuilder('a')
       .innerJoin('a.sentence', 's')
       .where('a.user_id = :userId', { userId })
       .andWhere('s.lesson_id = :lessonId', { lessonId })
+      .andWhere("((a.ai_score->>'overall')::numeric >= :pass OR a.self_assessment = 'easy')", { pass: PASS_SCORE })
       .select('COUNT(DISTINCT a.sentence_id)', 'count')
       .getRawOne<{ count: string }>();
 
-    const attemptedCount = parseInt(attempted?.count ?? '0', 10);
-    const pct = Math.round((attemptedCount / totalSentences) * 100);
+    const passedCount = parseInt(passed?.count ?? '0', 10);
+    const pct = Math.round((passedCount / totalSentences) * 100);
     const status = pct >= 100 ? 'completed' : 'in_progress';
 
     const existing = await this.progressRepo.findOne({

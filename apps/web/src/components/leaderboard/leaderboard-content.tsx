@@ -3,6 +3,7 @@
 import type { LeaderboardEntry } from '@elearning/contracts';
 import { Trophy } from 'lucide-react';
 
+import { CountUp } from '@/components/ui/count-up';
 import { Reveal, RevealGroup, RevealItem } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
@@ -56,7 +57,9 @@ export function LeaderboardContent({ entries, isLoading, isError, hasToken, curr
             <Trophy size={22} />
           </span>
           <div>
-            <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">Weekly leaderboard</h1>
+            <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">
+              Weekly <span className="text-gradient-warm">leaderboard</span>
+            </h1>
             <p className="text-sm text-muted-foreground">Top speakers by XP earned this week</p>
           </div>
         </header>
@@ -105,7 +108,7 @@ export function LeaderboardContent({ entries, isLoading, isError, hasToken, curr
                   </div>
 
                   <span className="shrink-0 font-display text-base font-semibold tabular-nums text-foreground">
-                    {entry.xpThisWeek.toLocaleString()} XP
+                    <CountUp value={entry.xpThisWeek} /> XP
                   </span>
                 </div>
               </RevealItem>

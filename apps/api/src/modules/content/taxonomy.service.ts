@@ -13,6 +13,8 @@ import { toCategory, toTopic } from './dtos/topic.mapper';
 export interface TopicFilter {
   category?: string;
   level?: string;
+  /** When true, drop topics that have no vocabulary words (for vocab browse views). */
+  hasVocab?: boolean;
 }
 
 @Injectable()
@@ -47,7 +49,8 @@ export class TaxonomyService {
     const lessonCounts = await this.countByColumn(this.lessonRepo, 'topic_id');
     const vocabCounts = await this.countByColumn(this.vocabRepo, 'topic_id');
 
-    return topics.map((t) => toTopic(t, lessonCounts.get(t.id) ?? 0, vocabCounts.get(t.id) ?? 0));
+    const mapped = topics.map((t) => toTopic(t, lessonCounts.get(t.id) ?? 0, vocabCounts.get(t.id) ?? 0));
+    return filter.hasVocab ? mapped.filter((t) => t.vocabCount > 0) : mapped;
   }
 
   /** Returns a map of fkColumn value → row count, ignoring null FKs. */

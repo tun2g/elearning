@@ -1,0 +1,15 @@
+**/node_modules
+**/.next
+**/dist
+**/.turbo
+.turbo
+.git
+.github
+.husky
+.tasks
+.claude
+plans
+docs
+data
+**/*.log
+**/.DS_Store

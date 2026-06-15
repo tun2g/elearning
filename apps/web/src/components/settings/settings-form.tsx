@@ -104,7 +104,7 @@ export function SettingsForm({ data }: { data: UserSettings }) {
           {isPending ? <Loader2 size={16} className="animate-spin" /> : 'Save changes'}
         </Button>
         {isSuccess && !isDirty && (
-          <span className="inline-flex items-center gap-1 text-sm text-secondary-600">
+          <span className="inline-flex items-center gap-1 text-sm text-secondary-deep">
             <Check size={15} /> Saved
           </span>
         )}

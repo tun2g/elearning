@@ -1,30 +1,18 @@
 'use client';
 
+import type { PronunciationAssessment } from '@elearning/contracts';
+import { isPassing } from '@elearning/core';
 import { useQueryClient } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useLesson } from '@/hooks/use-lessons';
-import { useLessonState, usePracticeAttempt } from '@/hooks/use-practice';
+import { useSeedReviewWords } from '@/hooks/use-vocab';
 import { getAccessToken } from '@/lib/auth';
 import { queryKeys } from '@/lib/query-keys';
-import type { Assessment } from '@/services/types';
 
 import { PracticeContent } from './practice-content';
-
-function speak(text: string, audioUrl: string | null) {
-  if (audioUrl) {
-    new Audio(audioUrl).play().catch(() => undefined);
-    return;
-  }
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = 0.9;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
-  }
-}
+import { trickyWords, type SentenceResult } from './practice-result';
 
 export function PracticeContainer() {
   const { slug } = useParams<{ slug: string }>();
@@ -33,49 +21,69 @@ export function PracticeContainer() {
 
   const { data: lesson, isLoading, isError } = useLesson({ variables: { slug } });
 
-  const [mode, setMode] = useState<'listen' | 'speak'>('listen');
-  const [assessments, setAssessments] = useState<Record<string, Assessment>>({});
-  const [playingId, setPlayingId] = useState<string | null>(null);
-  const [playedIds, setPlayedIds] = useState<Set<string>>(new Set());
+  const [index, setIndex] = useState(0);
+  const [results, setResults] = useState<Record<string, SentenceResult>>({});
+  const [skipped, setSkipped] = useState<Set<string>>(new Set());
+  const [finished, setFinished] = useState(false);
+  const [seededCount, setSeededCount] = useState(0);
+  const seededRef = useRef(false);
 
-  const hasToken = typeof window !== 'undefined' && Boolean(getAccessToken());
-  const { data: savedState } = useLessonState({
-    variables: { lessonId: lesson?.id ?? '' },
-    enabled: hasToken && Boolean(lesson?.id),
-  });
-
-  // Restore saved progress on load (server is the baseline; local edits win).
   useEffect(() => {
-    if (!savedState?.attempts.length) return;
-    const restored: Record<string, Assessment> = {};
-    const played = new Set<string>();
-    for (const a of savedState.attempts) {
-      restored[a.sentenceId] = a.selfAssessment;
-      played.add(a.sentenceId);
+    if (typeof window !== 'undefined' && !getAccessToken()) {
+      router.replace('/login');
     }
-    setAssessments((prev) => ({ ...restored, ...prev }));
-    setPlayedIds((prev) => new Set([...played, ...prev]));
-  }, [savedState]);
+  }, [router]);
 
-  const attempt = usePracticeAttempt({
-    onSuccess: () => {
-      void queryClient.invalidateQueries({ queryKey: queryKeys.home });
-    },
-    onError: () => {
-      if (!getAccessToken()) router.replace('/login');
+  const seedReview = useSeedReviewWords({
+    onSuccess: (res) => {
+      setSeededCount(res.seeded);
+      if (res.seeded > 0) void queryClient.invalidateQueries({ queryKey: queryKeys.vocabReview });
     },
   });
 
-  const onAssess = (id: string, a: Assessment) => {
-    setAssessments((prev) => ({ ...prev, [id]: a }));
-    attempt.mutate({ sentenceId: id, assessment: a });
+  // On finishing, push the words the learner mispronounced into vocab review.
+  useEffect(() => {
+    if (!finished || seededRef.current || !lesson) return;
+    seededRef.current = true;
+    const words = trickyWords(lesson, results);
+    if (words.length > 0) seedReview.mutate({ words });
+  }, [finished, lesson, results, seedReview]);
+
+  const total = lesson?.sentences.length ?? 0;
+  const current = lesson?.sentences[index];
+  const completedCount = Object.values(results).filter((r) => r.passed).length;
+  const canAdvance = current ? Boolean(results[current.id]?.passed) || skipped.has(current.id) : false;
+
+  // A scored recording arrived. Store pass/fail and refresh the screens whose
+  // numbers it changes (home streak/XP, the lessons-list completion).
+  const onResult = (sentenceId: string, assessment: PronunciationAssessment) => {
+    setResults((prev) => ({ ...prev, [sentenceId]: { passed: isPassing(assessment.overall), assessment } }));
+    void queryClient.invalidateQueries({ queryKey: queryKeys.home });
+    void queryClient.invalidateQueries({ queryKey: queryKeys.lessonProgress });
   };
 
-  const onPlay = (id: string, text: string, audioUrl: string | null) => {
-    speak(text, audioUrl);
-    setPlayedIds((prev) => new Set(prev).add(id));
-    setPlayingId(id);
-    window.setTimeout(() => setPlayingId((p) => (p === id ? null : p)), 1500);
+  const advance = () => {
+    if (index + 1 >= total) setFinished(true);
+    else setIndex((i) => i + 1);
+  };
+
+  const onNext = () => {
+    if (canAdvance) advance();
+  };
+  const onSkip = () => {
+    if (current) setSkipped((prev) => new Set(prev).add(current.id));
+    advance();
+  };
+  const onPrev = () => {
+    if (index > 0) setIndex((i) => i - 1);
+  };
+  const onRestart = () => {
+    setResults({});
+    setSkipped(new Set());
+    setIndex(0);
+    setFinished(false);
+    setSeededCount(0);
+    seededRef.current = false;
   };
 
   return (
@@ -83,13 +91,17 @@ export function PracticeContainer() {
       lesson={lesson}
       isLoading={isLoading}
       isError={isError}
-      mode={mode}
-      setMode={setMode}
-      assessments={assessments}
-      playedIds={playedIds}
-      playingId={playingId}
-      onAssess={onAssess}
-      onPlay={onPlay}
+      index={index}
+      completedCount={completedCount}
+      finished={finished}
+      canAdvance={canAdvance}
+      results={results}
+      seededCount={seededCount}
+      onPrev={onPrev}
+      onNext={onNext}
+      onSkip={onSkip}
+      onResult={onResult}
+      onRestart={onRestart}
     />
   );
 }

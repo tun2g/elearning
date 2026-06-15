@@ -36,6 +36,12 @@ export class PracticeController {
     return this.practiceService.getDueSentences(user.id);
   }
 
+  @Get('progress')
+  @ApiOperation({ summary: "Get the user's progress across all lessons" })
+  getProgress(@CurrentUser() user: RequestUser) {
+    return this.practiceService.getAllLessonProgress(user.id);
+  }
+
   @Get('lesson/:lessonId')
   @ApiOperation({
     summary: "Get the user's saved state for a lesson (progress + assessments)",

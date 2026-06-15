@@ -47,7 +47,9 @@ export function SettingsContent({ data, isLoading, isError, hasToken }: Settings
     <div className="flex flex-col gap-6">
       <Reveal>
         <header>
-          <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">Settings</h1>
+          <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">
+            <span className="text-gradient-warm">Settings</span>
+          </h1>
           <p className="text-sm text-muted-foreground">Tune your daily goal and reminders</p>
         </header>
       </Reveal>

@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import type { Vocabulary } from '@elearning/contracts';
 import { srsDueDate, SRS_DEFAULTS, srsNextInterval } from '@elearning/core';
-import { LessThanOrEqual, Repository } from 'typeorm';
+import { In, LessThanOrEqual, Repository } from 'typeorm';
 
 import { GamificationService } from 'src/modules/gamification/gamification.service';
 
@@ -61,6 +61,28 @@ export class VocabularyService {
     const newCards = await this.getNewCards(userId, NEW_CARDS_PER_SESSION);
 
     return [...reviewCards, ...newCards.map((v): VocabSessionCard => ({ ...toVocabulary(v), status: 'new' }))];
+  }
+
+  /**
+   * Build a study session scoped to a single topic: every word in that topic,
+   * tagged review (already started) or new. Unlike {@link getStudySession} there's
+   * no new-card cap — the user explicitly chose to study this whole topic.
+   */
+  async getTopicSession(userId: string, topicSlug: string): Promise<VocabSessionCard[]> {
+    const words = await this.vocabRepo.find({
+      where: { topic: { slug: topicSlug } },
+      order: { createdAt: 'ASC', id: 'ASC' },
+      relations: TOPIC_RELATION,
+    });
+    if (words.length === 0) return [];
+
+    const progress = await this.progressRepo.find({
+      where: { user: { id: userId }, vocab: { id: In(words.map((w) => w.id)) } },
+      relations: { vocab: true },
+    });
+    const started = new Set(progress.map((p) => p.vocab.id));
+
+    return words.map((v): VocabSessionCard => ({ ...toVocabulary(v), status: started.has(v.id) ? 'review' : 'new' }));
   }
 
   /** Catalog words the user has never started (no progress row), oldest first. */
@@ -123,5 +145,48 @@ export class VocabularyService {
     const saved = await this.progressRepo.save(progress);
     await this.gamificationService.awardXp(userId, 'vocab_review', saved.id);
     return saved;
+  }
+
+  /**
+   * Close the lesson→vocab loop: push words the learner mispronounced into their
+   * review queue. Any word matching the catalog (case-insensitive) becomes due
+   * now, so it surfaces in the next study session; words not in the catalog are
+   * ignored (we have no meaning/IPA for them).
+   */
+  async seedReviewWords(userId: string, words: string[]): Promise<{ seeded: number }> {
+    const normalized = [...new Set(words.map((w) => w.toLowerCase().replace(/[^a-z']/g, '')).filter(Boolean))];
+    if (normalized.length === 0) return { seeded: 0 };
+
+    const matches = await this.vocabRepo
+      .createQueryBuilder('v')
+      .where('LOWER(v.word) IN (:...words)', { words: normalized })
+      .getMany();
+    if (matches.length === 0) return { seeded: 0 };
+
+    const dueAt = srsDueDate(new Date(), 0); // due today, normalized like every other SRS write
+    const existing = await this.progressRepo.find({
+      where: { user: { id: userId }, vocab: { id: In(matches.map((m) => m.id)) } },
+      relations: { vocab: true },
+    });
+    const byVocabId = new Map(existing.map((p) => [p.vocab.id, p]));
+
+    const rows = matches.map((vocab) => {
+      const row = byVocabId.get(vocab.id);
+      if (row) {
+        row.srsInterval = 1;
+        row.srsDueAt = dueAt;
+        return row;
+      }
+      return this.progressRepo.create({
+        user: { id: userId },
+        vocab: { id: vocab.id },
+        srsInterval: SRS_DEFAULTS.interval,
+        srsEase: SRS_DEFAULTS.ease,
+        srsDueAt: dueAt,
+      });
+    });
+    await this.progressRepo.save(rows);
+
+    return { seeded: matches.length };
   }
 }

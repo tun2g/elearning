@@ -4,7 +4,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
 import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
-import { VocabAttemptDto } from './dtos/vocab.dto';
+import { SeedReviewDto, VocabAttemptDto } from './dtos/vocab.dto';
 import { VocabularyService } from './vocabulary.service';
 
 @ApiTags('vocabulary')
@@ -24,10 +24,22 @@ export class VocabularyController {
     return this.vocabularyService.getStudySession(user.id);
   }
 
+  @Get('topic/:slug/study')
+  @ApiOperation({ summary: 'Study session scoped to one topic (all of its words)' })
+  getTopicStudy(@CurrentUser() user: RequestUser, @Param('slug') slug: string) {
+    return this.vocabularyService.getTopicSession(user.id, slug);
+  }
+
   @Post('attempt')
   @ApiOperation({ summary: 'Record a vocabulary review attempt' })
   recordAttempt(@CurrentUser() user: RequestUser, @Body() dto: VocabAttemptDto) {
     return this.vocabularyService.recordAttempt(user.id, dto);
+  }
+
+  @Post('review/seed')
+  @ApiOperation({ summary: 'Queue mispronounced words for review (lesson → vocab loop)' })
+  seedReview(@CurrentUser() user: RequestUser, @Body() dto: SeedReviewDto) {
+    return this.vocabularyService.seedReviewWords(user.id, dto.words);
   }
 
   @Get(':id')
