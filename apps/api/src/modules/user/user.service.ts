@@ -23,11 +23,25 @@ export class UserService {
     return this.userRepo.findOne({ where: { email: email.toLowerCase() } });
   }
 
-  async create(data: { email: string; passwordHash: string; displayName: string }): Promise<UserEntity> {
+  async findByGoogleId(googleId: string): Promise<UserEntity | null> {
+    return this.userRepo.findOne({ where: { googleId } });
+  }
+
+  async create(data: {
+    email: string;
+    passwordHash?: string | null;
+    displayName: string;
+    emailVerifiedAt?: Date | null;
+    googleId?: string | null;
+    avatarUrl?: string | null;
+  }): Promise<UserEntity> {
     const user = this.userRepo.create({
       email: data.email.toLowerCase(),
-      passwordHash: data.passwordHash,
+      passwordHash: data.passwordHash ?? null,
       displayName: data.displayName,
+      emailVerifiedAt: data.emailVerifiedAt ?? null,
+      googleId: data.googleId ?? null,
+      avatarUrl: data.avatarUrl ?? null,
     });
     const saved = await this.userRepo.save(user);
 
@@ -35,6 +49,11 @@ export class UserService {
     await this.settingsRepo.save(settings);
 
     return saved;
+  }
+
+  /** Persists field changes on an existing user (verification, Google link, etc.). */
+  async update(user: UserEntity): Promise<UserEntity> {
+    return this.userRepo.save(user);
   }
 
   async findByIdOrThrow(id: string): Promise<UserEntity> {

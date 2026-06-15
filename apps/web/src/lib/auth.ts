@@ -1,6 +1,16 @@
 'use client';
 
-import { loginApi, logoutApi, refreshApi, registerApi } from '@/services/auth';
+import type { AuthTokens, RegisterResult } from '@elearning/contracts';
+
+import {
+  loginApi,
+  logoutApi,
+  magicLinkApi,
+  magicLinkVerifyApi,
+  refreshApi,
+  registerApi,
+  verifyEmailApi,
+} from '@/services/auth';
 
 const ACCESS_TOKEN_KEY = 'el_access_token';
 const REFRESH_TOKEN_KEY = 'el_refresh_token';
@@ -37,16 +47,34 @@ export function clearRefreshToken(): void {
 
 // --- auth actions ---
 
-export async function login(email: string, password: string): Promise<void> {
-  const tokens = await loginApi(email, password);
+/** Stores a fresh token pair (after login / verify / magic-link / Google). */
+export function setSession(tokens: { accessToken: string; refreshToken: string }): void {
   setAccessToken(tokens.accessToken);
   setRefreshToken(tokens.refreshToken);
 }
 
-export async function register(email: string, password: string, displayName: string): Promise<void> {
-  const tokens = await registerApi(email, password, displayName);
-  setAccessToken(tokens.accessToken);
-  setRefreshToken(tokens.refreshToken);
+export async function login(email: string, password: string): Promise<void> {
+  setSession(await loginApi(email, password));
+}
+
+/** Registers and triggers a verification email — does NOT start a session. */
+export async function register(email: string, password: string, displayName: string): Promise<RegisterResult> {
+  return registerApi(email, password, displayName);
+}
+
+/** Consumes an email-verification token and logs the user in. */
+export async function verifyEmail(token: string): Promise<void> {
+  setSession(await verifyEmailApi(token));
+}
+
+/** Consumes a passwordless sign-in link and logs the user in. */
+export async function verifyMagicLink(token: string): Promise<void> {
+  setSession(await magicLinkVerifyApi(token));
+}
+
+/** Requests a passwordless sign-in link by email. */
+export async function requestMagicLink(email: string): Promise<void> {
+  await magicLinkApi(email);
 }
 
 export function logout(): void {

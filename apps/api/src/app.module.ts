@@ -2,6 +2,7 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { ScheduleModule } from '@nestjs/schedule';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerModule } from 'nestjs-pino';
 
@@ -23,6 +24,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
 import { AuthMiddleware } from './shared/middlewares/auth.middleware';
 import { HttpRequestContextMiddleware } from './shared/modules/http-request-context/http-request-context.middleware';
 import { HttpRequestContextModule } from './shared/modules/http-request-context/http-request-context.module';
+import { MailModule } from './shared/modules/mail/mail.module';
 import { StorageModule } from './shared/modules/storage/storage.module';
 
 @Module({
@@ -41,6 +43,8 @@ import { StorageModule } from './shared/modules/storage/storage.module';
     }),
     TypeOrmModule.forRootAsync({ useClass: TypeOrmConfigService }),
     ScheduleModule.forRoot(),
+    // Per-IP rate limiting (default 100/min); auth endpoints tighten this via @Throttle.
+    ThrottlerModule.forRoot([{ ttl: 60_000, limit: 100 }]),
 
     // Global context module must be imported first
     HttpRequestContextModule,
@@ -61,8 +65,13 @@ import { StorageModule } from './shared/modules/storage/storage.module';
 
     // Shared infrastructure
     StorageModule,
+    MailModule,
   ],
   providers: [
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
     {
       provide: APP_GUARD,
       useClass: AuthGuard,

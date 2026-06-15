@@ -2,6 +2,7 @@ import type { LessonDetail, LessonSummary, Sentence } from '@elearning/contracts
 
 import { LessonEntity } from '../entities/lesson.entity';
 import { SentenceEntity } from '../entities/sentence.entity';
+import { toTopicRef } from './topic.mapper';
 
 export function toSentence(entity: SentenceEntity): Sentence {
   return {
@@ -21,7 +22,7 @@ export function toLessonSummary(entity: LessonEntity, sentenceCount: number): Le
     title: entity.title,
     description: entity.description,
     level: entity.level,
-    topic: entity.topic,
+    topic: toTopicRef(entity.topic),
     source: entity.source,
     externalUrl: entity.externalUrl,
     mediaKind: entity.mediaKind,

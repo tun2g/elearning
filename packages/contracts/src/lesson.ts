@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { TopicRefSchema } from './topic';
+
 export const LessonLevel = z.enum(['beginner', 'intermediate', 'advanced']);
 export type LessonLevel = z.infer<typeof LessonLevel>;
 
@@ -25,7 +27,7 @@ export const LessonSummarySchema = z.object({
   title: z.string(),
   description: z.string().nullable(),
   level: LessonLevel,
-  topic: z.string().nullable(),
+  topic: TopicRefSchema.nullable(),
   source: z.string().nullable(),
   /** For embedded sources (e.g. a YouTube watch URL); null for native-audio lessons. */
   externalUrl: z.string().nullable(),

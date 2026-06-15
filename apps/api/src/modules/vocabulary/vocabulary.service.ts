@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import type { Vocabulary } from '@elearning/contracts';
 import { srsDueDate, SRS_DEFAULTS, srsNextInterval } from '@elearning/core';
 import { LessThanOrEqual, Repository } from 'typeorm';
 
@@ -8,8 +9,12 @@ import { GamificationService } from 'src/modules/gamification/gamification.servi
 import { UserVocabProgressEntity } from './entities/user-vocab-progress.entity';
 import { VocabularyEntity } from './entities/vocabulary.entity';
 import { VocabAttemptDto } from './dtos/vocab.dto';
+import { toVocabulary } from './dtos/vocab.mapper';
 import { NEW_CARDS_PER_SESSION, REVIEW_SESSION_LIMIT } from './constants/vocabulary.constants';
 import { VocabSessionCard } from './interfaces/vocab-session.interface';
+
+/** Eager-load the topic + its category so cards map cleanly to the contract. */
+const TOPIC_RELATION = { topic: { category: true } } as const;
 
 @Injectable()
 export class VocabularyService {
@@ -21,14 +26,19 @@ export class VocabularyService {
     private readonly gamificationService: GamificationService
   ) {}
 
-  async getTodayWord(userId: string): Promise<VocabularyEntity | null> {
+  async getTodayWord(userId: string): Promise<Vocabulary | null> {
     // Use UTC day as a seed for "word of the day"
     const dayIndex = Math.floor(Date.now() / 86_400_000);
     const total = await this.vocabRepo.count();
     if (total === 0) return null;
     const offset = dayIndex % total;
-    const words = await this.vocabRepo.find({ skip: offset, take: 1, order: { createdAt: 'ASC', id: 'ASC' } });
-    return words[0] ?? null;
+    const words = await this.vocabRepo.find({
+      skip: offset,
+      take: 1,
+      order: { createdAt: 'ASC', id: 'ASC' },
+      relations: TOPIC_RELATION,
+    });
+    return words[0] ? toVocabulary(words[0]) : null;
   }
 
   /**
@@ -44,13 +54,13 @@ export class VocabularyService {
       where: { user: { id: userId }, srsDueAt: LessThanOrEqual(today) },
       order: { srsDueAt: 'ASC' },
       take: REVIEW_SESSION_LIMIT,
-      relations: { vocab: true },
+      relations: { vocab: TOPIC_RELATION },
     });
 
-    const reviewCards: VocabSessionCard[] = due.map((p) => ({ ...p.vocab, status: 'review' }));
+    const reviewCards: VocabSessionCard[] = due.map((p) => ({ ...toVocabulary(p.vocab), status: 'review' }));
     const newCards = await this.getNewCards(userId, NEW_CARDS_PER_SESSION);
 
-    return [...reviewCards, ...newCards.map((v): VocabSessionCard => ({ ...v, status: 'new' }))];
+    return [...reviewCards, ...newCards.map((v): VocabSessionCard => ({ ...toVocabulary(v), status: 'new' }))];
   }
 
   /** Catalog words the user has never started (no progress row), oldest first. */
@@ -59,6 +69,8 @@ export class VocabularyService {
 
     return this.vocabRepo
       .createQueryBuilder('v')
+      .leftJoinAndSelect('v.topic', 't')
+      .leftJoinAndSelect('t.category', 'tc')
       .leftJoin(UserVocabProgressEntity, 'p', 'p.vocab_id = v.id AND p.user_id = :userId AND p.deleted_at IS NULL', {
         userId,
       })
@@ -69,10 +81,10 @@ export class VocabularyService {
       .getMany();
   }
 
-  async getById(id: string): Promise<VocabularyEntity> {
-    const vocab = await this.vocabRepo.findOne({ where: { id } });
+  async getById(id: string): Promise<Vocabulary> {
+    const vocab = await this.vocabRepo.findOne({ where: { id }, relations: TOPIC_RELATION });
     if (!vocab) throw new NotFoundException('Vocabulary not found');
-    return vocab;
+    return toVocabulary(vocab);
   }
 
   async recordAttempt(userId: string, dto: VocabAttemptDto): Promise<UserVocabProgressEntity> {

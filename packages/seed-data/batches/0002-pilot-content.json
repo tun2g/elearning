@@ -1,0 +1,4028 @@
+{
+  "lessons": [
+    {
+      "slug": "tatoeba-greetings-and-introductions",
+      "title": "Greetings & Introductions — Example Sentences",
+      "description": "Authentic example sentences for Greetings & Introductions, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "greetings-and-introductions",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Nice to meet you.",
+          "ipa": null,
+          "translation": "Hân hạnh được gặp bạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "\"How do you do, Mr James?\" \"Fine, thanks for asking. Nice to meet you.\"",
+          "ipa": null,
+          "translation": "\"Ông hôm nay khỏe không, ông James?\" \"Khỏe, cảm ơn cậu. Rất vui được gặp.\"",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "It's rare to meet nice people like you.",
+          "ipa": null,
+          "translation": "Hiếm lắm mới gặp được những người tốt như các bạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "My name is Quy.",
+          "ipa": null,
+          "translation": "Tôi tên Quy",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "My name is Maria.",
+          "ipa": null,
+          "translation": "Tôi tên là Maria.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "My name is Robert.",
+          "ipa": null,
+          "translation": "Tên tôi là Robert.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "My name is Dilxwaz.",
+          "ipa": null,
+          "translation": "Tên tôi là Dilxwaz.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "My name is Saul.",
+          "ipa": null,
+          "translation": "Tôi tên là Saul.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "My name is Jim.",
+          "ipa": null,
+          "translation": "Tên tôi là Jim",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "My name is Hassan.",
+          "ipa": null,
+          "translation": "Tên tôi là Hassan",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "My name is Rahul.",
+          "ipa": null,
+          "translation": "Tên tôi là Rahul",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "My name is Juba.",
+          "ipa": null,
+          "translation": "Tên tôi là Juba",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-family-members",
+      "title": "Family Members — Example Sentences",
+      "description": "Authentic example sentences for Family Members, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "family-members",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Where's my family?",
+          "ipa": null,
+          "translation": "Gia đình tôi đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "My family has four members.",
+          "ipa": null,
+          "translation": "Nhà tôi có bốn người.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "My family thinks I'm rich.",
+          "ipa": null,
+          "translation": "Gia đình tôi nghĩ rằng tôi giàu có.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "My family goes skiing every winter.",
+          "ipa": null,
+          "translation": "Mùa đông nào gia đình tôi cũng đi trượt tuyết.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "All my family is very well.",
+          "ipa": null,
+          "translation": "Cả gia đình tôi mạnh khỏe.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "Every evening, my family has dinner together.",
+          "ipa": null,
+          "translation": "Mỗi tối, gia đình tôi ăn tối cùng nhau.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Mother is the busiest in my family.",
+          "ipa": null,
+          "translation": "Mẹ tôi là người bận nhất trong nhà.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "I didn't know where my family was.",
+          "ipa": null,
+          "translation": "Tôi đã không biết gia đình tôi ở đâu.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "I missed my family, so I went back.",
+          "ipa": null,
+          "translation": "Tôi nhớ gia đình mình, vì vậy nên tôi đã quay trở lại.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "She gets up the earliest in my family.",
+          "ipa": null,
+          "translation": "Cô ấy là người dậy sớm nhất trong nhà.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "Tom has sisters.",
+          "ipa": null,
+          "translation": "Tom có chị em gái.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Are they sisters?",
+          "ipa": null,
+          "translation": "Họ là chị em đúng không?",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-daily-routines",
+      "title": "Daily Routines — Example Sentences",
+      "description": "Authentic example sentences for Daily Routines, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "daily-routines",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "I eat breakfast every morning.",
+          "ipa": null,
+          "translation": "Tôi ăn điểm tâm mỗi sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "He irons his shirt every morning.",
+          "ipa": null,
+          "translation": "Anh ấy ủi áo sơ mi của mình mỗi sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "Tom walks his dog every morning.",
+          "ipa": null,
+          "translation": "Tom dắt chó đi dạo mỗi sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "The postman delivers letters every morning.",
+          "ipa": null,
+          "translation": "Bưu tá đưa thư mỗi buổi sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "She gets up early every morning.",
+          "ipa": null,
+          "translation": "Hằng ngày, chị ấy dậy sớm.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "The door is opened every morning.",
+          "ipa": null,
+          "translation": "Cửa được mở hàng sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "The students go to school every morning.",
+          "ipa": null,
+          "translation": "Các học sinh đi học vào mỗi sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "I get up at six every morning.",
+          "ipa": null,
+          "translation": "Mỗi ngày tôi dậy lúc 6 giờ.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Amy walks to the station every morning.",
+          "ipa": null,
+          "translation": "Tất cả các buổi sáng, Amy đi bộ tới nhà ga.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "I drink 2 cups of coffee every morning.",
+          "ipa": null,
+          "translation": "Sáng nào, tôi cũng uống 2 cốc cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I don't wanna go to work.",
+          "ipa": null,
+          "translation": "Mình không muốn đi làm.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "I go to work every morning by train.",
+          "ipa": null,
+          "translation": "Tôi đi làm mỗi sáng bằng tàu hỏa.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-numbers-and-counting",
+      "title": "Numbers & Counting — Example Sentences",
+      "description": "Authentic example sentences for Numbers & Counting, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "numbers-and-counting",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "How many times?",
+          "ipa": null,
+          "translation": "Bao nhiêu lần?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "How many people were killed?",
+          "ipa": null,
+          "translation": "Có bao nhiêu người bị giết?",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "How many children are there?",
+          "ipa": null,
+          "translation": "Bạn có mấy người con?",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "How many do you want?",
+          "ipa": null,
+          "translation": "Bạn muốn bao nhiêu?",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "How many kilometers did you run?",
+          "ipa": null,
+          "translation": "Bạn đã chạy được bao nhiêu ki-lô-mét?",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "How many letters do you have?",
+          "ipa": null,
+          "translation": "Bạn có bao nhiêu lá thư?",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "How many yen is four dollars?",
+          "ipa": null,
+          "translation": "Bốn đô la là bao nhiêu yên?",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "How many kilos do you weigh?",
+          "ipa": null,
+          "translation": "Bạn nặng bao nhiêu kg?",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "How many kilograms did you lose?",
+          "ipa": null,
+          "translation": "Bạn giảm được mấy cân thế?",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "How many cars do you own?",
+          "ipa": null,
+          "translation": "Ngài có mấy chiếc xe ô tô?",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "He prefers odd numbers.",
+          "ipa": null,
+          "translation": "Anh ấy thích số lẻ hơn.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "She prefers odd numbers.",
+          "ipa": null,
+          "translation": "Cô ấy thích số lẻ hơn.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-common-foods",
+      "title": "Common Foods — Example Sentences",
+      "description": "Authentic example sentences for Common Foods, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "common-foods",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Food arrived.",
+          "ipa": null,
+          "translation": "Đồ ăn đến rồi.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "I like food.",
+          "ipa": null,
+          "translation": "Tôi thích đồ ăn.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "I love food.",
+          "ipa": null,
+          "translation": "Tôi thích thức ăn.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Tom bought food.",
+          "ipa": null,
+          "translation": "Tom mang theo thức ăn.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "She sells food.",
+          "ipa": null,
+          "translation": "Cô ấy bán đồ ăn",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "I like fast food.",
+          "ipa": null,
+          "translation": "Tôi thích đồ ăn nhanh.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "The food was mediocre.",
+          "ipa": null,
+          "translation": "Đồ ăn này tàm tạm.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "Where's the food?",
+          "ipa": null,
+          "translation": "Đồ ăn đâu rồi?",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Dog food is expensive.",
+          "ipa": null,
+          "translation": "Thức ăn cho chó đắt thật.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "I like Chinese food.",
+          "ipa": null,
+          "translation": "Tôi thích đồ ăn Trung Quốc.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-ordering-at-a-restaurant",
+      "title": "Ordering at a Restaurant — Example Sentences",
+      "description": "Authentic example sentences for Ordering at a Restaurant, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "ordering-at-a-restaurant",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order.",
+          "ipa": null,
+          "translation": "Động từ tiếng Anh \"86\" bắt nguồn từ ngành dịch vụ ẩm thực, và ban đầu có nghĩa là huỷ đơn đặt hàng.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "The restaurant is full.",
+          "ipa": null,
+          "translation": "Nhà hàng hết chỗ rồi.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "Where is the buffet restaurant?",
+          "ipa": null,
+          "translation": "Nhà hàng búp phê ở đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "The restaurant has yellow windows.",
+          "ipa": null,
+          "translation": "Nhà hàng này có cửa sổ màu vàng.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "We dined at a restaurant.",
+          "ipa": null,
+          "translation": "Chúng tôi ăn tối tại một nhà hàng.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "My father has a restaurant.",
+          "ipa": null,
+          "translation": "Bố tôi có một nhà hàng.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "My father runs a restaurant.",
+          "ipa": null,
+          "translation": "Bố tôi có một nhà hàng.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "The restaurant has a white ceiling.",
+          "ipa": null,
+          "translation": "Nhà hàng này có trần nhà màu trắng.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Does this restaurant offer vegan dishes?",
+          "ipa": null,
+          "translation": "Nhà hàng này có phục vụ đồ ăn chay không?",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "Which restaurant did you go to?",
+          "ipa": null,
+          "translation": "Bạn đã đi đến cửa hàng nào?",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I know a very good restaurant.",
+          "ipa": null,
+          "translation": "Tôi biết một nhà hàng rất ngon.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "We're waiters.",
+          "ipa": null,
+          "translation": "Chúng tôi là những người phục vụ.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-at-a-cafe",
+      "title": "At a Cafe — Example Sentences",
+      "description": "Authentic example sentences for At a Cafe, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "at-a-cafe",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Coffee?",
+          "ipa": null,
+          "translation": "Cà phê?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "More coffee?",
+          "ipa": null,
+          "translation": "Thêm cà phê không?",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "Coffee's ready.",
+          "ipa": null,
+          "translation": "Cà phê được rồi.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "\"Good morning.\" \"Coffee.\"",
+          "ipa": null,
+          "translation": "\"Chào buổi sáng.\" \"Cà phê.\"",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "Coffee is life.",
+          "ipa": null,
+          "translation": "Cà phê là cuộc sống.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "I sell coffee.",
+          "ipa": null,
+          "translation": "Tôi bán cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Tom sells coffee.",
+          "ipa": null,
+          "translation": "Tom bán cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "I smell coffee.",
+          "ipa": null,
+          "translation": "Tôi ngửi cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "I like coffee.",
+          "ipa": null,
+          "translation": "Tôi thích cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "I love coffee.",
+          "ipa": null,
+          "translation": "Tôi thích cà phê.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "Is the cafe open?",
+          "ipa": null,
+          "translation": "Quán cà phê có mở không?",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "I'm sitting outside, at a cafe.",
+          "ipa": null,
+          "translation": "Tôi đang ngồi ngoài trời, tại một quán cà phê.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-directions-and-locations",
+      "title": "Directions & Locations — Example Sentences",
+      "description": "Authentic example sentences for Directions & Locations, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "directions-and-locations",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "How do I get to the train station?",
+          "ipa": null,
+          "translation": "Làm thế nào tôi có thể đi đến ga xe lửa?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "He lives next to me.",
+          "ipa": null,
+          "translation": "Anh ấy sống ở bên cạnh nhà tôi.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "He lay down next to me.",
+          "ipa": null,
+          "translation": "Anh ấy nằm xuống ngay cạnh tôi.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "He sat down next to me.",
+          "ipa": null,
+          "translation": "Anh ấy đã ngồi cạnh tôi.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "He sat next to the stream.",
+          "ipa": null,
+          "translation": "Nó ngồi cạnh con sông.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "My house is next to his house.",
+          "ipa": null,
+          "translation": "Nhà tôi ở kế bên nhà anh ấy.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "They sat down next to each other.",
+          "ipa": null,
+          "translation": "Hai người đó ngồi cạnh nhau.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "Tom is standing right next to Mary.",
+          "ipa": null,
+          "translation": "Tom đang đứng ngay bên cạnh Mary.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "The second mirror is hanging next to the door.",
+          "ipa": null,
+          "translation": "Chiếc gương thứ hai được treo bên cạnh cửa.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "There is a big park next to my house.",
+          "ipa": null,
+          "translation": "Có một công viên lớn kế bên nhà tôi.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I don't want to sit next to her.",
+          "ipa": null,
+          "translation": "Tôi không muốn ngồi cạnh cô ấy.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Which direction will he choose?",
+          "ipa": null,
+          "translation": "Anh ấy sẽ chọn hướng nào?",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-at-the-airport",
+      "title": "At the Airport — Example Sentences",
+      "description": "Authentic example sentences for At the Airport, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "at-the-airport",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "I'm at the airport.",
+          "ipa": null,
+          "translation": "Tôi đang ở sân bay",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "The airport is close by.",
+          "ipa": null,
+          "translation": "Sân bay ở không xa.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "How far away is the airport?",
+          "ipa": null,
+          "translation": "Sân bay cách đây bao xa?",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "The airport is in Osaka Bay.",
+          "ipa": null,
+          "translation": "Sân bay này tại vịnh Osaka.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "The airplane landed at Narita Airport.",
+          "ipa": null,
+          "translation": "Chiếc phi cơ hạ cánh trên sân bay Narita.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "The airport is close at hand.",
+          "ipa": null,
+          "translation": "Sân bay ở không xa.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Where do the airport buses leave from?",
+          "ipa": null,
+          "translation": "Xe buýt sân bay khởi hành từ đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "Where do I get an airport bus?",
+          "ipa": null,
+          "translation": "Tôi có thể tìm một chiếc xe buýt đưa đón cho sân bay ở đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "How far is it to the airport?",
+          "ipa": null,
+          "translation": "Đến sân bay xa bao nhiêu?",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "He went to the airport in a hurry.",
+          "ipa": null,
+          "translation": "Anh ta gấp rút đến phi trường.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-at-the-hotel",
+      "title": "At the Hotel — Example Sentences",
+      "description": "Authentic example sentences for At the Hotel, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "at-the-hotel",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Where is our hotel?",
+          "ipa": null,
+          "translation": "Khách sạn của chúng ta ở đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "The Hilton Hotel, please.",
+          "ipa": null,
+          "translation": "Làm ơn chở tôi tới khách sạn Hilton.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "There's a hotel there.",
+          "ipa": null,
+          "translation": "Ở kia có một cái khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Where's the hotel reception?",
+          "ipa": null,
+          "translation": "Bàn đăng ký của khách sạn này ở đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "I'm at the hotel.",
+          "ipa": null,
+          "translation": "Bây giờ tôi đang ở khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "He finally reached the hotel.",
+          "ipa": null,
+          "translation": "Rốt cuộc anh ấy tới khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Please get me hotel security.",
+          "ipa": null,
+          "translation": "Làm ơn cho tôi gặp bảo vệ khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "My passport is at the hotel.",
+          "ipa": null,
+          "translation": "Hộ chiếu của tôi đang ở khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Where in the hotel is reception?",
+          "ipa": null,
+          "translation": "Bàn đăng ký của khách sạn này ở đâu?",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "He's at the hotel now.",
+          "ipa": null,
+          "translation": "Anh ấy đang ở khách sạn.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "Leave the room.",
+          "ipa": null,
+          "translation": "Ra khỏi phòng đi.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Sweep my room.",
+          "ipa": null,
+          "translation": "Hãy quét phòng tôi.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-shopping-for-clothes",
+      "title": "Shopping for Clothes — Example Sentences",
+      "description": "Authentic example sentences for Shopping for Clothes, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "shopping-for-clothes",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Do you enjoy buying clothes?",
+          "ipa": null,
+          "translation": "Bạn có thích mua sắm quần áo không?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "Where do you buy clothes?",
+          "ipa": null,
+          "translation": "Ấy mua bộ đồ này ở đâu thế?",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "I will never buy clothes secondhand.",
+          "ipa": null,
+          "translation": "Tôi sẽ không bao giờ mua quần áo dùng rồi.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "She is going to the shopping center to buy clothes.",
+          "ipa": null,
+          "translation": "Cô ấy đang đi đến trung tâm mua sắm để mua quần áo.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "Women love buying new clothes.",
+          "ipa": null,
+          "translation": "Phụ nữ thích mua quần áo mới.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "I can’t decide whether to buy shoes or clothes.",
+          "ipa": null,
+          "translation": "Tôi không thể quyết định được liệu sẽ mua giày hay quần áo.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "What kind of clothes are you going to buy?",
+          "ipa": null,
+          "translation": "Bạn định mua loại quần áo nào?",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "Try on this sweater.",
+          "ipa": null,
+          "translation": "Hãy thử mặc chiếc áo len này xem.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "\"I'm in a terrible hurry... for reasons I can't say,\" Dima replied to the woman. \"Please, just let me try on that suit there.\"",
+          "ipa": null,
+          "translation": "\"Tôi đang cực kỳ vội... vì những lý do tôi không thể nói ra,\" Dima trả lời người phụ nữ. \"Hãy vui lòng để tôi thử bộ đồ đó.\"",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "May I try this on?",
+          "ipa": null,
+          "translation": "Tôi mặc thử đồ này được không ?",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "May I try it on?",
+          "ipa": null,
+          "translation": "Tôi có thể mặc thử cái đó có được không?",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Try this on. It's your size.",
+          "ipa": null,
+          "translation": "Mặc thử đi. Size này vừa với bạn nè.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-at-the-doctor-s",
+      "title": "At the Doctor's — Example Sentences",
+      "description": "Authentic example sentences for At the Doctor's, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "at-the-doctor-s",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "They're doctors.",
+          "ipa": null,
+          "translation": "Họ là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "We're doctors.",
+          "ipa": null,
+          "translation": "Chúng tôi là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "They are doctors.",
+          "ipa": null,
+          "translation": "Họ là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Doctor, cure me.",
+          "ipa": null,
+          "translation": "Bác sĩ hãy cứu tôi với.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "We are doctors.",
+          "ipa": null,
+          "translation": "Chúng tôi là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "She's a doctor.",
+          "ipa": null,
+          "translation": "Cô ấy là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Mary is a doctor.",
+          "ipa": null,
+          "translation": "Mary là một bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "We just played doctor.",
+          "ipa": null,
+          "translation": "Bọn cháu chỉ chơi trò bác sĩ thôi mà.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "I am a doctor.",
+          "ipa": null,
+          "translation": "Tôi là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "She is a doctor.",
+          "ipa": null,
+          "translation": "Cô ấy là bác sĩ.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I feel sick.",
+          "ipa": null,
+          "translation": "Tôi cảm thấy xấu.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "I don't feel sick or anything.",
+          "ipa": null,
+          "translation": "Tôi không cảm thấy ốm hay gì đâu.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-weather-and-seasons",
+      "title": "Weather & Seasons — Example Sentences",
+      "description": "Authentic example sentences for Weather & Seasons, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "weather-and-seasons",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Was the weather nice?",
+          "ipa": null,
+          "translation": "Thời tiết lúc đó có tốt không?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "I hate this weather.",
+          "ipa": null,
+          "translation": "Tôi rất ghét cái thời tiết này.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "The weather is bad.",
+          "ipa": null,
+          "translation": "Thời tiết xấu.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "The weather is good.",
+          "ipa": null,
+          "translation": "Thời tiết đẹp.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "The weather is hot.",
+          "ipa": null,
+          "translation": "Trời nóng",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "The weather is cold.",
+          "ipa": null,
+          "translation": "Lạnh.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Tom can control the weather.",
+          "ipa": null,
+          "translation": "Tom có thể điều khiển thời tiết.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "After rain comes nice weather.",
+          "ipa": null,
+          "translation": "Sau cơn mưa trời lại sáng.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "The weather is really great!",
+          "ipa": null,
+          "translation": "Thời tiết thật đẹp!",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "The weather suddenly got warmer.",
+          "ipa": null,
+          "translation": "Thời tiết đã ấm lên đột ngột.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "It's sunny.",
+          "ipa": null,
+          "translation": "Trời nắng.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "The weather is sunny and nice today.",
+          "ipa": null,
+          "translation": "Hôm nay thời tiết nắng đẹp.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-jobs-and-occupations",
+      "title": "Jobs & Occupations — Example Sentences",
+      "description": "Authentic example sentences for Jobs & Occupations, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "jobs-and-occupations",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Find a job!",
+          "ipa": null,
+          "translation": "Hãy tìm một công việc đi.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "I changed jobs.",
+          "ipa": null,
+          "translation": "Tôi đã nhảy việc.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "Find a job.",
+          "ipa": null,
+          "translation": "Hãy tìm một công việc đi.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "I have another job.",
+          "ipa": null,
+          "translation": "Tôi có một công việc khác.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "I have two jobs.",
+          "ipa": null,
+          "translation": "Tôi có hai công việc.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "I like that job.",
+          "ipa": null,
+          "translation": "Tôi thích công việc đấy.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "I want that job.",
+          "ipa": null,
+          "translation": "Tôi muốn công việc đấy.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "How's the job?",
+          "ipa": null,
+          "translation": "Công việc thế nào?",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Mary found a job.",
+          "ipa": null,
+          "translation": "Mary đã tìm được việc.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "I need a job.",
+          "ipa": null,
+          "translation": "Tôi cần một công việc.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "What does your father work as?",
+          "ipa": null,
+          "translation": "Bố bạn đang làm nghề gì?",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "I worked as hard as possible.",
+          "ipa": null,
+          "translation": "Tôi đã làm việc chăm chỉ nhất có thể.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-job-interviews",
+      "title": "Job Interviews — Example Sentences",
+      "description": "Authentic example sentences for Job Interviews, with Vietnamese translations.",
+      "level": "intermediate",
+      "topicSlug": "job-interviews",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Everyone has strengths and weaknesses.",
+          "ipa": null,
+          "translation": "Người nào cũng có cái hay và cái dở của họ.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "Do you have confidence in your physical strength?",
+          "ipa": null,
+          "translation": "Bạn có tự tin vào thể lực của bản thân không?",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "He forced me onto the bed using physical strength.",
+          "ipa": null,
+          "translation": "Anh ấy ép tôi xuống gường bằng vũ lưc.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Belief in victory is the chain mail of strength.",
+          "ipa": null,
+          "translation": "Ăn chắc mặc bền.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "I don't have the strength to keep trying.",
+          "ipa": null,
+          "translation": "Tôi không có sức mạng để tiếp tục cố gắng",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "Masculine qualities in a woman are seen as strength, while feminine qualities in a man are viewed as weakness.",
+          "ipa": null,
+          "translation": "Những đặc điểm nam tính của một người phụ nữ được coi là điểm mạnh, còn những đặc điểm nam tính của mội người đàn ông thì lại bị coi là điểm yếu.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-phones-and-devices",
+      "title": "Phones & Devices — Example Sentences",
+      "description": "Authentic example sentences for Phones & Devices, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "phones-and-devices",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "Phone the police.",
+          "ipa": null,
+          "translation": "Gọi cho cảnh sát đi.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "I phoned Tom.",
+          "ipa": null,
+          "translation": "Tôi đã điện thoại cho Tom.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "My phone rang.",
+          "ipa": null,
+          "translation": "Điện thoại của tôi đổ chuông.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Tom phoned Mary.",
+          "ipa": null,
+          "translation": "Tom đã gọi điện thoại cho Mary.",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "Please phone him.",
+          "ipa": null,
+          "translation": "Xin hãy gọi điện cho ổng.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "I've phoned Tom.",
+          "ipa": null,
+          "translation": "Tôi đã gọi điện thoại cho Tom.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Tom lost his phone.",
+          "ipa": null,
+          "translation": "Tom đánh mất điện thoại.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "Emily broke her phone.",
+          "ipa": null,
+          "translation": "Emily làm hư điện thoại của cô ấy.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "I broke my phone.",
+          "ipa": null,
+          "translation": "Tôi đã làm hỏng điện thoại.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "Who answered the phone?",
+          "ipa": null,
+          "translation": "Ai đã trả lời điện thoại vậy?",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I'm in charge.",
+          "ipa": null,
+          "translation": "Tôi đang phụ trách",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Tom denied all the charges.",
+          "ipa": null,
+          "translation": "Tom chối bỏ mọi lời cáo buộc.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-artificial-intelligence",
+      "title": "Artificial Intelligence — Example Sentences",
+      "description": "Authentic example sentences for Artificial Intelligence, with Vietnamese translations.",
+      "level": "advanced",
+      "topicSlug": "artificial-intelligence",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "AI means Artificial Intelligence.",
+          "ipa": null,
+          "translation": "AI là Trí tuệ nhân tạo.",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "Artificial intelligence makes things easier.",
+          "ipa": null,
+          "translation": "Trí tuệ nhân tạo làm mọi thứ dễ dàng hơn.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "AI stands for artificial intelligence.",
+          "ipa": null,
+          "translation": "AI là Trí tuệ nhân tạo.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "Will artificial intelligence make these jobs disappear?",
+          "ipa": null,
+          "translation": "Liệu những công việc này có thể bị trí tuệ nhân tạo thay thế không?",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "Will artificial intelligence grow to kill humankind?",
+          "ipa": null,
+          "translation": "Liệu trí tuệ nhân tạo sau này có huỷ diệt nhân loại không?",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "There's no such thing as Artificial Intelligence.",
+          "ipa": null,
+          "translation": "Không có cái gọi là trí tuệ nhân tạo.",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Will these jobs be replaced by artificial intelligence?",
+          "ipa": null,
+          "translation": "Liệu những công việc này có thể bị trí tuệ nhân tạo thay thế không?",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "This isn't Leon's actual voice. It's artificial intelligence.",
+          "ipa": null,
+          "translation": "Đó không phải giọng thật của Leon. Nó là trí tuệ nhân tạo.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Maybe someday, artificial intelligence will create new languages for humans to use.",
+          "ipa": null,
+          "translation": "Có lẽ một ngày nào đó, trí tuệ nhân tạo sẽ tạo ra những ngôn ngữ mới để con người sử dụng.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "Benedito's work has the potential to advance the field of artificial intelligence.",
+          "ipa": null,
+          "translation": "Công trình của Benedito có tiềm năng thúc đẩy lĩnh vực trí tuệ nhân tạo.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I'm not a robot.",
+          "ipa": null,
+          "translation": "Tôi không phải là robot.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "Robots can withstand dangerous conditions.",
+          "ipa": null,
+          "translation": "Robot có thể hoạt động trong điều kiện nguy hiểm.",
+          "audioUrl": null
+        }
+      ]
+    },
+    {
+      "slug": "tatoeba-hobbies-and-free-time",
+      "title": "Hobbies & Free Time — Example Sentences",
+      "description": "Authentic example sentences for Hobbies & Free Time, with Vietnamese translations.",
+      "level": "beginner",
+      "topicSlug": "hobbies-and-free-time",
+      "source": "Tatoeba (CC BY 2.0 FR)",
+      "externalUrl": null,
+      "mediaKind": null,
+      "sentences": [
+        {
+          "order": 1,
+          "text": "What is your hobby?",
+          "ipa": null,
+          "translation": "Sở thích của bạn là gì?",
+          "audioUrl": null
+        },
+        {
+          "order": 2,
+          "text": "You need a hobby.",
+          "ipa": null,
+          "translation": "Bạn cần một sở thích.",
+          "audioUrl": null
+        },
+        {
+          "order": 3,
+          "text": "That's my hobby.",
+          "ipa": null,
+          "translation": "Đó là sở thích của tui.",
+          "audioUrl": null
+        },
+        {
+          "order": 4,
+          "text": "What are your hobbies?",
+          "ipa": null,
+          "translation": "Sở thích của bạn là gì?",
+          "audioUrl": null
+        },
+        {
+          "order": 5,
+          "text": "My hobby is reading.",
+          "ipa": null,
+          "translation": "Sở thích của tôi là đọc sách.",
+          "audioUrl": null
+        },
+        {
+          "order": 6,
+          "text": "What's your hobby?",
+          "ipa": null,
+          "translation": "Sở thích của bạn là gì?",
+          "audioUrl": null
+        },
+        {
+          "order": 7,
+          "text": "Swimming is my hobby.",
+          "ipa": null,
+          "translation": "Bơi lội là sở thích của tôi.",
+          "audioUrl": null
+        },
+        {
+          "order": 8,
+          "text": "My hobby is fishing.",
+          "ipa": null,
+          "translation": "Sở thích của tôi là câu cá.",
+          "audioUrl": null
+        },
+        {
+          "order": 9,
+          "text": "Her hobby is collecting stamps.",
+          "ipa": null,
+          "translation": "Sở thích của cô ấy là sưu tầm tem.",
+          "audioUrl": null
+        },
+        {
+          "order": 10,
+          "text": "My hobby is collecting stamps.",
+          "ipa": null,
+          "translation": "Thú riêng của tôi là sưu tầm tem.",
+          "audioUrl": null
+        },
+        {
+          "order": 11,
+          "text": "I have very little free time.",
+          "ipa": null,
+          "translation": "Tôi có rất ít thời gian rảnh.",
+          "audioUrl": null
+        },
+        {
+          "order": 12,
+          "text": "In my free time, I'm a poet.",
+          "ipa": null,
+          "translation": "Khi tôi rảnh rỗi, tôi là nhà thơ.",
+          "audioUrl": null
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "word": "nice",
+      "meaningVn": "đẹp, thú vị, dễ chịu",
+      "meaningEn": "Niceness.",
+      "ipa": "/naɪs/",
+      "synonyms": ["charming", "delightful", "friendly", "kind", "lovely", "pleasant"],
+      "exampleSentences": ["Nice to meet you."],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nice-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "meet",
+      "meaningVn": "gặp, gặp gỡ",
+      "meaningEn": "A sports competition, especially for track and field (a track meet) or swimming (a swim meet).",
+      "ipa": "/miːt/",
+      "synonyms": [],
+      "exampleSentences": ["Nice to meet you."],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/meet-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "thanks",
+      "meaningVn": "cảm ơn",
+      "meaningEn": "An expression of appreciation; a thought.",
+      "ipa": "/θæŋks/",
+      "synonyms": [],
+      "exampleSentences": ["\"How do you do, Mr James?\" \"Fine, thanks for asking. Nice to meet you.\""],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thanks-us.ogg",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "asking",
+      "meaningVn": "Hỏi",
+      "meaningEn": "To request (information, or an answer to a question).",
+      "ipa": "/ˈaskɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["\"How do you do, Mr James?\" \"Fine, thanks for asking. Nice to meet you.\""],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/asking-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "people",
+      "meaningVn": "người",
+      "meaningEn": "Used as plural of person; a body of human beings considered generally or collectively; a group of two or more persons.",
+      "ipa": "/ˈpiːpəl/",
+      "synonyms": ["citizenry", "commoners", "populace", "collective", "community", "congregation"],
+      "exampleSentences": ["It's rare to meet nice people like you."],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/people-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hassan",
+      "meaningVn": "Đà Nẵng",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["My name is Hassan."],
+      "topicSlug": "greetings-and-introductions",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sisters",
+      "meaningVn": "chị em mình",
+      "meaningEn": "A daughter of the same parents as another person; a female sibling.",
+      "ipa": "/ˈsɪstəz/",
+      "synonyms": ["affiliate", "affiliated", "charge nurse", "darling", "dear", "lady"],
+      "exampleSentences": ["Tom has sisters."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sisters-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "every",
+      "meaningVn": "mỗi, mọi",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["My family goes skiing every winter."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "together",
+      "meaningVn": "cùng nhau",
+      "meaningEn": "Coherent; well organized.",
+      "ipa": "/təˈɡɛð.ə(ɹ)/",
+      "synonyms": ["at the same time", "concurrently", "collectively", "jointly"],
+      "exampleSentences": ["Every evening, my family has dinner together."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/together-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "earliest",
+      "meaningVn": "Cũ nhất",
+      "meaningEn": "At a time in advance of the usual or expected event.",
+      "ipa": "/ˈɜː.li.ɪst/",
+      "synonyms": ["first", "premature", "prematurely"],
+      "exampleSentences": ["She gets up the earliest in my family."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/earliest-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "where's",
+      "meaningVn": "ở đâu",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["Where's my family?"],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "members",
+      "meaningVn": "thành viên",
+      "meaningEn": "One who officially belongs to a group.",
+      "ipa": "/ˈmɛmbəz/",
+      "synonyms": ["element", "limb", "lith", "pintle", "tarse", "premise"],
+      "exampleSentences": ["My family has four members."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/members-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "evening",
+      "meaningVn": "buổi chiều, tối",
+      "meaningEn": "The time of the day between dusk and night, when it gets dark.",
+      "ipa": "/ˈivnɪŋ/",
+      "synonyms": ["eve", "eventide", "undern"],
+      "exampleSentences": ["Every evening, my family has dinner together."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/evening-1-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "busiest",
+      "meaningVn": "bận rộn nhất",
+      "meaningEn": "To make somebody busy or active; to occupy.",
+      "ipa": null,
+      "synonyms": ["swamped"],
+      "exampleSentences": ["Mother is the busiest in my family."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "thinks",
+      "meaningVn": "nghĩ",
+      "meaningEn": "An act of thinking; consideration (of something).",
+      "ipa": "/θɪŋks/",
+      "synonyms": ["guess"],
+      "exampleSentences": ["My family thinks I'm rich."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thinks-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "skiing",
+      "meaningVn": "trượt tuyết",
+      "meaningEn": "To move on skis",
+      "ipa": "/ˈskiɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["My family goes skiing every winter."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "winter",
+      "meaningVn": "mùa đông",
+      "meaningEn": "Traditionally the fourth of the four seasons, typically regarded as being from December 23 to March 20 in continental regions of the Northern Hemisphere or the months of June, July and August in the Southern Hemisphere. It is the time when the sun is lowest in the sky, resulting in short days, and the time of year with the lowest atmospheric temperatures for the region.",
+      "ipa": "/ˈwɪntɚ/",
+      "synonyms": [],
+      "exampleSentences": ["My family goes skiing every winter."],
+      "topicSlug": "family-members",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/winter-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "morning",
+      "meaningVn": "buổi sáng",
+      "meaningEn": "The part of the day from dawn to noon.",
+      "ipa": "/ˈmɔːnɪŋ/",
+      "synonyms": ["forenoon", "yeender", "a.m."],
+      "exampleSentences": ["I eat breakfast every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/morning-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "every",
+      "meaningVn": "mỗi, mọi",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["I eat breakfast every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "walks",
+      "meaningVn": "đi bộ",
+      "meaningEn": "To move on the feet by alternately setting each foot (or pair or group of feet, in the case of animals with four or more feet) forward, with at least one foot on the ground at all times. Compare run.",
+      "ipa": "/wɑks/",
+      "synonyms": ["nicked", "pinched", "stolen", "full", "waulk", "acquitted"],
+      "exampleSentences": ["Tom walks his dog every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/walks-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "work",
+      "meaningVn": "Hoạt động",
+      "meaningEn": "(heading) Employment.",
+      "ipa": "/wɜːk/",
+      "synonyms": [],
+      "exampleSentences": ["I don't wanna go to work."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/work-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "breakfast",
+      "meaningVn": "bữa điếm tâm, bữa sáng",
+      "meaningEn": "The first meal of the day, usually eaten in the morning.",
+      "ipa": "/ˈbɹɛkfəst/",
+      "synonyms": ["break one's fast"],
+      "exampleSentences": ["I eat breakfast every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/breakfast-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "delivers",
+      "meaningVn": "giao hàng",
+      "meaningEn": "To set free from restraint or danger.",
+      "ipa": null,
+      "synonyms": ["come through", "come up with the goods", "outbring", "utter", "free", "loose"],
+      "exampleSentences": ["The postman delivers letters every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "students",
+      "meaningVn": "sinh viên",
+      "meaningEn": "A person who studies or learns about a particular subject.",
+      "ipa": "/ˈstjuːdn̩ts/",
+      "synonyms": ["candlewaster", "devotee", "disciple", "scholar"],
+      "exampleSentences": ["The students go to school every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/students-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "postman",
+      "meaningVn": "người phát thư",
+      "meaningEn": "Someone (implied male) who delivers the post (mail) to, and/or collects the post from, residential or commercial addresses, or from public mailboxes.",
+      "ipa": "/ˈpəʊsmən/",
+      "synonyms": ["mailman"],
+      "exampleSentences": ["The postman delivers letters every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/postman-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "letters",
+      "meaningVn": "chữ cái",
+      "meaningEn": "A symbol in an alphabet.",
+      "ipa": "/ˈlɛtəz/",
+      "synonyms": ["bookstaff", "bookstave"],
+      "exampleSentences": ["The postman delivers letters every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/letters-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "station",
+      "meaningVn": "trạm",
+      "meaningEn": "A stopping place.",
+      "ipa": "/ˈsteɪʃən/",
+      "synonyms": ["channel", "sta", "stn", "farm", "ranch", "base"],
+      "exampleSentences": ["Amy walks to the station every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/station-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "opened",
+      "meaningVn": "đã mở",
+      "meaningEn": "To make something accessible or allow for passage by moving from a shut position.",
+      "ipa": "/ˈəʊpənd/",
+      "synonyms": ["raise", "bare", "start", "unseal"],
+      "exampleSentences": ["The door is opened every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/opened-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "school",
+      "meaningVn": "đàn cá",
+      "meaningEn": "(collective) A group of fish or a group of marine mammals such as porpoises, dolphins, or whales.",
+      "ipa": "/skuːl/",
+      "synonyms": ["shoal"],
+      "exampleSentences": ["The students go to school every morning."],
+      "topicSlug": "daily-routines",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/school-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "many",
+      "meaningVn": "nhiều",
+      "meaningEn": "A multitude; a great aggregate; a mass of people; the generality; the common herd.",
+      "ipa": "/ˈmæni/",
+      "synonyms": ["abundance", "buttload", "deal", "crowd", "mob", "multiple"],
+      "exampleSentences": ["How many times?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/many-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "prefers",
+      "meaningVn": "thích",
+      "meaningEn": "To be in the habit of choosing something rather than something else; to favor; to like better.",
+      "ipa": null,
+      "synonyms": ["forechoose"],
+      "exampleSentences": ["He prefers odd numbers."],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "numbers",
+      "meaningVn": "số lượng",
+      "meaningEn": "An abstract entity used to describe quantity.",
+      "ipa": "/ˈnʌmbəz/",
+      "synonyms": ["numeral", "rime", "scalar"],
+      "exampleSentences": ["He prefers odd numbers."],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/numbers-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "kilometers",
+      "meaningVn": "km",
+      "meaningEn": "(official BIPM spelling, Australian, New Zealand, Irish, Indian and South African spelling) An SI unit of length equal to 103 metres. Symbol: km",
+      "ipa": null,
+      "synonyms": ["SI", "km", "klick"],
+      "exampleSentences": ["How many kilometers did you run?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "kilograms",
+      "meaningVn": "Ki-lô-gam",
+      "meaningEn": "In the International System of Units, the base unit of mass; conceived of as the mass of one litre of water, but now defined by taking the fixed numerical value of the Planck constant h to be 6.626 070 15 × 10-34 when expressed in units of kg⋅m2⋅s−1. Symbol: kg",
+      "ipa": null,
+      "synonyms": ["kg", "kilo"],
+      "exampleSentences": ["How many kilograms did you lose?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "children",
+      "meaningVn": "trẻ em",
+      "meaningEn": "A person who has not yet reached adulthood, whether natural (puberty), cultural (initiation), or legal (majority)",
+      "ipa": "[ˈt͡ʃʊld̠ɹ̠ ̝ʷən]",
+      "synonyms": [],
+      "exampleSentences": ["How many children are there?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/children-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "letters",
+      "meaningVn": "chữ cái",
+      "meaningEn": "A symbol in an alphabet.",
+      "ipa": "/ˈlɛtəz/",
+      "synonyms": ["bookstaff", "bookstave"],
+      "exampleSentences": ["How many letters do you have?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/letters-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "dollars",
+      "meaningVn": "Đô la",
+      "meaningEn": "Official designation for currency in some parts of the world, including Canada, the United States, Australia, New Zealand, Hong Kong, and elsewhere. Its symbol is $.",
+      "ipa": "/ˈdɒləz/",
+      "synonyms": [],
+      "exampleSentences": ["How many yen is four dollars?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dollars-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "people",
+      "meaningVn": "người",
+      "meaningEn": "Used as plural of person; a body of human beings considered generally or collectively; a group of two or more persons.",
+      "ipa": "/ˈpiːpəl/",
+      "synonyms": ["citizenry", "commoners", "populace", "collective", "community", "congregation"],
+      "exampleSentences": ["How many people were killed?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/people-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "killed",
+      "meaningVn": "Giết người",
+      "meaningEn": "To put to death; to extinguish the life of.",
+      "ipa": "/kɪld/",
+      "synonyms": ["annihilate", "assassinate", "bump off", "dispatch", "ice", "knock off"],
+      "exampleSentences": ["How many people were killed?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/killed-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "times",
+      "meaningVn": "lần",
+      "meaningEn": "The inevitable progression into the future with the passing of present and past events.",
+      "ipa": "/tɑemz/",
+      "synonyms": ["set", "clock"],
+      "exampleSentences": ["How many times?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/times-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "kilos",
+      "meaningVn": "Kilô",
+      "meaningEn": "In the International System of Units, the base unit of mass; conceived of as the mass of one litre of water, but now defined by taking the fixed numerical value of the Planck constant h to be 6.626 070 15 × 10-34 when expressed in units of kg⋅m2⋅s−1. Symbol: kg",
+      "ipa": "/ˈkiːləʊz/",
+      "synonyms": ["kg", "kilo"],
+      "exampleSentences": ["How many kilos do you weigh?"],
+      "topicSlug": "numbers-and-counting",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "food",
+      "meaningVn": "đồ ăn, món ăn",
+      "meaningEn": "Any solid substance that can be consumed by living organisms, especially by eating, in order to sustain life.",
+      "ipa": "/fuːd/",
+      "synonyms": ["belly-timber", "chow", "comestible", "eats", "feed", "fodder"],
+      "exampleSentences": ["Food arrived."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/food-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "expensive",
+      "meaningVn": "đắt",
+      "meaningEn": "Given to expending a lot of money; profligate, lavish.",
+      "ipa": "/ɛkˈspɛnsɪv/",
+      "synonyms": [],
+      "exampleSentences": ["Dog food is expensive."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expensive-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "mediocre",
+      "meaningVn": "Tầm thường",
+      "meaningEn": "A person of minor significance, accomplishment or acclaim; a common and undistinguished person.",
+      "ipa": "/ˈmiːdɪˌəʊkə/",
+      "synonyms": ["common", "commonplace", "ordinary"],
+      "exampleSentences": ["The food was mediocre."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mediocre-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "arrived",
+      "meaningVn": "đến",
+      "meaningEn": "To reach; to get to a certain place.",
+      "ipa": "/əˈɹaɪvd/",
+      "synonyms": [],
+      "exampleSentences": ["Food arrived."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/arrived-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "where's",
+      "meaningVn": "ở đâu",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["Where's the food?"],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "chinese",
+      "meaningVn": "Tiếng Trung Quốc",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["I like Chinese food."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "bought",
+      "meaningVn": "mua",
+      "meaningEn": "To obtain (something) in exchange for money or goods",
+      "ipa": "/bɔːt/",
+      "synonyms": ["make a buy", "accept", "believe", "swallow", "take on", "cheap"],
+      "exampleSentences": ["Tom bought food."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bought-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sells",
+      "meaningVn": "bán",
+      "meaningEn": "An act of selling.",
+      "ipa": "/sɛlz/",
+      "synonyms": [],
+      "exampleSentences": ["She sells food."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "love",
+      "meaningVn": "yêu",
+      "meaningEn": "Strong affection.",
+      "ipa": "/lʊv/",
+      "synonyms": ["baby", "darling", "honey", "love bird", "lover", "pet"],
+      "exampleSentences": ["I love food."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/love-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "fast",
+      "meaningVn": "nhanh",
+      "meaningEn": "A train that calls at only some stations it passes between its origin and destination, typically just the principal stations",
+      "ipa": "/fɑːst/",
+      "synonyms": ["express", "express train", "quick", "rapid", "speedy", "swift"],
+      "exampleSentences": ["I like fast food."],
+      "topicSlug": "common-foods",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fast-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "restaurant",
+      "meaningVn": "nhà hàng , hiệu ăn",
+      "meaningEn": "An eating establishment in which diners are served food, usually by waiters at their tables but sometimes (as in a fast food restaurant) at a counter.",
+      "ipa": "/ˈɹɛs.t(ə).ɹ(ə)nt/",
+      "synonyms": [],
+      "exampleSentences": ["The restaurant is full."],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/restaurant-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "father",
+      "meaningVn": "cha",
+      "meaningEn": "A (generally human) male who begets a child.",
+      "ipa": "/ˈfaːðə/",
+      "synonyms": ["granddaddy", "mother"],
+      "exampleSentences": ["My father has a restaurant."],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/father-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "originates",
+      "meaningVn": "khởi nguồn",
+      "meaningEn": "To cause to be, to bring into existence; to produce, initiate.",
+      "ipa": null,
+      "synonyms": ["begin", "initiate", "spring to life", "take shape"],
+      "exampleSentences": [
+        "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order."
+      ],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "originally",
+      "meaningVn": "một cách sáng tạo, mới mẻ, độc đáo; khởi đầu, đầu tiên",
+      "meaningEn": "As it was in the beginning.",
+      "ipa": "/əˈɹɪdʒnəli/",
+      "synonyms": ["innovatively", "outside the box", "at first", "initially", "start"],
+      "exampleSentences": [
+        "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order."
+      ],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/originally-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "canceling",
+      "meaningVn": "Đang hủy ...",
+      "meaningEn": "To cross out something with lines etc.",
+      "ipa": null,
+      "synonyms": ["blacklist", "belay", "take care of"],
+      "exampleSentences": [
+        "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order."
+      ],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "industry",
+      "meaningVn": "lĩnh vực",
+      "meaningEn": "The tendency to work persistently. Diligence.",
+      "ipa": "/ˈɪndəstɹi/",
+      "synonyms": ["field", "sector", "manufacturing", "application", "diligence"],
+      "exampleSentences": [
+        "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order."
+      ],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/industry-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "service",
+      "meaningVn": "dịch vụ",
+      "meaningEn": "An act of being of assistance to someone.",
+      "ipa": "/ˈsɜːvɪs/",
+      "synonyms": ["be with", "go to bed with", "sleep with", "attend", "wait on"],
+      "exampleSentences": [
+        "The English verb \"86\" originates in the food service industry, and referred originally to canceling an order."
+      ],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "windows",
+      "meaningVn": "Các Cửa Sổ",
+      "meaningEn": "The inedible parts of a grain-producing plant.",
+      "ipa": "/ˈwɪndəʊz/",
+      "synonyms": ["window"],
+      "exampleSentences": ["The restaurant has yellow windows."],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/windows-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "ceiling",
+      "meaningVn": "trần bay",
+      "meaningEn": "To line or finish (a surface, such as a wall), with plaster, stucco, thin boards, or similar.",
+      "ipa": "/ˈsiːlɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["The restaurant has a white ceiling."],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ceiling-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "waiters",
+      "meaningVn": "Bồi bàn",
+      "meaningEn": "A male or female attendant who serves customers at their tables in a restaurant, café or similar.",
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["We're waiters."],
+      "topicSlug": "ordering-at-a-restaurant",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "coffee",
+      "meaningVn": "cà phê",
+      "meaningEn": "A beverage made by infusing the beans of the coffee plant in hot water.",
+      "ipa": "/ˈkɑ.fi/",
+      "synonyms": [],
+      "exampleSentences": ["Coffee?"],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/coffee-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "cafe",
+      "meaningVn": "quán cà phê",
+      "meaningEn": "A convenience store, originally one that sold coffee and similar basic items.",
+      "ipa": "/ˈkæfeɪ/",
+      "synonyms": ["caff", "coffee shop", "coffeehouse", "tea shop"],
+      "exampleSentences": ["Is the cafe open?"],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cafe-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "coffee's",
+      "meaningVn": "cà phê",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["Coffee's ready."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "morning",
+      "meaningVn": "buổi sáng",
+      "meaningEn": "The part of the day from dawn to noon.",
+      "ipa": "/ˈmɔːnɪŋ/",
+      "synonyms": ["forenoon", "yeender", "a.m."],
+      "exampleSentences": ["\"Good morning.\" \"Coffee.\""],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/morning-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sitting",
+      "meaningVn": "lượt ngồi",
+      "meaningEn": "A period during which one is seated for a specific purpose.",
+      "ipa": "/ˈsɪtɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["I'm sitting outside, at a cafe."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sitting-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "outside",
+      "meaningVn": "bể ngoài,ở ngoài; ngoài",
+      "meaningEn": "The part of something that faces out; the outer surface.",
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["I'm sitting outside, at a cafe."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "ready",
+      "meaningVn": "sẵn sàng",
+      "meaningEn": "Ready money; cash",
+      "ipa": "/ˈɹɛdi/",
+      "synonyms": ["yark", "dexterous", "easy", "expert", "prompt", "good to go"],
+      "exampleSentences": ["Coffee's ready."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ready-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sells",
+      "meaningVn": "bán",
+      "meaningEn": "An act of selling.",
+      "ipa": "/sɛlz/",
+      "synonyms": [],
+      "exampleSentences": ["Tom sells coffee."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "smell",
+      "meaningVn": "ngửi",
+      "meaningEn": "A sensation, pleasant or unpleasant, detected by inhaling air (or, the case of water-breathing animals, water) carrying airborne molecules of a substance.",
+      "ipa": "/smɛl/",
+      "synonyms": ["olfaction", "sense of smell", "detect", "sense", "pong", "reek"],
+      "exampleSentences": ["I smell coffee."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/smell-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "good",
+      "meaningVn": "tốt, hay, tuyệt; điểu tốt, điều thiện",
+      "meaningEn": "(of people)",
+      "ipa": "/ɡʊ(d)/",
+      "synonyms": ["accomplished", "all right", "decent", "not bad", "satisfactory", "well"],
+      "exampleSentences": ["\"Good morning.\" \"Coffee.\""],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/good-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "life",
+      "meaningVn": "đời, sự sống",
+      "meaningEn": "The state of organisms preceding their death, characterized by biological processes such as metabolism and reproduction and distinguishing them from inanimate objects; the state of being alive and living.",
+      "ipa": "/laɪf/",
+      "synonyms": ["existence", "experience", "time"],
+      "exampleSentences": ["Coffee is life."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/life-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sell",
+      "meaningVn": "bán",
+      "meaningEn": "An act of selling.",
+      "ipa": "/sɛl/",
+      "synonyms": [],
+      "exampleSentences": ["I sell coffee."],
+      "topicSlug": "at-a-cafe",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sell-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "next",
+      "meaningVn": "sau",
+      "meaningEn": "The one that follows after this one.",
+      "ipa": "/nɛkst/",
+      "synonyms": [],
+      "exampleSentences": ["He lives next to me."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/next-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "house",
+      "meaningVn": "nhà, căn nhà, toàn nhà",
+      "meaningEn": "A structure built or serving as an abode of human beings.",
+      "ipa": "/hʌʊs/",
+      "synonyms": ["shop"],
+      "exampleSentences": ["My house is next to his house."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/house-1-ca.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "direction",
+      "meaningVn": "điểu khiến, chỉ huy",
+      "meaningEn": "A theoretical line (physically or mentally) followed from a point of origin or towards a destination. May be relative (e.g. up, left, outbound, dorsal), geographical (e.g. north), rotational (e.g. clockwise), or with respect to an object or location (e.g. toward Boston).",
+      "ipa": "/d(a)ɪˈɹɛk.ʃən/",
+      "synonyms": [],
+      "exampleSentences": ["Which direction will he choose?"],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/direction-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "standing",
+      "meaningVn": "đứng",
+      "meaningEn": "(heading) To position or be positioned physically.",
+      "ipa": "/ˈstændɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["Tom is standing right next to Mary."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/standing-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "station",
+      "meaningVn": "trạm",
+      "meaningEn": "A stopping place.",
+      "ipa": "/ˈsteɪʃən/",
+      "synonyms": ["channel", "sta", "stn", "farm", "ranch", "base"],
+      "exampleSentences": ["How do I get to the train station?"],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/station-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hanging",
+      "meaningVn": "Treo cổ",
+      "meaningEn": "To be or remain suspended.",
+      "ipa": "/ˈhæŋɪŋ/",
+      "synonyms": ["put up", "gallows", "swing", "take a ride to Tyburn", "dangle", "suspended"],
+      "exampleSentences": ["The second mirror is hanging next to the door."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hanging-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "stream",
+      "meaningVn": "dỏng suối",
+      "meaningEn": "A small river; a large creek; a body of moving water confined by banks.",
+      "ipa": "/stɹiːm/",
+      "synonyms": ["beck", "brook", "burn"],
+      "exampleSentences": ["He sat next to the stream."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stream-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "second",
+      "meaningVn": "giây",
+      "meaningEn": "Something that is number two in a series.",
+      "ipa": "/ˈsɛkɪnd/",
+      "synonyms": ["seconder", "twoth", "other"],
+      "exampleSentences": ["The second mirror is hanging next to the door."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/second-1-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "mirror",
+      "meaningVn": "gương",
+      "meaningEn": "A smooth surface, usually made of glass with reflective material painted on the underside, that reflects light so as to give an image of what is in front of it.",
+      "ipa": "/ˈmɘ.ɹɘ/",
+      "synonyms": ["glass", "looking glass"],
+      "exampleSentences": ["The second mirror is hanging next to the door."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mirror-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "choose",
+      "meaningVn": "lựa chọn",
+      "meaningEn": "To pick; to make the choice of; to select.",
+      "ipa": "/t͡ʃuːz/",
+      "synonyms": [],
+      "exampleSentences": ["Which direction will he choose?"],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/choose-1-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "train",
+      "meaningVn": "xe lửa; rèn luyện, đào tạo",
+      "meaningEn": "Elongated portion.",
+      "ipa": "/tɹeɪn/",
+      "synonyms": [],
+      "exampleSentences": ["How do I get to the train station?"],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/train-1-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "lives",
+      "meaningVn": "mạng",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["He lives next to me."],
+      "topicSlug": "directions-and-locations",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "airport",
+      "meaningVn": "sân bay",
+      "meaningEn": "An airfield (an area designated for the takeoff and landing of aircraft), including one or more runways and (for commercial airports) one or more passenger terminals.",
+      "ipa": "/ˈɛə.pɔːt/",
+      "synonyms": [],
+      "exampleSentences": ["I'm at the airport."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/airport-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "close",
+      "meaningVn": "đóng",
+      "meaningEn": "An end or conclusion.",
+      "ipa": "/kləʊz/",
+      "synonyms": ["end", "finale", "narrow", "shut", "close off", "close up"],
+      "exampleSentences": ["The airport is close by."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/close-1-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "airplane",
+      "meaningVn": "máy bay",
+      "meaningEn": "A powered heavier-than-air aircraft with fixed wings.",
+      "ipa": "/ˈɛəpleɪn/",
+      "synonyms": [],
+      "exampleSentences": ["The airplane landed at Narita Airport."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/airplane-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "landed",
+      "meaningVn": "thuộc về đất",
+      "meaningEn": "To descend to a surface, especially from the air.",
+      "ipa": "/ˈlændɪd/",
+      "synonyms": [],
+      "exampleSentences": ["The airplane landed at Narita Airport."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/landed-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "buses",
+      "meaningVn": "Xe buýt",
+      "meaningEn": "A motor vehicle for transporting large numbers of people along roads.",
+      "ipa": null,
+      "synonyms": ["busbar", "digit trunk", "electrical bus", "autobus", "coach", "loser cruiser"],
+      "exampleSentences": ["Where do the airport buses leave from?"],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "leave",
+      "meaningVn": "thai sản",
+      "meaningEn": "To have a consequence or remnant.",
+      "ipa": "/liːv/",
+      "synonyms": ["depart", "forget", "leave behind"],
+      "exampleSentences": ["Where do the airport buses leave from?"],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/leave-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hurry",
+      "meaningVn": "vội",
+      "meaningEn": "Rushed action.",
+      "ipa": "/ˈhʌ.ɹi/",
+      "synonyms": [],
+      "exampleSentences": ["He went to the airport in a hurry."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hurry-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "away",
+      "meaningVn": "rời xa",
+      "meaningEn": "To depart; to go to another place.",
+      "ipa": "/əˈweɪ/",
+      "synonyms": ["at bay", "off"],
+      "exampleSentences": ["How far away is the airport?"],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/away-1-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hand",
+      "meaningVn": "bàn tay",
+      "meaningEn": "The part of the forelimb below the forearm or wrist in a human, and the corresponding part in many other animals.",
+      "ipa": "/hænd/",
+      "synonyms": ["manus", "paw"],
+      "exampleSentences": ["The airport is close at hand."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hand-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "went",
+      "meaningVn": "được phép bay vào.",
+      "meaningEn": "To move:",
+      "ipa": "/went/",
+      "synonyms": ["become", "change into", "turn", "cross", "draw", "drift"],
+      "exampleSentences": ["He went to the airport in a hurry."],
+      "topicSlug": "at-the-airport",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/went-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hotel",
+      "meaningVn": "khách sạn",
+      "meaningEn": "A large town house or mansion; a grand private residence, especially in France.",
+      "ipa": "/(h)əʊˈtɛl/",
+      "synonyms": [],
+      "exampleSentences": ["Where is our hotel?"],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hotel-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "reception",
+      "meaningVn": "tiếp nhận, đón tiếp",
+      "meaningEn": "The act of receiving.",
+      "ipa": "/ɹɪˈsɛp.ʃn̩/",
+      "synonyms": ["front desk"],
+      "exampleSentences": ["Where's the hotel reception?"],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reception-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "please",
+      "meaningVn": "làm vui lòng ; xin mời",
+      "meaningEn": "To make happy or satisfy; to give pleasure to.",
+      "ipa": "/pliːz/",
+      "synonyms": ["desire", "will", "satisfy"],
+      "exampleSentences": ["The Hilton Hotel, please."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/please-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "room",
+      "meaningVn": "phòng",
+      "meaningEn": "Opportunity or scope (to do something).",
+      "ipa": "/ɹuːm/",
+      "synonyms": ["chamber", "quarters", "elbow room", "legroom", "space", "rm"],
+      "exampleSentences": ["Leave the room."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "security",
+      "meaningVn": "an toàn",
+      "meaningEn": "The condition of not being threatened, especially physically, psychologically, emotionally, or financially.",
+      "ipa": "/sɪˈkjɔːɹəti/",
+      "synonyms": ["safety", "protection", "guarantee", "surety"],
+      "exampleSentences": ["Please get me hotel security."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/security-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "passport",
+      "meaningVn": "hộ chiếu",
+      "meaningEn": "An official document normally used for international journeys, which proves the identity and nationality of the person for whom it was issued.",
+      "ipa": "/ˈpɑːspɔːt/",
+      "synonyms": [],
+      "exampleSentences": ["My passport is at the hotel."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/passport-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "there's",
+      "meaningVn": "có",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["There's a hotel there."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "where's",
+      "meaningVn": "ở đâu",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["Where's the hotel reception?"],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "finally",
+      "meaningVn": "cuối cùng, sau cùng",
+      "meaningEn": "At the end or conclusion; ultimately.",
+      "ipa": "/ˈfaɪ.nəl.i/",
+      "synonyms": ["completely", "thoroughly", "totally", "at last", "at length", "endly"],
+      "exampleSentences": ["He finally reached the hotel."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/finally-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "reached",
+      "meaningVn": "phải xử lý",
+      "meaningEn": "To extend, stretch, or thrust out (for example a limb or object held in the hand).",
+      "ipa": "/ɹiːtʃt/",
+      "synonyms": ["contact", "get hold of", "get in touch"],
+      "exampleSentences": ["He finally reached the hotel."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reached-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hilton",
+      "meaningVn": "Hilton.",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["The Hilton Hotel, please."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "leave",
+      "meaningVn": "thai sản",
+      "meaningEn": "To have a consequence or remnant.",
+      "ipa": "/liːv/",
+      "synonyms": ["depart", "forget", "leave behind"],
+      "exampleSentences": ["Leave the room."],
+      "topicSlug": "at-the-hotel",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/leave-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "clothes",
+      "meaningVn": "quần áo",
+      "meaningEn": "A woven fabric such as used in dressing, decorating, cleaning or other practical use.",
+      "ipa": "/kləʊ(ð)z/",
+      "synonyms": ["material", "stuff"],
+      "exampleSentences": ["Do you enjoy buying clothes?"],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clothes-1-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "buying",
+      "meaningVn": "Mua vào",
+      "meaningEn": "To obtain (something) in exchange for money or goods",
+      "ipa": "/ˈbaɪ.ɪŋ/",
+      "synonyms": ["make a buy", "accept", "believe", "swallow", "take on", "cheap"],
+      "exampleSentences": ["Do you enjoy buying clothes?"],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/buying-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "secondhand",
+      "meaningVn": "đồ cũ",
+      "meaningEn": "(of goods) Not new; previously owned and used by another.",
+      "ipa": null,
+      "synonyms": ["hand-me-down", "pre-owned", "used"],
+      "exampleSentences": ["I will never buy clothes secondhand."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "shopping",
+      "meaningVn": "mua sắm",
+      "meaningEn": "To visit stores or shops to browse or explore merchandise, especially with the intention of buying such merchandise.",
+      "ipa": "/ˈʃɒpɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["She is going to the shopping center to buy clothes."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "terrible",
+      "meaningVn": "khủng khiếp",
+      "meaningEn": "Dreadful; causing terror, alarm and fear; awesome",
+      "ipa": "/ˈtɛ.ɹə.bl̩/",
+      "synonyms": [],
+      "exampleSentences": [
+        "\"I'm in a terrible hurry... for reasons I can't say,\" Dima replied to the woman. \"Please, just let me try on that suit there.\""
+      ],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/terrible-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "whether",
+      "meaningVn": "có.. chăng",
+      "meaningEn": "Which of two.",
+      "ipa": "/ˈwɛðə(ɹ)/",
+      "synonyms": [],
+      "exampleSentences": ["I can’t decide whether to buy shoes or clothes."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/whether-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sweater",
+      "meaningVn": "kẻ bóc lột lao động",
+      "meaningEn": "A knitted jacket or jersey, usually of thick wool, worn by athletes before or after exercise.",
+      "ipa": "/ˈswetə/",
+      "synonyms": ["sweatshirt", "cardigan", "jersey", "jumper", "pullover", "wooly"],
+      "exampleSentences": ["Try on this sweater."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sweater-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "reasons",
+      "meaningVn": "LÝ DO",
+      "meaningEn": "A cause:",
+      "ipa": "/ˈɹiːzənz/",
+      "synonyms": ["motive", "rationale", "cause", "excuse"],
+      "exampleSentences": [
+        "\"I'm in a terrible hurry... for reasons I can't say,\" Dima replied to the woman. \"Please, just let me try on that suit there.\""
+      ],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reasons-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "replied",
+      "meaningVn": "Đã trả lời",
+      "meaningEn": "To give a written or spoken response, especially to a question, request, accusation or criticism; to answer.",
+      "ipa": "/ɹɪˈplaɪd/",
+      "synonyms": ["answer", "answer back", "counter", "follow up", "get back to", "react"],
+      "exampleSentences": [
+        "\"I'm in a terrible hurry... for reasons I can't say,\" Dima replied to the woman. \"Please, just let me try on that suit there.\""
+      ],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/replied-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "center",
+      "meaningVn": "ở giữa",
+      "meaningEn": "The point in the interior of a circle that is equidistant from all points on the circumference.",
+      "ipa": "/ˈsɛn.tə(ɹ)/",
+      "synonyms": ["middle", "midst", "center of gravity", "center of mass", "centroid", "midpoint"],
+      "exampleSentences": ["She is going to the shopping center to buy clothes."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "decide",
+      "meaningVn": "quyết định",
+      "meaningEn": "To resolve (a contest, problem, dispute, etc.); to choose, determine, or settle",
+      "ipa": "/dɪˈsaɪd/",
+      "synonyms": ["choose", "determine", "make up one's mind", "pick"],
+      "exampleSentences": ["I can’t decide whether to buy shoes or clothes."],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decide-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "please",
+      "meaningVn": "làm vui lòng ; xin mời",
+      "meaningEn": "To make happy or satisfy; to give pleasure to.",
+      "ipa": "/pliːz/",
+      "synonyms": ["desire", "will", "satisfy"],
+      "exampleSentences": [
+        "\"I'm in a terrible hurry... for reasons I can't say,\" Dima replied to the woman. \"Please, just let me try on that suit there.\""
+      ],
+      "topicSlug": "shopping-for-clothes",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/please-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "doctor",
+      "meaningVn": "bác sĩ y khoa, tiến sĩ",
+      "meaningEn": "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D.O., DPM, M.D., DMD, DDS, in the US or MBBS in the UK.",
+      "ipa": "/ˈdɒktə/",
+      "synonyms": ["GP", "doc", "family doctor", "general practitioner", "medic", "physician"],
+      "exampleSentences": ["Doctor, cure me."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/doctor-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "doctors",
+      "meaningVn": "Bác sĩ",
+      "meaningEn": "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D.O., DPM, M.D., DMD, DDS, in the US or MBBS in the UK.",
+      "ipa": "/ˈdɒktəz/",
+      "synonyms": ["GP", "doc", "family doctor", "general practitioner", "medic", "physician"],
+      "exampleSentences": ["They're doctors."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "feel",
+      "meaningVn": "cảm thấy",
+      "meaningEn": "A quality of an object experienced by touch.",
+      "ipa": "/fiːl/",
+      "synonyms": [],
+      "exampleSentences": ["I feel sick."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feel-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sick",
+      "meaningVn": "ốm, bệnh",
+      "meaningEn": "Sick people in general as a group.",
+      "ipa": "/sɪk/",
+      "synonyms": ["disturbed", "twisted", "warped", "ill", "not well", "poorly"],
+      "exampleSentences": ["I feel sick."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sick-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "anything",
+      "meaningVn": "việc gì, vật gì; bất cứ việc gì, vật gì",
+      "meaningEn": "Someone or something of importance.",
+      "ipa": "/ˈɛ.nə.θɪŋ/",
+      "synonyms": ["aught"],
+      "exampleSentences": ["I don't feel sick or anything."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/anything-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "they're",
+      "meaningVn": "Bọn xì ke ấy mà.",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["They're doctors."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "played",
+      "meaningVn": "được chơi",
+      "meaningEn": "To act in a manner such that one has fun; to engage in activities expressly for the purpose of recreation or entertainment.",
+      "ipa": "/pleɪd/",
+      "synonyms": ["defraud", "get it on", "have sex", "make out"],
+      "exampleSentences": ["We just played doctor."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/played-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "we're",
+      "meaningVn": "chúng tôi",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["We're doctors."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "she's",
+      "meaningVn": "cô ấy",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["She's a doctor."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "don't",
+      "meaningVn": "Đừng...",
+      "meaningEn": "Something that must not be done (usually in the phrase dos and don'ts).",
+      "ipa": "/dəʊnt/",
+      "synonyms": [],
+      "exampleSentences": ["I don't feel sick or anything."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/don't-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "cure",
+      "meaningVn": "chữa trị, điều trị",
+      "meaningEn": "A method, device or medication that restores good health.",
+      "ipa": "/kɜː(ɹ)/",
+      "synonyms": ["curacy"],
+      "exampleSentences": ["Doctor, cure me."],
+      "topicSlug": "at-the-doctor-s",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cure-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "weather",
+      "meaningVn": "thời tiết",
+      "meaningEn": "The short term state of the atmosphere at a specific time and place, including the temperature, relative humidity, cloud cover, precipitation, wind, etc.",
+      "ipa": "/ˈwɛðə/",
+      "synonyms": ["meteorology", "weatherboard", "windward"],
+      "exampleSentences": ["Was the weather nice?"],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/weather-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "nice",
+      "meaningVn": "đẹp, thú vị, dễ chịu",
+      "meaningEn": "Niceness.",
+      "ipa": "/naɪs/",
+      "synonyms": ["charming", "delightful", "friendly", "kind", "lovely", "pleasant"],
+      "exampleSentences": ["Was the weather nice?"],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nice-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "sunny",
+      "meaningVn": "Nắng ấm",
+      "meaningEn": "A sunfish.",
+      "ipa": "/ˈsʌni/",
+      "synonyms": ["bright", "cheerful", "sunlit", "sunshiny"],
+      "exampleSentences": ["It's sunny."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sunny-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "suddenly",
+      "meaningVn": "thình lình, đột ngột",
+      "meaningEn": "Happening quickly and with little or no warning; in a sudden manner.",
+      "ipa": "/ˈsʌdn̩li/",
+      "synonyms": ["all of a sudden", "without warning"],
+      "exampleSentences": ["The weather suddenly got warmer."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suddenly-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "control",
+      "meaningVn": "điều khiển",
+      "meaningEn": "Influence or authority over something.",
+      "ipa": "/kənˈtɹəʊl/",
+      "synonyms": ["widget", "besteer", "bewield", "manage", "puppeteer", "rule"],
+      "exampleSentences": ["Tom can control the weather."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/control-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "warmer",
+      "meaningVn": "lồng ấp",
+      "meaningEn": "Having a temperature slightly higher than usual, but still pleasant; mildly hot.",
+      "ipa": "/ˈwɔːmə/",
+      "synonyms": [],
+      "exampleSentences": ["The weather suddenly got warmer."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "comes",
+      "meaningVn": "kèm",
+      "meaningEn": "To move from further away to nearer to.",
+      "ipa": "/kʌmz/",
+      "synonyms": [],
+      "exampleSentences": ["After rain comes nice weather."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/comes-1-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "great",
+      "meaningVn": "to, lớn, vĩ đại",
+      "meaningEn": "A person of major significance, accomplishment or acclaim.",
+      "ipa": "/ɡɹeɪt/",
+      "synonyms": ["gr8", "grt"],
+      "exampleSentences": ["The weather is really great!"],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/great-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "today",
+      "meaningVn": "hôm nay",
+      "meaningEn": "A current day or date.",
+      "ipa": "/təˈdeɪ/",
+      "synonyms": ["current day", "this day"],
+      "exampleSentences": ["The weather is sunny and nice today."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/today-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hate",
+      "meaningVn": "ghét bỏ",
+      "meaningEn": "An object of hatred.",
+      "ipa": "/heɪt/",
+      "synonyms": [],
+      "exampleSentences": ["I hate this weather."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hate-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "good",
+      "meaningVn": "tốt, hay, tuyệt; điểu tốt, điều thiện",
+      "meaningEn": "(of people)",
+      "ipa": "/ɡʊ(d)/",
+      "synonyms": ["accomplished", "all right", "decent", "not bad", "satisfactory", "well"],
+      "exampleSentences": ["The weather is good."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/good-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "cold",
+      "meaningVn": "lạnh lẽo, lạnh nhạt",
+      "meaningEn": "(of a thing) Having a low temperature.",
+      "ipa": "/kɔʊld/",
+      "synonyms": ["chilled", "chilly", "cool", "freezing", "frigid", "glacial"],
+      "exampleSentences": ["The weather is cold."],
+      "topicSlug": "weather-and-seasons",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cold-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "find",
+      "meaningVn": "tìm, tìm thấy",
+      "meaningEn": "Anything that is found (usually valuable), as objects on an archeological site or a person with talent.",
+      "ipa": "/faɪnd/",
+      "synonyms": ["catch", "discovery"],
+      "exampleSentences": ["Find a job!"],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/find-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "jobs",
+      "meaningVn": "Những việc sẽ làm:",
+      "meaningEn": "A task.",
+      "ipa": "/d͡ʒɒbz/",
+      "synonyms": [],
+      "exampleSentences": ["I changed jobs."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "possible",
+      "meaningVn": "có thể mở rộng",
+      "meaningEn": "A possible one.",
+      "ipa": "/ˈpɒsɪbl̩/",
+      "synonyms": ["option", "possibility", "achievable", "doable", "viable", "futurable"],
+      "exampleSentences": ["I worked as hard as possible."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/possible-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "changed",
+      "meaningVn": "Đã thay đổi",
+      "meaningEn": "To become something different.",
+      "ipa": "/t͡ʃeɪnd͡ʒd/",
+      "synonyms": ["alter", "another", "make", "modify", "transform"],
+      "exampleSentences": ["I changed jobs."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "another",
+      "meaningVn": "khác nữa",
+      "meaningEn": "An additional one of the same kind.",
+      "ipa": "/æˈnʌð.ə(ɹ)/",
+      "synonyms": [],
+      "exampleSentences": ["I have another job."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/another-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "father",
+      "meaningVn": "cha",
+      "meaningEn": "A (generally human) male who begets a child.",
+      "ipa": "/ˈfaːðə/",
+      "synonyms": ["granddaddy", "mother"],
+      "exampleSentences": ["What does your father work as?"],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/father-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "worked",
+      "meaningVn": "Đã làm việc",
+      "meaningEn": "To do a specific task by employing physical or mental powers.",
+      "ipa": "/wɜːkt/",
+      "synonyms": [],
+      "exampleSentences": ["I worked as hard as possible."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/worked-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "found",
+      "meaningVn": "tìm thấy",
+      "meaningEn": "To encounter or discover by accident; to happen upon.",
+      "ipa": "/faʊnd/",
+      "synonyms": [],
+      "exampleSentences": ["Mary found a job."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/found-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "need",
+      "meaningVn": "cần, đòi hỏi",
+      "meaningEn": "A requirement for something; something needed.",
+      "ipa": "/niːd/",
+      "synonyms": [],
+      "exampleSentences": ["I need a job."],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/need-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "work",
+      "meaningVn": "Hoạt động",
+      "meaningEn": "(heading) Employment.",
+      "ipa": "/wɜːk/",
+      "synonyms": [],
+      "exampleSentences": ["What does your father work as?"],
+      "topicSlug": "jobs-and-occupations",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/work-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "strength",
+      "meaningVn": "sức mạnh",
+      "meaningEn": "The quality or degree of being strong.",
+      "ipa": "/stɹɛŋkθ/",
+      "synonyms": [],
+      "exampleSentences": ["Do you have confidence in your physical strength?"],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/strength-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "physical",
+      "meaningVn": "vật chất; (thuộc) cơ thể",
+      "meaningEn": "Physical examination.",
+      "ipa": "/ˈfɪzɪkəl/",
+      "synonyms": ["check-up", "checkup"],
+      "exampleSentences": ["Do you have confidence in your physical strength?"],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/physical-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "weaknesses",
+      "meaningVn": "điểm yếu",
+      "meaningEn": "The condition of being weak.",
+      "ipa": "/ˈwiːk.nə.sɪz/",
+      "synonyms": ["frailty", "powerlessness", "vincibility", "vulnerability", "defect", "fault"],
+      "exampleSentences": ["Everyone has strengths and weaknesses."],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "confidence",
+      "meaningVn": "tin tưởng, tin cậy, tự tin",
+      "meaningEn": "Self-assurance.",
+      "ipa": "/ˈkɒnfɪdəns/",
+      "synonyms": [],
+      "exampleSentences": ["Do you have confidence in your physical strength?"],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/confidence-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "strengths",
+      "meaningVn": "điểm mạnh",
+      "meaningEn": "The quality or degree of being strong.",
+      "ipa": "/stɹɛŋθs/",
+      "synonyms": [],
+      "exampleSentences": ["Everyone has strengths and weaknesses."],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/strengths-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "masculine",
+      "meaningVn": "nam tính",
+      "meaningEn": "(grammar) The masculine gender.",
+      "ipa": "/ˈmæskjələn/",
+      "synonyms": ["male", "manly", "virile"],
+      "exampleSentences": [
+        "Masculine qualities in a woman are seen as strength, while feminine qualities in a man are viewed as weakness."
+      ],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/masculine-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "everyone",
+      "meaningVn": "mọi người",
+      "meaningEn": "Every person.",
+      "ipa": "/ˈɛv.ɹi.wʌn/",
+      "synonyms": ["everybody", "the world and his wife"],
+      "exampleSentences": ["Everyone has strengths and weaknesses."],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/everyone-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "feminine",
+      "meaningVn": "nữ tính",
+      "meaningEn": "That which is feminine.",
+      "ipa": "/ˈfɛmənɪn/",
+      "synonyms": ["caring", "ladylike", "nurturing", "female", "womanly"],
+      "exampleSentences": [
+        "Masculine qualities in a woman are seen as strength, while feminine qualities in a man are viewed as weakness."
+      ],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feminine-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "weakness",
+      "meaningVn": "yếu đuối",
+      "meaningEn": "The condition of being weak.",
+      "ipa": "/ˈwiːk.nəs/",
+      "synonyms": ["frailty", "powerlessness", "vincibility", "vulnerability", "defect", "fault"],
+      "exampleSentences": [
+        "Masculine qualities in a woman are seen as strength, while feminine qualities in a man are viewed as weakness."
+      ],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/weakness-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "victory",
+      "meaningVn": "chiến thắng",
+      "meaningEn": "An instance of having won a competition or battle or succeeded in an effort.",
+      "ipa": "/ˈvɪkt(ə)ɹi/",
+      "synonyms": ["to win", "triumph", "win"],
+      "exampleSentences": ["Belief in victory is the chain mail of strength."],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/victory-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "forced",
+      "meaningVn": "bắt buộc",
+      "meaningEn": "To violate (a woman); to rape.",
+      "ipa": "/fɔːst/",
+      "synonyms": ["forcible"],
+      "exampleSentences": ["He forced me onto the bed using physical strength."],
+      "topicSlug": "job-interviews",
+      "level": "intermediate",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/forced-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "phone",
+      "meaningVn": "số điện thoại",
+      "meaningEn": "A device for transmitting conversations and other sounds in real time across distances, now often a small portable unit also capable of running software etc.",
+      "ipa": "/fəʊ̯n/",
+      "synonyms": ["call", "ring", "telephone"],
+      "exampleSentences": ["Phone the police."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phone-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "phoned",
+      "meaningVn": "gọi điện thoại",
+      "meaningEn": "To call (someone) using a telephone.",
+      "ipa": "/fəʊnd/",
+      "synonyms": ["call", "ring", "telephone"],
+      "exampleSentences": ["I phoned Tom."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phoned-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "broke",
+      "meaningVn": "phá sản",
+      "meaningEn": "To separate into two or more pieces, to fracture or crack, by a process that cannot easily be reversed for reassembly.",
+      "ipa": "/bɹəʊk/",
+      "synonyms": ["crack", "fracture", "burst", "bust", "shatter", "shear"],
+      "exampleSentences": ["Emily broke her phone."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/broke-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "answered",
+      "meaningVn": "đã trả lời",
+      "meaningEn": "To make a reply or response to.",
+      "ipa": "/ænsɜːd/",
+      "synonyms": ["answer for"],
+      "exampleSentences": ["Who answered the phone?"],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/answered-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "police",
+      "meaningVn": "cảnh sát, công an",
+      "meaningEn": "A civil force granted the legal authority for law enforcement and maintaining public order.",
+      "ipa": "[pəˈliːs]",
+      "synonyms": [],
+      "exampleSentences": ["Phone the police."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/police-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "please",
+      "meaningVn": "làm vui lòng ; xin mời",
+      "meaningEn": "To make happy or satisfy; to give pleasure to.",
+      "ipa": "/pliːz/",
+      "synonyms": ["desire", "will", "satisfy"],
+      "exampleSentences": ["Please phone him."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/please-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "charge",
+      "meaningVn": "nhiệm vụ, trách nhiệm",
+      "meaningEn": "The amount of money levied for a service.",
+      "ipa": "/t͡ʃɑːd͡ʒ/",
+      "synonyms": ["count"],
+      "exampleSentences": ["I'm in charge."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/charge-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "denied",
+      "meaningVn": "từ chối",
+      "meaningEn": "To disallow or reject.",
+      "ipa": "/dɪˈnaɪd/",
+      "synonyms": ["contradict", "disclaim", "gainsay", "refute", "withsay"],
+      "exampleSentences": ["Tom denied all the charges."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/denied-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "rang",
+      "meaningVn": "barbecue",
+      "meaningEn": "Of a bell, etc., to produce a resonant sound.",
+      "ipa": "/ɹæŋ/",
+      "synonyms": [],
+      "exampleSentences": ["My phone rang."],
+      "topicSlug": "phones-and-devices",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rang-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "intelligence",
+      "meaningVn": "sự hiểu biết, trí thông minh",
+      "meaningEn": "Capacity of mind, especially to understand principles, truths, facts or meanings, acquire knowledge, and apply it to practice; the ability to comprehend and learn.",
+      "ipa": "/ɪnˈtɛl.ɪ.d͡ʒəns/",
+      "synonyms": ["brightness", "intellect", "wit"],
+      "exampleSentences": ["AI means Artificial Intelligence."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/intelligence-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "artificial",
+      "meaningVn": "nhân tạo",
+      "meaningEn": "Man-made; of artifice.",
+      "ipa": "/ɑː(ɹ)təˈfɪʃəl/",
+      "synonyms": ["artificious"],
+      "exampleSentences": ["AI means Artificial Intelligence."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/artificial-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "jobs",
+      "meaningVn": "Những việc sẽ làm:",
+      "meaningEn": "A task.",
+      "ipa": "/d͡ʒɒbz/",
+      "synonyms": [],
+      "exampleSentences": ["Will artificial intelligence make these jobs disappear?"],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "conditions",
+      "meaningVn": "Tình trạng",
+      "meaningEn": "A logical clause or phrase that a conditional statement uses. The phrase can either be true or false.",
+      "ipa": "/kənˈdɪʃənz/",
+      "synonyms": ["fettle"],
+      "exampleSentences": ["Robots can withstand dangerous conditions."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/conditions-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "disappear",
+      "meaningVn": "biến mất, biến đi",
+      "meaningEn": "To vanish.",
+      "ipa": "/dɪsəˈpiːɹ/",
+      "synonyms": ["dematerialize", "vanish"],
+      "exampleSentences": ["Will artificial intelligence make these jobs disappear?"],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/disappear-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "humankind",
+      "meaningVn": "Loài người",
+      "meaningEn": "The human race; mankind, humanity; Homo sapiens.",
+      "ipa": null,
+      "synonyms": ["human race", "humanity", "mankind"],
+      "exampleSentences": ["Will artificial intelligence grow to kill humankind?"],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/humankind-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "languages",
+      "meaningVn": "ngôn ngữ",
+      "meaningEn": "A body of words, and set of methods of combining them (called a grammar), understood by a community and used as a form of communication.",
+      "ipa": "/ˈlæŋɡwɪd͡ʒɪz/",
+      "synonyms": ["computer language", "machine language", "programming language"],
+      "exampleSentences": ["Maybe someday, artificial intelligence will create new languages for humans to use."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/languages-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "potential",
+      "meaningVn": "tiềm năng; khả năng, tiềm lực",
+      "meaningEn": "Currently unrealized ability (with the most common adposition being to)",
+      "ipa": "/pəˈtɛnʃəl/",
+      "synonyms": ["noumenon", "spirit", "efficacious", "influential", "noumenal", "spiritual"],
+      "exampleSentences": ["Benedito's work has the potential to advance the field of artificial intelligence."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/potential-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "withstand",
+      "meaningVn": "Chịu được",
+      "meaningEn": "To resist or endure (something) successfully.",
+      "ipa": "/wɪðˈstænd/",
+      "synonyms": [],
+      "exampleSentences": ["Robots can withstand dangerous conditions."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/withstand-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "dangerous",
+      "meaningVn": "Cá voi",
+      "meaningEn": "Full of danger.",
+      "ipa": "/ˈdeɪnd͡ʒ(ə)ɹəs/",
+      "synonyms": ["hazardous", "perilous", "risky", "unsafe"],
+      "exampleSentences": ["Robots can withstand dangerous conditions."],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dangerous-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "replaced",
+      "meaningVn": "Đã thay thế",
+      "meaningEn": "To restore to a former place, position, condition, etc.; to put back",
+      "ipa": "/ɹɪˈpleɪst/",
+      "synonyms": ["exchange", "swap"],
+      "exampleSentences": ["Will these jobs be replaced by artificial intelligence?"],
+      "topicSlug": "artificial-intelligence",
+      "level": "advanced",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/replaced-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hobby",
+      "meaningVn": "sở thích",
+      "meaningEn": "An activity that one enjoys doing in one's spare time.",
+      "ipa": "/ˈhɒ.bi/",
+      "synonyms": ["avocation", "pastime"],
+      "exampleSentences": ["What is your hobby?"],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hobby-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "collecting",
+      "meaningVn": "Thu gom",
+      "meaningEn": "To gather together; amass.",
+      "ipa": "/kəˈlɛktɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["Her hobby is collecting stamps."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/collecting-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "stamps",
+      "meaningVn": "Con dấu",
+      "meaningEn": "An act of stamping the foot, paw or hoof.",
+      "ipa": "/stæmps/",
+      "synonyms": ["postage stamp", "revenue stamp", "tax stamp", "impress", "imprint", "dent"],
+      "exampleSentences": ["Her hobby is collecting stamps."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "free",
+      "meaningVn": "miễn phí",
+      "meaningEn": "Free transfer",
+      "ipa": "/fɹiː/",
+      "synonyms": ["befree", "emancipate", "let loose", "liberate", "manumit", "release"],
+      "exampleSentences": ["I have very little free time."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/free-uk.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "time",
+      "meaningVn": "thời gian",
+      "meaningEn": "The inevitable progression into the future with the passing of present and past events.",
+      "ipa": "/tɑem/",
+      "synonyms": ["set", "clock"],
+      "exampleSentences": ["I have very little free time."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/time-au.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "swimming",
+      "meaningVn": "bể nước",
+      "meaningEn": "The act or art of sustaining and propelling the body in water.",
+      "ipa": "/ˈswɪmɪŋ/",
+      "synonyms": [],
+      "exampleSentences": ["Swimming is my hobby."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/swimming-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "hobbies",
+      "meaningVn": "Sở thích",
+      "meaningEn": "An activity that one enjoys doing in one's spare time.",
+      "ipa": null,
+      "synonyms": ["avocation", "pastime"],
+      "exampleSentences": ["What are your hobbies?"],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "reading",
+      "meaningVn": "đọc",
+      "meaningEn": "To look at and interpret letters or other information that is written.",
+      "ipa": "/ˈɹidiŋ/",
+      "synonyms": ["clock", "copy", "hear", "receive", "interpret", "make out"],
+      "exampleSentences": ["My hobby is reading."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reading-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "fishing",
+      "meaningVn": "câu cá, đánh cá",
+      "meaningEn": "The act of catching fish.",
+      "ipa": "/ˈfɪʃɪŋ/",
+      "synonyms": ["gentle craft", "piscation", "piscatology", "piscicapture", "piscicide", "fish"],
+      "exampleSentences": ["My hobby is fishing."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fishing-us.mp3",
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "that's",
+      "meaningVn": "đó là",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["That's my hobby."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "what's",
+      "meaningVn": "những gì",
+      "meaningEn": null,
+      "ipa": null,
+      "synonyms": [],
+      "exampleSentences": ["What's your hobby?"],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": null,
+      "sourceLessonSlug": null
+    },
+    {
+      "word": "little",
+      "meaningVn": "nhỏ, bé, chút ít",
+      "meaningEn": "A small amount.",
+      "ipa": "/ˈlɪ.ɾɫ̩/",
+      "synonyms": [],
+      "exampleSentences": ["I have very little free time."],
+      "topicSlug": "hobbies-and-free-time",
+      "level": "beginner",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/little-nz.mp3",
+      "sourceLessonSlug": null
+    }
+  ]
+}

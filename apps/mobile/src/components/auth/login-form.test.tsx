@@ -1,5 +1,3 @@
-import type { LoginFormProps } from './login-form';
-
 import * as React from 'react';
 
 import { cleanup, screen, setup, waitFor } from '@/lib/test-utils';
@@ -7,59 +5,52 @@ import { LoginForm } from './login-form';
 
 afterEach(cleanup);
 
-const onSubmitMock: jest.Mock<LoginFormProps['onSubmit']> = jest.fn();
+function mockProps() {
+  return {
+    onPasswordLogin: jest.fn().mockResolvedValue(undefined),
+    onSendMagicLink: jest.fn().mockResolvedValue(undefined),
+    onResendVerification: jest.fn().mockResolvedValue(undefined),
+    onGoogle: jest.fn().mockResolvedValue(undefined),
+  };
+}
 
-describe('loginForm Form ', () => {
-  it('renders correctly', async () => {
-    setup(<LoginForm />);
+describe('loginForm (email-first wizard)', () => {
+  it('renders the identifier step', async () => {
+    setup(<LoginForm {...mockProps()} />);
     expect(await screen.findByTestId('form-title')).toBeOnTheScreen();
+    expect(screen.getByTestId('continue-button')).toBeOnTheScreen();
   });
 
-  it('should display required error when values are empty', async () => {
-    const { user } = setup(<LoginForm />);
-
-    const button = screen.getByTestId('login-button');
-    expect(screen.queryByText(/Email is required/i)).not.toBeOnTheScreen();
-    await user.press(button);
-    expect(await screen.findByText(/Email is required/i)).toBeOnTheScreen();
-    expect(screen.getByText(/Password is required/i)).toBeOnTheScreen();
+  it('shows an error for an invalid email', async () => {
+    const { user } = setup(<LoginForm {...mockProps()} />);
+    await user.type(screen.getByTestId('email-input'), 'not-an-email');
+    await user.press(screen.getByTestId('continue-button'));
+    expect(await screen.findByText(/Enter a valid email/i)).toBeOnTheScreen();
   });
 
-  it('should display matching error when email is invalid', async () => {
-    const { user } = setup(<LoginForm />);
+  it('sends a magic link as the primary method', async () => {
+    const props = mockProps();
+    const { user } = setup(<LoginForm {...props} />);
+    await user.type(screen.getByTestId('email-input'), 'youssef@gmail.com');
+    await user.press(screen.getByTestId('continue-button'));
 
-    const button = screen.getByTestId('login-button');
-    const emailInput = screen.getByTestId('email-input');
-    const passwordInput = screen.getByTestId('password-input');
-
-    await user.type(emailInput, 'yyyyy');
-    emailInput.props.onBlur(); // Manually trigger blur to set touched state
-    await user.type(passwordInput, 'test');
-    await user.press(button);
-
-    expect(await screen.findByText(/Invalid Email Format/i)).toBeOnTheScreen();
-    expect(screen.queryByText(/Email is required/i)).not.toBeOnTheScreen();
-  });
-
-  it('should call LoginForm with correct values when values are valid', async () => {
-    const { user } = setup(<LoginForm onSubmit={onSubmitMock} />);
-
-    const button = screen.getByTestId('login-button');
-    const emailInput = screen.getByTestId('email-input');
-    const passwordInput = screen.getByTestId('password-input');
-
-    await user.type(emailInput, 'youssef@gmail.com');
-    await user.type(passwordInput, 'password');
-    await user.press(button);
+    await user.press(await screen.findByText(/Email me a login link/i));
     await waitFor(() => {
-      expect(onSubmitMock).toHaveBeenCalledTimes(1);
+      expect(props.onSendMagicLink).toHaveBeenCalledWith('youssef@gmail.com');
     });
-    // expect.objectContaining({}) because we don't want to test the target event we are receiving from the onSubmit function
-    expect(onSubmitMock).toHaveBeenCalledWith(
-      expect.objectContaining({
-        email: 'youssef@gmail.com',
-        password: 'password',
-      }),
-    );
+  });
+
+  it('logs in with a password shown directly on the method step', async () => {
+    const props = mockProps();
+    const { user } = setup(<LoginForm {...props} />);
+    await user.type(screen.getByTestId('email-input'), 'youssef@gmail.com');
+    await user.press(screen.getByTestId('continue-button'));
+
+    await user.type(await screen.findByTestId('password-input'), 'password');
+    await user.press(screen.getByTestId('login-button'));
+
+    await waitFor(() => {
+      expect(props.onPasswordLogin).toHaveBeenCalledWith('youssef@gmail.com', 'password');
+    });
   });
 });

@@ -33,8 +33,40 @@ export class RefreshDto {
   refreshToken!: string;
 }
 
+export class VerifyEmailDto {
+  @ApiProperty()
+  @IsString()
+  token!: string;
+}
+
+export class MagicLinkRequestDto {
+  @ApiProperty({ example: 'nguyen@example.com' })
+  @IsEmail()
+  email!: string;
+}
+
+export class MagicLinkVerifyDto {
+  @ApiProperty()
+  @IsString()
+  token!: string;
+}
+
+export class ResendVerificationDto {
+  @ApiProperty({ example: 'nguyen@example.com' })
+  @IsEmail()
+  email!: string;
+}
+
 export class AuthTokensResponseDto {
   @ApiProperty() accessToken!: string;
   @ApiProperty() refreshToken!: string;
   @ApiProperty() expiresIn!: number;
+}
+
+export class RegisterResultDto {
+  @ApiProperty({ example: 'verification_sent' }) status!: 'verification_sent';
+}
+
+export class MessageResultDto {
+  @ApiProperty({ example: 'ok' }) status!: string;
 }

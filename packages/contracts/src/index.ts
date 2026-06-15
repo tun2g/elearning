@@ -5,5 +5,6 @@ export * from './gamification';
 export * from './lesson';
 export * from './notification';
 export * from './practice';
+export * from './topic';
 export * from './user';
 export * from './vocabulary';

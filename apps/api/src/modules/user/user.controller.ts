@@ -6,6 +6,7 @@ import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/
 
 import { UpdateSettingsDto, UserSettingsResponseDto } from './dtos/settings.dto';
 import { UserResponseDto } from './dtos/user-response.dto';
+import { toUserResponse } from './dtos/user.mapper';
 import { UserSettingsEntity } from './entities/user-settings.entity';
 import { UserService } from './user.service';
 
@@ -17,16 +18,7 @@ export class UserController {
   @Get()
   @ApiOperation({ summary: 'Get current user profile' })
   async getMe(@CurrentUser() currentUser: RequestUser): Promise<UserResponseDto> {
-    const user = await this.userService.findByIdOrThrow(currentUser.id);
-    return {
-      id: user.id,
-      email: user.email,
-      displayName: user.displayName,
-      avatarUrl: user.avatarUrl,
-      xpTotal: user.xpTotal,
-      levelRank: user.levelRank,
-      createdAt: user.createdAt,
-    };
+    return toUserResponse(await this.userService.findByIdOrThrow(currentUser.id));
   }
 
   @Get('settings')

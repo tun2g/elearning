@@ -5,7 +5,7 @@
       "title": "Greetings and Introductions",
       "description": "Everyday phrases for meeting someone new.",
       "level": "beginner",
-      "topic": "small talk",
+      "topicSlug": "greetings-and-introductions",
       "source": "Soundwell Editorial",
       "sentences": [
         {
@@ -45,7 +45,7 @@
       "title": "Ordering at a Café",
       "description": "Order drinks and food politely.",
       "level": "beginner",
-      "topic": "food and drink",
+      "topicSlug": "at-a-cafe",
       "source": "Soundwell Editorial",
       "sentences": [
         {
@@ -85,7 +85,7 @@
       "title": "Weekend Small Talk",
       "description": "Chat naturally about your weekend plans.",
       "level": "intermediate",
-      "topic": "small talk",
+      "topicSlug": "hobbies-and-free-time",
       "source": "Soundwell Editorial",
       "sentences": [
         {
@@ -129,7 +129,7 @@
       "ipa": "/ˌɪntrəˈdjuːs/",
       "synonyms": ["present", "acquaint"],
       "exampleSentences": ["Let me introduce my colleague."],
-      "topic": "small talk",
+      "topicSlug": "greetings-and-introductions",
       "level": "beginner",
       "sourceLessonSlug": "greetings-and-introductions"
     },
@@ -140,7 +140,7 @@
       "ipa": "/pəˈlaɪt/",
       "synonyms": ["courteous", "respectful"],
       "exampleSentences": ["It's polite to say thank you."],
-      "topic": "small talk",
+      "topicSlug": "greetings-and-introductions",
       "level": "beginner"
     },
     {
@@ -150,7 +150,7 @@
       "ipa": "/ˈɔːdə/",
       "synonyms": ["request", "ask for"],
       "exampleSentences": ["I'd like to order a coffee."],
-      "topic": "food and drink",
+      "topicSlug": "at-a-cafe",
       "level": "beginner",
       "sourceLessonSlug": "ordering-at-a-cafe"
     },
@@ -161,7 +161,7 @@
       "ipa": "/dɪˈlɪʃəs/",
       "synonyms": ["tasty", "yummy"],
       "exampleSentences": ["This sandwich is delicious."],
-      "topic": "food and drink",
+      "topicSlug": "common-foods",
       "level": "beginner"
     },
     {
@@ -171,7 +171,7 @@
       "ipa": "/əˈfɔːd/",
       "synonyms": ["manage", "spare"],
       "exampleSentences": ["I can't afford a new phone right now."],
-      "topic": "money",
+      "topicSlug": "prices-and-paying",
       "level": "intermediate"
     },
     {
@@ -181,7 +181,7 @@
       "ipa": "/plæn/",
       "synonyms": ["arrangement", "intention"],
       "exampleSentences": ["What are your plans for tonight?"],
-      "topic": "small talk",
+      "topicSlug": "hobbies-and-free-time",
       "level": "beginner",
       "sourceLessonSlug": "weekend-small-talk"
     },
@@ -192,7 +192,7 @@
       "ipa": "/ˈhaɪkɪŋ/",
       "synonyms": ["trekking", "rambling"],
       "exampleSentences": ["We went hiking in the hills."],
-      "topic": "hobbies",
+      "topicSlug": "hobbies-and-free-time",
       "level": "intermediate",
       "sourceLessonSlug": "weekend-small-talk"
     },
@@ -203,7 +203,7 @@
       "ipa": "/rɪˈlæks/",
       "synonyms": ["unwind", "rest"],
       "exampleSentences": ["I just want to relax this weekend."],
-      "topic": "hobbies",
+      "topicSlug": "hobbies-and-free-time",
       "level": "beginner"
     },
     {
@@ -213,7 +213,7 @@
       "ipa": "/kənˈviːniənt/",
       "synonyms": ["handy", "suitable"],
       "exampleSentences": ["Is tomorrow convenient for you?"],
-      "topic": "small talk",
+      "topicSlug": "greetings-and-introductions",
       "level": "intermediate"
     },
     {
@@ -223,7 +223,7 @@
       "ipa": "/ˈfluːənt/",
       "synonyms": ["articulate", "proficient"],
       "exampleSentences": ["She is fluent in three languages."],
-      "topic": "language",
+      "topicSlug": "studying-and-learning",
       "level": "intermediate"
     }
   ]

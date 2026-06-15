@@ -1,33 +1,53 @@
-import type { AuthTokens, User } from '@elearning/contracts';
+import type { AuthTokens, RegisterResult, User } from '@elearning/contracts';
 
 import { apiGet, doFetch } from '@/lib/api';
 
-export function loginApi(email: string, password: string): Promise<AuthTokens> {
-  return doFetch('/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password }),
-  }).then(async (r) => {
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({ message: 'Login failed' }));
-      throw new Error((err as { message?: string }).message ?? 'Invalid email or password');
-    }
-    return r.json() as Promise<AuthTokens>;
-  });
+/** Error carrying the API's stable `code` (e.g. EMAIL_NOT_VERIFIED) for UI branching. */
+export class AuthError extends Error {
+  code?: string;
+  constructor(message: string, code?: string) {
+    super(message);
+    this.name = 'AuthError';
+    this.code = code;
+  }
 }
 
-export function registerApi(email: string, password: string, displayName: string): Promise<AuthTokens> {
-  return doFetch('/auth/register', {
+async function postJson<T>(path: string, body: unknown, fallbackMessage: string): Promise<T> {
+  const r = await doFetch(path, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password, displayName }),
-  }).then(async (r) => {
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({ message: 'Registration failed' }));
-      throw new Error((err as { message?: string }).message ?? 'Registration failed');
-    }
-    return r.json() as Promise<AuthTokens>;
+    body: JSON.stringify(body),
   });
+  if (!r.ok) {
+    const err = (await r.json().catch(() => ({}))) as { message?: string | string[]; code?: string };
+    const message = Array.isArray(err.message) ? err.message.join(', ') : (err.message ?? fallbackMessage);
+    throw new AuthError(message, err.code);
+  }
+  return r.json() as Promise<T>;
+}
+
+export function loginApi(email: string, password: string): Promise<AuthTokens> {
+  return postJson<AuthTokens>('/auth/login', { email, password }, 'Invalid email or password');
+}
+
+export function registerApi(email: string, password: string, displayName: string): Promise<RegisterResult> {
+  return postJson<RegisterResult>('/auth/register', { email, password, displayName }, 'Registration failed');
+}
+
+export function verifyEmailApi(token: string): Promise<AuthTokens> {
+  return postJson<AuthTokens>('/auth/verify-email', { token }, 'Verification failed');
+}
+
+export function resendVerificationApi(email: string): Promise<void> {
+  return postJson<{ status: string }>('/auth/resend-verification', { email }, 'Could not resend').then(() => undefined);
+}
+
+export function magicLinkApi(email: string): Promise<void> {
+  return postJson<{ status: string }>('/auth/magic-link', { email }, 'Could not send link').then(() => undefined);
+}
+
+export function magicLinkVerifyApi(token: string): Promise<AuthTokens> {
+  return postJson<AuthTokens>('/auth/magic-link/verify', { token }, 'Sign-in link invalid');
 }
 
 export function refreshApi(refreshToken: string): Promise<AuthTokens> {

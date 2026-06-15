@@ -5,6 +5,7 @@ import { ImportBatchSchema, type ImportBatch } from '@elearning/contracts';
 
 import { applyImportBatch } from '../modules/content/content-import.logic';
 import { AppDataSource } from './data-source';
+import { seedTaxonomy } from './seed-taxonomy';
 
 /**
  * Imports reviewed content batches into the database.
@@ -70,11 +71,20 @@ async function run(): Promise<void> {
 
   await AppDataSource.initialize();
   try {
+    const taxo = await seedTaxonomy(AppDataSource);
+    console.log(`Taxonomy ready: ${taxo.categories} categories, ${taxo.topics} topics.`);
+
     const result = await AppDataSource.transaction((manager) => applyImportBatch(manager, batch));
     console.log(
       `Done — lessons +${result.lessonsCreated}/~${result.lessonsUpdated}, ` +
         `vocab +${result.vocabCreated}/~${result.vocabUpdated}`
     );
+    if (result.unmatchedTopics.length) {
+      console.warn(
+        `\n⚠ ${result.unmatchedTopics.length} unmatched topic slug(s) (imported with null topic):\n  ` +
+          result.unmatchedTopics.join(', ')
+      );
+    }
   } finally {
     await AppDataSource.destroy();
   }

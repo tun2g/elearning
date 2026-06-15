@@ -71,7 +71,7 @@ export function LessonsContent({ lessons, isLoading, level, levels, filtered, on
                     <h2 className="font-display text-lg font-semibold leading-tight text-foreground">{lesson.title}</h2>
                     <p className="mt-0.5 text-xs text-subtle">
                       {lesson.sentenceCount} sentences
-                      {lesson.topic ? ` · ${lesson.topic}` : ''}
+                      {lesson.topic ? ` · ${lesson.topic.title}` : ''}
                     </p>
                   </div>
                 </div>

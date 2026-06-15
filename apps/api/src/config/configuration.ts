@@ -41,6 +41,27 @@ export interface AppConfig {
     gemini: { apiKey: string; model: string };
     openai: { apiKey: string; model: string };
   };
+  /** Outbound email (SMTP). Env names mirror vault/admin_be. */
+  mail: {
+    host: string;
+    port: number;
+    username: string;
+    password: string;
+    from: string;
+    fromName: string;
+    secure: boolean;
+  };
+  /** Google Sign-In (Passport OAuth 2.0 redirect flow). */
+  google: {
+    clientId: string;
+    clientSecret: string;
+    callbackUrl: string;
+  };
+  /** Frontend coordinates used to build magic-link URLs. */
+  app: {
+    webUrl: string;
+    deepLinkScheme: string;
+  };
 }
 
 export const configuration = (): AppConfig => ({
@@ -84,5 +105,23 @@ export const configuration = (): AppConfig => ({
       apiKey: process.env.OPENAI_API_KEY ?? '',
       model: process.env.OPENAI_MODEL ?? 'gpt-4o-mini',
     },
+  },
+  mail: {
+    host: process.env.SMTP_HOST ?? '',
+    port: parseInt(process.env.SMTP_PORT ?? '587', 10),
+    username: process.env.SMTP_USERNAME ?? '',
+    password: process.env.SMTP_PASSWORD ?? '',
+    from: process.env.EMAIL_FROM ?? 'no-reply@soundwell.app',
+    fromName: process.env.EMAIL_FROM_NAME ?? 'Soundwell',
+    secure: process.env.USE_TLS === 'true',
+  },
+  google: {
+    clientId: process.env.GOOGLE_CLIENT_ID ?? '',
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
+    callbackUrl: process.env.GOOGLE_CALLBACK_URL ?? 'http://localhost:4000/api/v1/auth/google/callback',
+  },
+  app: {
+    webUrl: process.env.WEB_APP_URL ?? 'http://localhost:3000',
+    deepLinkScheme: process.env.APP_DEEP_LINK_SCHEME ?? 'elearning',
   },
 });

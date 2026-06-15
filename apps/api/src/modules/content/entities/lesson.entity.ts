@@ -4,6 +4,7 @@ import { StorageObjectEntity } from 'src/modules/media/entities/storage-object.e
 import { AuditableEntity } from 'src/shared/entities/auditable.entity';
 
 import { SentenceEntity } from './sentence.entity';
+import { TopicEntity } from './topic.entity';
 
 export type LessonLevel = 'beginner' | 'intermediate' | 'advanced';
 export type LessonMediaKind = 'audio' | 'youtube';
@@ -23,8 +24,10 @@ export class LessonEntity extends AuditableEntity {
   @Column({ type: 'varchar', length: 20, default: 'beginner' })
   level!: LessonLevel;
 
-  @Column({ type: 'varchar', length: 120, nullable: true })
-  topic!: string | null;
+  /** Thematic grouping. Null when no taxonomy topic matched on import. */
+  @ManyToOne(() => TopicEntity, { nullable: true, onDelete: 'SET NULL' })
+  @JoinColumn({ name: 'topic_id' })
+  topic!: TopicEntity | null;
 
   /** Attribution for crawled content (the source site/dataset). */
   @Column({ type: 'varchar', length: 120, nullable: true })

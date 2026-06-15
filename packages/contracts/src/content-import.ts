@@ -18,7 +18,8 @@ export const ImportLessonSchema = z.object({
   title: z.string().min(1).max(240),
   description: z.string().nullish(),
   level: LessonLevel.default('beginner'),
-  topic: z.string().max(120).nullish(),
+  /** Taxonomy topic slug; resolved to a Topic FK on import (unknown → null + reported). */
+  topicSlug: z.string().max(120).nullish(),
   /** Attribution — the source site/dataset (e.g. "VOA Learning English"). */
   source: z.string().max(120).nullish(),
   /** For embedded sources (e.g. the YouTube watch URL). */
@@ -36,7 +37,8 @@ export const ImportVocabSchema = z.object({
   ipa: z.string().max(200).nullish(),
   synonyms: z.array(z.string()).default([]),
   exampleSentences: z.array(z.string()).default([]),
-  topic: z.string().max(120).nullish(),
+  /** Taxonomy topic slug; resolved to a Topic FK on import (unknown → null + reported). */
+  topicSlug: z.string().max(120).nullish(),
   level: z.string().max(20).default('beginner'),
   audioUrl: z.string().url().nullish(),
   /** Optional link back to the lesson it was derived from. */
@@ -57,5 +59,7 @@ export const ImportResultSchema = z.object({
   lessonsUpdated: z.number().int(),
   vocabCreated: z.number().int(),
   vocabUpdated: z.number().int(),
+  /** Distinct topicSlugs referenced by the batch that had no matching Topic row. */
+  unmatchedTopics: z.array(z.string()).default([]),
 });
 export type ImportResult = z.infer<typeof ImportResultSchema>;

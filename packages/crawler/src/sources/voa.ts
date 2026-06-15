@@ -7,6 +7,7 @@ import { fetchBuffer, fetchText } from '../lib/http';
 import { isAllowed } from '../lib/robots';
 import { segmentSentences } from '../lib/segment';
 import { uploadObject } from '../lib/storage';
+import { buildTopicVocab, candidateWords } from '../lib/vocab-extract';
 import type { RunContext, Source } from '../types';
 
 type VoaItem = Parser.Item & { contentEncoded?: string };
@@ -89,8 +90,8 @@ async function buildLesson(item: VoaItem, ctx: RunContext, usedSlugs: Set<string
     slug,
     title: title.slice(0, 240),
     description: texts[0]?.slice(0, 200) ?? null,
-    level: 'intermediate',
-    topic: 'news',
+    level: ctx.plan?.level ?? 'intermediate',
+    topicSlug: ctx.plan?.topicSlug ?? null,
     source: 'VOA Learning English',
     externalUrl,
     mediaKind,
@@ -102,7 +103,7 @@ export const voaSource: Source = {
   name: 'voa',
   licence: 'VOA Learning English (US Government — public domain)',
   crawl: async (ctx: RunContext): Promise<ImportBatch> => {
-    const feedUrl = ctx.feedUrl ?? voaSource.defaultFeed;
+    const feedUrl = ctx.feedUrl ?? ctx.plan?.voaFeed ?? voaSource.defaultFeed;
     if (!feedUrl) {
       throw new Error(
         'VOA needs an RSS feed URL — pass --feed <url>. Find feeds at ' +
@@ -125,7 +126,14 @@ export const voaSource: Source = {
       if (lesson) lessons.push(lesson);
     }
 
-    // Vocabulary extraction needs translation/enrichment (Phase C) — none here.
+    // With a topic plan, derive enriched vocab from the crawled sentences.
+    if (ctx.plan && lessons.length) {
+      const texts = lessons.flatMap((l) => l.sentences.map((s) => s.text));
+      const { vocab, gaps } = await buildTopicVocab(candidateWords(texts), ctx.plan, texts);
+      ctx.log(`vocab: ${vocab.length} card(s), ${gaps.length} gap(s)`);
+      return { lessons, vocab };
+    }
+
     return { lessons, vocab: [] };
   },
 };

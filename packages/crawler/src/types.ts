@@ -1,13 +1,17 @@
 import type { ImportBatch } from '@elearning/contracts';
 
+import type { TopicPlanEntry } from './topic-plan';
+
 /** Options passed to a source adapter for one crawl run. */
 export interface RunContext {
-  /** Max items (lessons) to produce. */
+  /** Max items (lessons/sentences) to produce. */
   limit: number;
   /** Source-specific feed/listing URL (overrides the adapter default). */
   feedUrl?: string;
   /** Whether to download + upload native audio (off → faster dry runs). */
   withAudio: boolean;
+  /** Topic-aware crawl target — tags output and drives content-source queries. */
+  plan?: TopicPlanEntry;
   log: (message: string) => void;
 }
 

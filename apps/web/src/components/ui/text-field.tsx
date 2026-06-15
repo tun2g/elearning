@@ -1,16 +1,21 @@
-import type { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes, ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error?: string;
+  /** Optional accessory shown right-aligned on the label row (e.g. "Forgot password?"). */
+  labelRight?: ReactNode;
 }
 
-export function TextField({ label, error, className, ...props }: TextFieldProps) {
+export function TextField({ label, error, labelRight, className, ...props }: TextFieldProps) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-foreground">{label}</label>
+      <div className="mb-1.5 flex items-center justify-between gap-2">
+        <label className="block text-sm font-medium text-foreground">{label}</label>
+        {labelRight}
+      </div>
       <input
         className={cn(
           'w-full rounded-xl border bg-background px-3.5 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-subtle focus:border-primary focus:ring-2 focus:ring-primary/25',

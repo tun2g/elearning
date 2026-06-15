@@ -24,7 +24,7 @@ function LessonCard({ item }: { item: LessonSummary }) {
                 {item.sentenceCount}
                 {' '}
                 sentences
-                {item.topic ? ` · ${item.topic}` : ''}
+                {item.topic ? ` · ${item.topic.title}` : ''}
               </Text>
             </View>
           </View>

@@ -11,8 +11,18 @@ export class UserEntity extends AuditableEntity {
   @Column({ type: 'varchar', length: 255 })
   email!: string;
 
-  @Column({ name: 'password_hash', type: 'text' })
-  passwordHash!: string;
+  /** Argon2 hash. Null for accounts created via Google or passwordless magic-link. */
+  @Column({ name: 'password_hash', type: 'text', nullable: true })
+  passwordHash!: string | null;
+
+  /** When the email was confirmed. Null until verified — gates password login. */
+  @Column({ name: 'email_verified_at', type: 'timestamptz', nullable: true })
+  emailVerifiedAt!: Date | null;
+
+  /** Google account subject (`sub`) when linked via Google Sign-In. */
+  @Index({ unique: true, where: '"google_id" IS NOT NULL' })
+  @Column({ name: 'google_id', type: 'varchar', length: 255, nullable: true })
+  googleId!: string | null;
 
   @Column({ name: 'display_name', type: 'varchar', length: 120 })
   displayName!: string;

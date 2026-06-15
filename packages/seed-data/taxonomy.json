@@ -1,0 +1,1494 @@
+{
+  "categories": [
+    {
+      "slug": "daily-life",
+      "title": "Daily Life & Self",
+      "order": 1,
+      "description": "Everyday self, family, feelings, and routines."
+    },
+    {
+      "slug": "home-living",
+      "title": "Home & Living",
+      "order": 2,
+      "description": "Houses, furniture, chores, and neighborhoods."
+    },
+    {
+      "slug": "food-dining",
+      "title": "Food & Dining",
+      "order": 3,
+      "description": "Eating, cooking, ordering, and food culture."
+    },
+    {
+      "slug": "travel-transport",
+      "title": "Travel & Transport",
+      "order": 4,
+      "description": "Getting around, trips, and travel life."
+    },
+    {
+      "slug": "work-career",
+      "title": "Work & Career",
+      "order": 5,
+      "description": "Jobs, the workplace, and professional growth."
+    },
+    {
+      "slug": "shopping-money",
+      "title": "Shopping, Money & Services",
+      "order": 6,
+      "description": "Buying, paying, banking, and finance."
+    },
+    {
+      "slug": "health-body",
+      "title": "Health & Body",
+      "order": 7,
+      "description": "Illness, fitness, wellness, and healthcare."
+    },
+    {
+      "slug": "society-culture",
+      "title": "Society, Culture & Current Affairs",
+      "order": 8,
+      "description": "Culture, news, and social issues."
+    },
+    {
+      "slug": "technology",
+      "title": "Technology & Communication",
+      "order": 9,
+      "description": "Devices, the internet, apps, and AI."
+    },
+    {
+      "slug": "academic-exam",
+      "title": "Academic & Exam English",
+      "order": 10,
+      "description": "School, university, and IELTS/TOEFL skills."
+    }
+  ],
+  "topics": [
+    {
+      "slug": "greetings-and-introductions",
+      "title": "Greetings & Introductions",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "numbers-and-counting",
+      "title": "Numbers & Counting",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "colors",
+      "title": "Colors",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "days-months-and-dates",
+      "title": "Days, Months & Dates",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "telling-time",
+      "title": "Telling Time",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "family-members",
+      "title": "Family Members",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 6
+    },
+    {
+      "slug": "personal-information",
+      "title": "Personal Information",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 7
+    },
+    {
+      "slug": "describing-appearance",
+      "title": "Describing Appearance",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 8
+    },
+    {
+      "slug": "personality-and-feelings",
+      "title": "Personality & Feelings",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 9
+    },
+    {
+      "slug": "daily-routines",
+      "title": "Daily Routines",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 10
+    },
+    {
+      "slug": "body-parts",
+      "title": "Body Parts",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 11
+    },
+    {
+      "slug": "personal-hygiene",
+      "title": "Personal Hygiene",
+      "categorySlug": "daily-life",
+      "cefrLevel": "beginner",
+      "order": 12
+    },
+    {
+      "slug": "habits-and-lifestyle",
+      "title": "Habits & Lifestyle",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 13
+    },
+    {
+      "slug": "emotions-and-moods",
+      "title": "Emotions & Moods",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 14
+    },
+    {
+      "slug": "life-events-and-milestones",
+      "title": "Life Events & Milestones",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 15
+    },
+    {
+      "slug": "personal-goals",
+      "title": "Personal Goals",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 16
+    },
+    {
+      "slug": "describing-character-in-depth",
+      "title": "Describing Character in Depth",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 17
+    },
+    {
+      "slug": "dreams-and-ambitions",
+      "title": "Dreams & Ambitions",
+      "categorySlug": "daily-life",
+      "cefrLevel": "intermediate",
+      "order": 18
+    },
+    {
+      "slug": "self-reflection-and-identity",
+      "title": "Self-reflection & Identity",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 19
+    },
+    {
+      "slug": "values-and-beliefs",
+      "title": "Values & Beliefs",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 20
+    },
+    {
+      "slug": "personal-philosophy",
+      "title": "Personal Philosophy",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 21
+    },
+    {
+      "slug": "discussing-regret-and-hindsight",
+      "title": "Discussing Regret & Hindsight",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 22
+    },
+    {
+      "slug": "coping-and-resilience",
+      "title": "Coping & Resilience",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 23
+    },
+    {
+      "slug": "life-stories-and-memoirs",
+      "title": "Life Stories & Memoirs",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 24
+    },
+    {
+      "slug": "existential-topics",
+      "title": "Existential Topics",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 25
+    },
+    {
+      "slug": "personal-branding",
+      "title": "Personal Branding",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 26
+    },
+    {
+      "slug": "mindfulness-and-self-talk",
+      "title": "Mindfulness & Self-talk",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 27
+    },
+    {
+      "slug": "discussing-change",
+      "title": "Discussing Change",
+      "categorySlug": "daily-life",
+      "cefrLevel": "advanced",
+      "order": 28
+    },
+    {
+      "slug": "rooms-in-a-house",
+      "title": "Rooms in a House",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "furniture",
+      "title": "Furniture",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "household-objects",
+      "title": "Household Objects",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "housework-and-chores",
+      "title": "Housework & Chores",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "kitchen-and-cooking-tools",
+      "title": "Kitchen & Cooking Tools",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "in-the-bathroom",
+      "title": "In the Bathroom",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 6
+    },
+    {
+      "slug": "in-the-bedroom",
+      "title": "In the Bedroom",
+      "categorySlug": "home-living",
+      "cefrLevel": "beginner",
+      "order": 7
+    },
+    {
+      "slug": "renting-and-buying-a-home",
+      "title": "Renting & Buying a Home",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "describing-your-neighborhood",
+      "title": "Describing Your Neighborhood",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "home-repairs-and-maintenance",
+      "title": "Home Repairs & Maintenance",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "utilities-and-bills",
+      "title": "Utilities & Bills",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "interior-design",
+      "title": "Interior Design",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 12
+    },
+    {
+      "slug": "moving-house",
+      "title": "Moving House",
+      "categorySlug": "home-living",
+      "cefrLevel": "intermediate",
+      "order": 13
+    },
+    {
+      "slug": "real-estate-and-property",
+      "title": "Real Estate & Property",
+      "categorySlug": "home-living",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "sustainable-and-smart-homes",
+      "title": "Sustainable & Smart Homes",
+      "categorySlug": "home-living",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "urban-vs-rural-living",
+      "title": "Urban vs Rural Living",
+      "categorySlug": "home-living",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "architecture-and-housing-trends",
+      "title": "Architecture & Housing Trends",
+      "categorySlug": "home-living",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "home-ownership-finance",
+      "title": "Home Ownership Finance",
+      "categorySlug": "home-living",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "common-foods",
+      "title": "Common Foods",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "fruits-and-vegetables",
+      "title": "Fruits & Vegetables",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "drinks",
+      "title": "Drinks",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "meals-of-the-day",
+      "title": "Meals of the Day",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "at-a-cafe",
+      "title": "At a Cafe",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "ordering-at-a-restaurant",
+      "title": "Ordering at a Restaurant",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 6
+    },
+    {
+      "slug": "tastes-and-flavors",
+      "title": "Tastes & Flavors",
+      "categorySlug": "food-dining",
+      "cefrLevel": "beginner",
+      "order": 7
+    },
+    {
+      "slug": "cooking-and-recipes",
+      "title": "Cooking & Recipes",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "dietary-preferences-and-restrictions",
+      "title": "Dietary Preferences & Restrictions",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "grocery-shopping",
+      "title": "Grocery Shopping",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "eating-out-and-etiquette",
+      "title": "Eating Out & Etiquette",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "street-food-and-local-cuisine",
+      "title": "Street Food & Local Cuisine",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 12
+    },
+    {
+      "slug": "reviewing-a-meal",
+      "title": "Reviewing a Meal",
+      "categorySlug": "food-dining",
+      "cefrLevel": "intermediate",
+      "order": 13
+    },
+    {
+      "slug": "food-culture-and-traditions",
+      "title": "Food Culture & Traditions",
+      "categorySlug": "food-dining",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "nutrition-and-diet-science",
+      "title": "Nutrition & Diet Science",
+      "categorySlug": "food-dining",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "fine-dining-and-gastronomy",
+      "title": "Fine Dining & Gastronomy",
+      "categorySlug": "food-dining",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "food-sustainability",
+      "title": "Food Sustainability",
+      "categorySlug": "food-dining",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "the-restaurant-business",
+      "title": "The Restaurant Business",
+      "categorySlug": "food-dining",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "directions-and-locations",
+      "title": "Directions & Locations",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "modes-of-transport",
+      "title": "Modes of Transport",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "at-the-airport",
+      "title": "At the Airport",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "buying-tickets",
+      "title": "Buying Tickets",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "at-the-hotel",
+      "title": "At the Hotel",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "asking-for-help",
+      "title": "Asking for Help",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 6
+    },
+    {
+      "slug": "common-travel-phrases",
+      "title": "Common Travel Phrases",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "beginner",
+      "order": 7
+    },
+    {
+      "slug": "planning-a-trip",
+      "title": "Planning a Trip",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "booking-accommodation",
+      "title": "Booking Accommodation",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "public-transport",
+      "title": "Public Transport",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "sightseeing-and-tourist-attractions",
+      "title": "Sightseeing & Tourist Attractions",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "travel-problems-and-delays",
+      "title": "Travel Problems & Delays",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 12
+    },
+    {
+      "slug": "renting-a-car",
+      "title": "Renting a Car",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 13
+    },
+    {
+      "slug": "describing-places-you-ve-visited",
+      "title": "Describing Places You've Visited",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "intermediate",
+      "order": 14
+    },
+    {
+      "slug": "travel-writing-and-blogging",
+      "title": "Travel Writing & Blogging",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "cultural-tourism",
+      "title": "Cultural Tourism",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "backpacking-and-adventure-travel",
+      "title": "Backpacking & Adventure Travel",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "travel-industry-and-logistics",
+      "title": "Travel Industry & Logistics",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "immigration-and-customs",
+      "title": "Immigration & Customs",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 19
+    },
+    {
+      "slug": "eco-tourism",
+      "title": "Eco-tourism",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 20
+    },
+    {
+      "slug": "expatriate-life",
+      "title": "Expatriate Life",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 21
+    },
+    {
+      "slug": "travel-insurance-and-risk",
+      "title": "Travel Insurance & Risk",
+      "categorySlug": "travel-transport",
+      "cefrLevel": "advanced",
+      "order": 22
+    },
+    {
+      "slug": "jobs-and-occupations",
+      "title": "Jobs & Occupations",
+      "categorySlug": "work-career",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "workplace-objects",
+      "title": "Workplace Objects",
+      "categorySlug": "work-career",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "asking-about-someone-s-job",
+      "title": "Asking About Someone's Job",
+      "categorySlug": "work-career",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "daily-work-routine",
+      "title": "Daily Work Routine",
+      "categorySlug": "work-career",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "simple-office-phrases",
+      "title": "Simple Office Phrases",
+      "categorySlug": "work-career",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "job-applications-and-cvs",
+      "title": "Job Applications & CVs",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "job-interviews",
+      "title": "Job Interviews",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "office-communication",
+      "title": "Office Communication",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "meetings-and-presentations",
+      "title": "Meetings & Presentations",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "emails-and-professional-writing",
+      "title": "Emails & Professional Writing",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "describing-skills-and-experience",
+      "title": "Describing Skills & Experience",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "workplace-relationships",
+      "title": "Workplace Relationships",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 12
+    },
+    {
+      "slug": "salary-and-benefits",
+      "title": "Salary & Benefits",
+      "categorySlug": "work-career",
+      "cefrLevel": "intermediate",
+      "order": 13
+    },
+    {
+      "slug": "negotiation",
+      "title": "Negotiation",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "leadership-and-management",
+      "title": "Leadership & Management",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "career-development-and-promotion",
+      "title": "Career Development & Promotion",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "entrepreneurship-and-startups",
+      "title": "Entrepreneurship & Startups",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "project-management",
+      "title": "Project Management",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "workplace-conflict-resolution",
+      "title": "Workplace Conflict Resolution",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 19
+    },
+    {
+      "slug": "remote-work-and-freelancing",
+      "title": "Remote Work & Freelancing",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 20
+    },
+    {
+      "slug": "industry-jargon-and-networking",
+      "title": "Industry Jargon & Networking",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 21
+    },
+    {
+      "slug": "performance-reviews",
+      "title": "Performance Reviews",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 22
+    },
+    {
+      "slug": "business-ethics",
+      "title": "Business Ethics",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 23
+    },
+    {
+      "slug": "public-speaking-at-work",
+      "title": "Public Speaking at Work",
+      "categorySlug": "work-career",
+      "cefrLevel": "advanced",
+      "order": 24
+    },
+    {
+      "slug": "shopping-for-clothes",
+      "title": "Shopping for Clothes",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "prices-and-paying",
+      "title": "Prices & Paying",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "sizes-and-quantities",
+      "title": "Sizes & Quantities",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "at-the-market",
+      "title": "At the Market",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "common-shops",
+      "title": "Common Shops",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "online-shopping",
+      "title": "Online Shopping",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "banking-basics",
+      "title": "Banking Basics",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "returns-and-complaints",
+      "title": "Returns & Complaints",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "comparing-products",
+      "title": "Comparing Products",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "customer-service",
+      "title": "Customer Service",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "budgeting-and-saving",
+      "title": "Budgeting & Saving",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "personal-finance-and-investing",
+      "title": "Personal Finance & Investing",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "advanced",
+      "order": 12
+    },
+    {
+      "slug": "consumer-rights",
+      "title": "Consumer Rights",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "advanced",
+      "order": 13
+    },
+    {
+      "slug": "insurance",
+      "title": "Insurance",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "economics-in-everyday-life",
+      "title": "Economics in Everyday Life",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "cryptocurrency-and-digital-money",
+      "title": "Cryptocurrency & Digital Money",
+      "categorySlug": "shopping-money",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "common-illnesses-and-symptoms",
+      "title": "Common Illnesses & Symptoms",
+      "categorySlug": "health-body",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "at-the-doctor-s",
+      "title": "At the Doctor's",
+      "categorySlug": "health-body",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "at-the-pharmacy",
+      "title": "At the Pharmacy",
+      "categorySlug": "health-body",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "parts-of-the-body",
+      "title": "Parts of the Body",
+      "categorySlug": "health-body",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "staying-healthy",
+      "title": "Staying Healthy",
+      "categorySlug": "health-body",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "describing-pain-and-symptoms",
+      "title": "Describing Pain & Symptoms",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "fitness-and-exercise",
+      "title": "Fitness & Exercise",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "mental-health-basics",
+      "title": "Mental Health Basics",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "medical-appointments",
+      "title": "Medical Appointments",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "diet-and-wellness",
+      "title": "Diet & Wellness",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "emergencies-and-first-aid",
+      "title": "Emergencies & First Aid",
+      "categorySlug": "health-body",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "healthcare-systems",
+      "title": "Healthcare Systems",
+      "categorySlug": "health-body",
+      "cefrLevel": "advanced",
+      "order": 12
+    },
+    {
+      "slug": "medical-conditions-in-depth",
+      "title": "Medical Conditions in Depth",
+      "categorySlug": "health-body",
+      "cefrLevel": "advanced",
+      "order": 13
+    },
+    {
+      "slug": "mental-health-and-therapy",
+      "title": "Mental Health & Therapy",
+      "categorySlug": "health-body",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "public-health-and-disease",
+      "title": "Public Health & Disease",
+      "categorySlug": "health-body",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "medical-research-and-ethics",
+      "title": "Medical Research & Ethics",
+      "categorySlug": "health-body",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "countries-and-nationalities",
+      "title": "Countries & Nationalities",
+      "categorySlug": "society-culture",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "weather-and-seasons",
+      "title": "Weather & Seasons",
+      "categorySlug": "society-culture",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "holidays-and-festivals",
+      "title": "Holidays & Festivals",
+      "categorySlug": "society-culture",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "hobbies-and-free-time",
+      "title": "Hobbies & Free Time",
+      "categorySlug": "society-culture",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "sports",
+      "title": "Sports",
+      "categorySlug": "society-culture",
+      "cefrLevel": "beginner",
+      "order": 5
+    },
+    {
+      "slug": "news-and-media",
+      "title": "News & Media",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "music-and-entertainment",
+      "title": "Music & Entertainment",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "movies-and-tv",
+      "title": "Movies & TV",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "social-customs-and-etiquette",
+      "title": "Social Customs & Etiquette",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "religion-and-traditions",
+      "title": "Religion & Traditions",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "community-and-volunteering",
+      "title": "Community & Volunteering",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "crime-and-law-basics",
+      "title": "Crime & Law Basics",
+      "categorySlug": "society-culture",
+      "cefrLevel": "intermediate",
+      "order": 12
+    },
+    {
+      "slug": "politics-and-government",
+      "title": "Politics & Government",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 13
+    },
+    {
+      "slug": "social-issues-and-inequality",
+      "title": "Social Issues & Inequality",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "environment-and-climate-change",
+      "title": "Environment & Climate Change",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "globalization",
+      "title": "Globalization",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "human-rights",
+      "title": "Human Rights",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "media-bias-and-misinformation",
+      "title": "Media Bias & Misinformation",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "cultural-identity",
+      "title": "Cultural Identity",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 19
+    },
+    {
+      "slug": "debating-controversial-topics",
+      "title": "Debating Controversial Topics",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 20
+    },
+    {
+      "slug": "history-and-civilization",
+      "title": "History & Civilization",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 21
+    },
+    {
+      "slug": "philosophy-and-ethics",
+      "title": "Philosophy & Ethics",
+      "categorySlug": "society-culture",
+      "cefrLevel": "advanced",
+      "order": 22
+    },
+    {
+      "slug": "phones-and-devices",
+      "title": "Phones & Devices",
+      "categorySlug": "technology",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "using-the-internet",
+      "title": "Using the Internet",
+      "categorySlug": "technology",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "social-media-basics",
+      "title": "Social Media Basics",
+      "categorySlug": "technology",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "common-tech-words",
+      "title": "Common Tech Words",
+      "categorySlug": "technology",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "apps-and-software",
+      "title": "Apps & Software",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 5
+    },
+    {
+      "slug": "online-safety-and-privacy",
+      "title": "Online Safety & Privacy",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "texting-and-messaging",
+      "title": "Texting & Messaging",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "email-etiquette",
+      "title": "Email Etiquette",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "describing-gadgets",
+      "title": "Describing Gadgets",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "troubleshooting-tech",
+      "title": "Troubleshooting Tech",
+      "categorySlug": "technology",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "artificial-intelligence",
+      "title": "Artificial Intelligence",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 11
+    },
+    {
+      "slug": "cybersecurity",
+      "title": "Cybersecurity",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 12
+    },
+    {
+      "slug": "digital-transformation",
+      "title": "Digital Transformation",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 13
+    },
+    {
+      "slug": "data-and-privacy-debates",
+      "title": "Data & Privacy Debates",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "the-future-of-technology",
+      "title": "The Future of Technology",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "tech-industry-and-innovation",
+      "title": "Tech Industry & Innovation",
+      "categorySlug": "technology",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "school-and-classroom",
+      "title": "School & Classroom",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "beginner",
+      "order": 1
+    },
+    {
+      "slug": "school-subjects",
+      "title": "School Subjects",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "beginner",
+      "order": 2
+    },
+    {
+      "slug": "studying-and-learning",
+      "title": "Studying & Learning",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "beginner",
+      "order": 3
+    },
+    {
+      "slug": "stationery-and-supplies",
+      "title": "Stationery & Supplies",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "beginner",
+      "order": 4
+    },
+    {
+      "slug": "university-life",
+      "title": "University Life",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 5
+    },
+    {
+      "slug": "describing-charts-and-graphs",
+      "title": "Describing Charts & Graphs",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 6
+    },
+    {
+      "slug": "opinion-essays",
+      "title": "Opinion Essays",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 7
+    },
+    {
+      "slug": "note-taking-and-summarizing",
+      "title": "Note-taking & Summarizing",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 8
+    },
+    {
+      "slug": "academic-listening",
+      "title": "Academic Listening",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 9
+    },
+    {
+      "slug": "group-discussions",
+      "title": "Group Discussions",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 10
+    },
+    {
+      "slug": "library-and-research-basics",
+      "title": "Library & Research Basics",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "intermediate",
+      "order": 11
+    },
+    {
+      "slug": "ielts-writing-task-1-data",
+      "title": "IELTS Writing Task 1 Data",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 12
+    },
+    {
+      "slug": "ielts-writing-task-2-argument",
+      "title": "IELTS Writing Task 2 Argument",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 13
+    },
+    {
+      "slug": "ielts-speaking-part-1",
+      "title": "IELTS Speaking Part 1",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 14
+    },
+    {
+      "slug": "ielts-speaking-part-2",
+      "title": "IELTS Speaking Part 2",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 15
+    },
+    {
+      "slug": "ielts-speaking-part-3",
+      "title": "IELTS Speaking Part 3",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 16
+    },
+    {
+      "slug": "academic-vocabulary-awl",
+      "title": "Academic Vocabulary AWL",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 17
+    },
+    {
+      "slug": "cause-and-effect-essays",
+      "title": "Cause & Effect Essays",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 18
+    },
+    {
+      "slug": "compare-contrast-essays",
+      "title": "Compare-Contrast Essays",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 19
+    },
+    {
+      "slug": "cohesion-and-linking-devices",
+      "title": "Cohesion & Linking Devices",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 20
+    },
+    {
+      "slug": "paraphrasing-skills",
+      "title": "Paraphrasing Skills",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 21
+    },
+    {
+      "slug": "lectures-and-seminars",
+      "title": "Lectures & Seminars",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 22
+    },
+    {
+      "slug": "citing-and-referencing",
+      "title": "Citing & Referencing",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 23
+    },
+    {
+      "slug": "formal-vs-informal-register",
+      "title": "Formal vs Informal Register",
+      "categorySlug": "academic-exam",
+      "cefrLevel": "advanced",
+      "order": 24
+    }
+  ]
+}

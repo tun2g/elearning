@@ -1,4 +1,4 @@
-import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService, type JwtSignOptions } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -8,9 +8,15 @@ import { Repository } from 'typeorm';
 
 import { AppConfig } from 'src/config/configuration';
 import { UserService } from 'src/modules/user/user.service';
+import { MailService } from 'src/shared/modules/mail/mail.service';
+import { buildMagicLinkEmail, buildVerifyEmail } from 'src/shared/modules/mail/mail.templates';
 
-import { AuthTokensResponseDto } from './dtos/auth.dto';
+import { LOGIN_TTL_MINUTES, LOGIN_TTL_MS, VERIFY_TTL_HOURS, VERIFY_TTL_MS } from './constants/auth.constants';
+import { AuthTokensResponseDto, RegisterResultDto } from './dtos/auth.dto';
+import { EmailAuthTokenService } from './email-auth-token.service';
 import { SessionEntity } from './entities/session.entity';
+import type { GoogleProfile } from './google.strategy';
+import { deriveName, parseDurationMs } from './auth.util';
 import type { AccessClaims, SessionContext } from './interfaces/session-context.interface';
 
 @Injectable()
@@ -19,35 +25,135 @@ export class AuthService {
     private readonly userService: UserService,
     private readonly jwtService: JwtService,
     private readonly configService: ConfigService<AppConfig, true>,
+    private readonly mailService: MailService,
+    private readonly emailTokenService: EmailAuthTokenService,
     @InjectRepository(SessionEntity)
     private readonly sessionRepo: Repository<SessionEntity>
   ) {}
 
-  async register(
-    email: string,
-    password: string,
-    displayName: string,
-    ctx: SessionContext = {}
-  ): Promise<AuthTokensResponseDto> {
+  /** Creates an unverified account and emails a verification link. No session yet. */
+  async register(email: string, password: string, displayName: string): Promise<RegisterResultDto> {
     const existing = await this.userService.findByEmail(email);
-    if (existing) throw new ConflictException('Email already registered');
+    if (existing?.emailVerifiedAt) throw new ConflictException('Email already registered');
 
     const passwordHash = await argon2.hash(password);
-    const user = await this.userService.create({
-      email,
-      passwordHash,
-      displayName,
-    });
+    let user = existing;
+    if (user) {
+      // Re-registering an unverified account: refresh credentials, resend link.
+      user.passwordHash = passwordHash;
+      user.displayName = displayName;
+      await this.userService.update(user);
+    } else {
+      user = await this.userService.create({ email, passwordHash, displayName, emailVerifiedAt: null });
+    }
+
+    await this.sendVerificationEmail(user.email, user.displayName, user.id);
+    return { status: 'verification_sent' };
+  }
+
+  /** Marks the email verified and auto-logs the user in. */
+  async verifyEmail(rawToken: string, ctx: SessionContext = {}): Promise<AuthTokensResponseDto> {
+    const token = await this.emailTokenService.consume(rawToken, 'verify_email');
+    const user = token.userId
+      ? await this.userService.findById(token.userId)
+      : await this.userService.findByEmail(token.email);
+    if (!user) throw new UnauthorizedException('Account not found');
+
+    if (!user.emailVerifiedAt) {
+      user.emailVerifiedAt = new Date();
+      await this.userService.update(user);
+    }
     return this.createSession(user.id, user.email, ctx);
+  }
+
+  /** Re-sends a verification link. Always succeeds outwardly (no enumeration). */
+  async resendVerification(email: string): Promise<void> {
+    const user = await this.userService.findByEmail(email);
+    if (user && !user.emailVerifiedAt) {
+      await this.sendVerificationEmail(user.email, user.displayName, user.id);
+    }
   }
 
   async login(email: string, password: string, ctx: SessionContext = {}): Promise<AuthTokensResponseDto> {
     const user = await this.userService.findByEmail(email);
-    if (!user) throw new UnauthorizedException('Invalid credentials');
+    // No password set → account is Google/passwordless-only; never log in by password.
+    if (!user || !user.passwordHash) throw new UnauthorizedException('Invalid credentials');
 
     const valid = await argon2.verify(user.passwordHash, password);
     if (!valid) throw new UnauthorizedException('Invalid credentials');
 
+    // Check verification only AFTER proving credentials (avoids leaking account state).
+    if (!user.emailVerifiedAt) {
+      throw new ForbiddenException({ code: 'EMAIL_NOT_VERIFIED', message: 'Please verify your email first.' });
+    }
+
+    return this.createSession(user.id, user.email, ctx);
+  }
+
+  /** Sends a passwordless sign-in link. Always succeeds outwardly (no enumeration). */
+  async requestMagicLink(email: string): Promise<void> {
+    const user = await this.userService.findByEmail(email);
+    const raw = await this.emailTokenService.issue({
+      email,
+      purpose: 'login',
+      ttlMs: LOGIN_TTL_MS,
+      userId: user?.id ?? null,
+    });
+    if (!raw) return; // throttled — prior link still valid
+    const url = this.magicLinkUrl(raw, 'login');
+    await this.mailService.send(
+      buildMagicLinkEmail({ to: email, displayName: user?.displayName, url, expiresMinutes: LOGIN_TTL_MINUTES })
+    );
+  }
+
+  /** Consumes a passwordless link → session. Auto-creates a verified account if new. */
+  async verifyMagicLink(rawToken: string, ctx: SessionContext = {}): Promise<AuthTokensResponseDto> {
+    const token = await this.emailTokenService.consume(rawToken, 'login');
+    let user = token.userId
+      ? await this.userService.findById(token.userId)
+      : await this.userService.findByEmail(token.email);
+
+    if (!user) {
+      user = await this.userService.create({
+        email: token.email,
+        passwordHash: null,
+        displayName: deriveName(token.email),
+        emailVerifiedAt: new Date(),
+      });
+    } else if (!user.emailVerifiedAt) {
+      // Clicking an emailed link proves ownership → verify.
+      user.emailVerifiedAt = new Date();
+      await this.userService.update(user);
+    }
+    return this.createSession(user.id, user.email, ctx);
+  }
+
+  /** Upserts/links the user from a verified Google profile and starts a session. */
+  async loginWithGoogleProfile(profile: GoogleProfile, ctx: SessionContext = {}): Promise<AuthTokensResponseDto> {
+    const email = profile.email?.toLowerCase();
+    if (!email) throw new UnauthorizedException('Google account has no email');
+    // Only trust the email (for linking/auto-verify) if Google says it verified it.
+    if (!profile.emailVerified) throw new UnauthorizedException('Your Google email is not verified');
+
+    let user = await this.userService.findByGoogleId(profile.googleId);
+    if (!user) {
+      user = await this.userService.findByEmail(email);
+      if (user) {
+        user.googleId = profile.googleId;
+        if (!user.emailVerifiedAt) user.emailVerifiedAt = new Date();
+        if (!user.avatarUrl && profile.avatarUrl) user.avatarUrl = profile.avatarUrl;
+        await this.userService.update(user);
+      } else {
+        user = await this.userService.create({
+          email,
+          passwordHash: null,
+          displayName: profile.displayName ?? deriveName(email),
+          emailVerifiedAt: new Date(),
+          googleId: profile.googleId,
+          avatarUrl: profile.avatarUrl,
+        });
+      }
+    }
     return this.createSession(user.id, user.email, ctx);
   }
 
@@ -111,6 +217,25 @@ export class AuthService {
 
   // --- internals ---
 
+  private async sendVerificationEmail(email: string, displayName: string | null, userId: string): Promise<void> {
+    const raw = await this.emailTokenService.issue({
+      email,
+      purpose: 'verify_email',
+      ttlMs: VERIFY_TTL_MS,
+      userId,
+    });
+    if (!raw) return; // throttled — prior link still valid
+    const url = this.magicLinkUrl(raw, 'verify_email');
+    await this.mailService.send(buildVerifyEmail({ to: email, displayName, url, expiresHours: VERIFY_TTL_HOURS }));
+  }
+
+  /** Builds the frontend verify URL the email links to (frontend → POST verify). */
+  private magicLinkUrl(rawToken: string, purpose: 'verify_email' | 'login'): string {
+    const { webUrl } = this.configService.get('app', { infer: true });
+    const params = new URLSearchParams({ token: rawToken, purpose });
+    return `${webUrl}/auth/verify?${params.toString()}`;
+  }
+
   private async createSession(userId: string, email: string, ctx: SessionContext): Promise<AuthTokensResponseDto> {
     const sessionId = randomUUID();
     const tokens = this.signTokens(userId, email, sessionId);
@@ -157,23 +282,11 @@ export class AuthService {
 
   private refreshExpiry(): Date {
     const { refreshExpiresIn } = this.configService.get('jwt', { infer: true });
-    return new Date(Date.now() + this.parseDurationMs(refreshExpiresIn));
+    return new Date(Date.now() + parseDurationMs(refreshExpiresIn));
   }
 
   private accessTtlSeconds(): number {
     const { expiresIn } = this.configService.get('jwt', { infer: true });
-    return this.parseDurationMs(expiresIn) / 1000;
-  }
-
-  private parseDurationMs(duration: string): number {
-    const unit = duration.slice(-1);
-    const value = parseInt(duration.slice(0, -1), 10);
-    const multipliers: Record<string, number> = {
-      s: 1000,
-      m: 60_000,
-      h: 3_600_000,
-      d: 86_400_000,
-    };
-    return value * (multipliers[unit] ?? 60_000);
+    return parseDurationMs(expiresIn) / 1000;
   }
 }

@@ -1,7 +1,11 @@
 import { AppDataSource } from './data-source';
+import { seedTaxonomy } from './seed-taxonomy';
 import { LessonEntity } from '../modules/content/entities/lesson.entity';
 import { SentenceEntity } from '../modules/content/entities/sentence.entity';
+import { TopicEntity } from '../modules/content/entities/topic.entity';
 import { VocabularyEntity } from '../modules/vocabulary/entities/vocabulary.entity';
+
+const SEED_TOPIC_SLUG = 'greetings-and-introductions';
 
 /**
  * Minimal seed for the "practice by sound" vertical slice.
@@ -9,7 +13,12 @@ import { VocabularyEntity } from '../modules/vocabulary/entities/vocabulary.enti
  */
 async function seed(): Promise<void> {
   await AppDataSource.initialize();
+
+  const taxo = await seedTaxonomy(AppDataSource);
+  console.log(`Taxonomy ready: ${taxo.categories} categories, ${taxo.topics} topics.`);
+
   const lessonRepo = AppDataSource.getRepository(LessonEntity);
+  const topic = await AppDataSource.getRepository(TopicEntity).findOne({ where: { slug: SEED_TOPIC_SLUG } });
 
   const existing = await lessonRepo.count();
   if (existing > 0) {
@@ -61,7 +70,7 @@ async function seed(): Promise<void> {
     title: 'Everyday Small Talk',
     description: 'Warm up with five common conversational lines. Listen, then shadow each one.',
     level: 'beginner',
-    topic: 'Daily conversation',
+    topic,
     source: 'seed',
     sentences: sentences as SentenceEntity[],
   });
@@ -78,7 +87,6 @@ async function seed(): Promise<void> {
       ipa: '/ˈduːɪŋ/',
       synonyms: ['performing', 'carrying out'],
       exampleSentences: ['How are you doing today?', 'She is doing her homework.'],
-      topic: 'Daily conversation',
       level: 'beginner',
     },
     {
@@ -87,7 +95,6 @@ async function seed(): Promise<void> {
       ipa: '/ɡreɪt/',
       synonyms: ['excellent', 'wonderful', 'fantastic'],
       exampleSentences: ["I'm doing great, thanks!", 'That was a great idea.'],
-      topic: 'Daily conversation',
       level: 'beginner',
     },
     {
@@ -96,7 +103,6 @@ async function seed(): Promise<void> {
       ipa: '/ˈjuːʒuəli/',
       synonyms: ['generally', 'normally', 'typically'],
       exampleSentences: ['What do you usually do on weekends?', 'I usually wake up at 7 am.'],
-      topic: 'Daily conversation',
       level: 'beginner',
     },
     {
@@ -105,7 +111,6 @@ async function seed(): Promise<void> {
       ipa: '/ˈwiːkˌɛnd/',
       synonyms: ['days off', 'Saturday and Sunday'],
       exampleSentences: ['What do you do on weekends?', 'I love spending weekends with family.'],
-      topic: 'Daily conversation',
       level: 'beginner',
     },
     {
@@ -114,13 +119,12 @@ async function seed(): Promise<void> {
       ipa: '/ˈtɔːkɪŋ/',
       synonyms: ['speaking', 'chatting', 'conversing'],
       exampleSentences: ['It was nice talking to you.', 'We were talking for hours.'],
-      topic: 'Daily conversation',
       level: 'beginner',
     },
   ];
 
   for (const data of vocabData) {
-    const vocab = vocabRepo.create({ ...data, audioUrl: null });
+    const vocab = vocabRepo.create({ ...data, topic, audioUrl: null });
     await vocabRepo.save(vocab);
   }
 

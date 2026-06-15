@@ -1,6 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 
 import { LessonEntity } from 'src/modules/content/entities/lesson.entity';
+import { TopicEntity } from 'src/modules/content/entities/topic.entity';
 import { StorageObjectEntity } from 'src/modules/media/entities/storage-object.entity';
 import { AuditableEntity } from 'src/shared/entities/auditable.entity';
 
@@ -24,8 +25,10 @@ export class VocabularyEntity extends AuditableEntity {
   @Column({ name: 'example_sentences', type: 'jsonb', default: '[]' })
   exampleSentences!: string[];
 
-  @Column({ type: 'varchar', length: 120, nullable: true })
-  topic!: string | null;
+  /** Thematic grouping. Null when no taxonomy topic matched on import. */
+  @ManyToOne(() => TopicEntity, { nullable: true, onDelete: 'SET NULL' })
+  @JoinColumn({ name: 'topic_id' })
+  topic!: TopicEntity | null;
 
   @Column({ type: 'varchar', length: 20, default: 'beginner' })
   level!: string;

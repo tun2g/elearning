@@ -1,27 +1,41 @@
-import { voaSource } from './sources/voa';
-import type { Source } from './types';
+import type { ImportBatch } from '@elearning/contracts';
+
 import { writeBatch } from './lib/writer';
+import { tatoebaSource } from './sources/tatoeba';
+import { voaSource } from './sources/voa';
+import { PILOT_TOPICS, planForAll, planForTopic } from './topic-plan';
+import type { Source } from './types';
 
 const SOURCES: Record<string, Source> = {
   voa: voaSource,
+  tatoeba: tatoebaSource,
 };
+
+// Per-topic quality gate (matches the plan's pilot acceptance bar).
+const GATE_MIN_VOCAB = 5;
 
 interface Args {
   source: string;
   limit: number;
+  topic?: string;
+  pilot: boolean;
+  all: boolean;
   feed?: string;
   withAudio: boolean;
   out?: string;
 }
 
 function parseArgs(argv: string[]): Args {
-  const args: Args = { source: 'voa', limit: 5, withAudio: true };
+  const args: Args = { source: 'tatoeba', limit: 12, pilot: false, all: false, withAudio: true };
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i];
     if (a === '--source') args.source = argv[(i += 1)];
     else if (a === '--limit') args.limit = Number(argv[(i += 1)]);
+    else if (a === '--topic') args.topic = argv[(i += 1)];
     else if (a === '--feed') args.feed = argv[(i += 1)];
     else if (a === '--out') args.out = argv[(i += 1)];
+    else if (a === '--pilot') args.pilot = true;
+    else if (a === '--all') args.all = true;
     else if (a === '--no-audio') args.withAudio = false;
   }
   return args;
@@ -36,6 +50,19 @@ function stamp(): string {
   );
 }
 
+function targetSlugs(args: Args): string[] {
+  if (args.topic) return [args.topic];
+  if (args.pilot) return PILOT_TOPICS;
+  if (args.all) return planForAll().map((p) => p.topicSlug);
+  return [];
+}
+
+interface Coverage {
+  topicSlug: string;
+  lessons: number;
+  vocab: number;
+}
+
 async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const source = SOURCES[args.source];
@@ -44,19 +71,57 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
+  const slugs = targetSlugs(args);
+  if (slugs.length === 0) {
+    console.error('No topics targeted. Pass one of: --topic <slug> | --pilot | --all');
+    process.exit(1);
+  }
+
   console.log(`Source: ${source.name} — ${source.licence}`);
-  console.log(`Limit: ${args.limit} · audio: ${args.withAudio ? 'on' : 'off'}\n`);
+  console.log(`Topics: ${slugs.length} · limit/topic: ${args.limit} · audio: ${args.withAudio ? 'on' : 'off'}\n`);
 
-  const batch = await source.crawl({
-    limit: args.limit,
-    feedUrl: args.feed,
-    withAudio: args.withAudio,
-    log: (m) => console.log(`  ${m}`),
-  });
+  const merged: ImportBatch = { lessons: [], vocab: [] };
+  const coverage: Coverage[] = [];
 
-  const runId = `${args.source}-${stamp()}`;
-  const outPath = writeBatch(batch, runId, args.out);
-  console.log(`\nWrote ${batch.lessons.length} lesson(s), ${batch.vocab.length} vocab → ${outPath}`);
+  for (const slug of slugs) {
+    const plan = planForTopic(slug);
+    console.log(`▸ ${slug}`);
+    try {
+      const batch = await source.crawl({
+        limit: args.limit,
+        feedUrl: args.feed,
+        withAudio: args.withAudio,
+        plan,
+        log: (m) => console.log(`    ${m}`),
+      });
+      merged.lessons.push(...batch.lessons);
+      merged.vocab.push(...batch.vocab);
+      coverage.push({ topicSlug: slug, lessons: batch.lessons.length, vocab: batch.vocab.length });
+    } catch (err) {
+      console.error(`    error: ${(err as Error).message}`);
+      coverage.push({ topicSlug: slug, lessons: 0, vocab: 0 });
+    }
+  }
+
+  const runId = `${args.source}-${args.topic ?? (args.pilot ? 'pilot' : 'all')}-${stamp()}`;
+  const outPath = writeBatch(merged, runId, args.out);
+
+  // Coverage report — surface topics that fall short of the quality gate.
+  const short = coverage.filter((c) => c.lessons < 1 || c.vocab < GATE_MIN_VOCAB);
+  console.log(`\n── Coverage ──`);
+  for (const c of coverage) {
+    const flag = c.lessons < 1 || c.vocab < GATE_MIN_VOCAB ? '  ✗' : '  ✓';
+    console.log(`${flag} ${c.topicSlug}: ${c.lessons} lesson(s), ${c.vocab} vocab`);
+  }
+  console.log(
+    `\n${coverage.length - short.length}/${coverage.length} topics met the gate ` +
+      `(≥1 lesson, ≥${GATE_MIN_VOCAB} vocab).`
+  );
+  if (short.length) {
+    console.log(`Below gate (${short.length}): ${short.map((c) => c.topicSlug).join(', ')}`);
+  }
+
+  console.log(`\nWrote ${merged.lessons.length} lesson(s), ${merged.vocab.length} vocab → ${outPath}`);
   console.log('Review it, then import with: pnpm --filter @elearning/api seed:import');
 }
 

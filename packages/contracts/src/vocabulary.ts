@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { TopicRefSchema } from './topic';
+
 export const VocabularySchema = z.object({
   id: z.string(),
   word: z.string(),
@@ -8,7 +10,7 @@ export const VocabularySchema = z.object({
   ipa: z.string().nullable(),
   synonyms: z.array(z.string()),
   exampleSentences: z.array(z.string()),
-  topic: z.string().nullable(),
+  topic: TopicRefSchema.nullable(),
   level: z.string(),
   audioUrl: z.string().nullable(),
 });
