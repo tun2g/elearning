@@ -22,7 +22,7 @@ export function Features() {
       <RevealGroup className="mt-16 grid auto-rows-[minmax(0,1fr)] gap-5 md:grid-cols-3" stagger={0.07}>
         {features.map((f) => (
           <RevealItem key={f.title} className={cn(f.span && 'md:col-span-2', 'h-full')}>
-            <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+            <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)">
               <div>
                 <span className={cn('inline-grid h-12 w-12 place-items-center rounded-2xl', accentBg[f.accent])}>
                   <f.icon size={22} />

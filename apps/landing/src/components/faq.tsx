@@ -18,10 +18,7 @@ export function Faq() {
         {faqs.map((f, i) => {
           const isOpen = open === i;
           return (
-            <div
-              key={f.q}
-              className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)]"
-            >
+            <div key={f.q} className="overflow-hidden rounded-2xl border border-border bg-card shadow-(--shadow-soft)">
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"

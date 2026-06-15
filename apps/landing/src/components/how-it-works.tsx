@@ -13,12 +13,12 @@ export function HowItWorks() {
 
       <RevealGroup className="relative mt-16 grid gap-6 md:grid-cols-3">
         {/* connecting line */}
-        <div className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-border-strong to-transparent md:block" />
+        <div className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-linear-to-r from-transparent via-border-strong to-transparent md:block" />
 
         {steps.map((s) => (
           <RevealItem
             key={s.n}
-            className="group relative rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+            className="group relative rounded-3xl border border-border bg-card p-7 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
           >
             <div className="flex items-center justify-between">
               <span className="grid h-14 w-14 place-items-center rounded-2xl bg-foreground text-accent transition-colors duration-300 group-hover:bg-primary group-hover:text-white">

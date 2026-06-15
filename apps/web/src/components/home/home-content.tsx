@@ -57,7 +57,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
 
       {/* Streak hero */}
       <Reveal delay={0.05}>
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary via-primary to-primary-deep p-6 text-white shadow-[var(--shadow-lift)]">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-linear-to-br from-primary via-primary to-primary-deep p-6 text-white shadow-(--shadow-lift)">
           <div className="pointer-events-none absolute -right-8 -top-10 h-40 w-40 rounded-full bg-accent/40 blur-2xl" />
           <div className="relative flex items-center justify-between">
             <div>
@@ -77,7 +77,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
 
       {/* Daily goal */}
       <Reveal delay={0.1}>
-        <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
+        <div className="rounded-3xl border border-border bg-card p-6 shadow-(--shadow-soft)">
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Trophy size={18} className="text-accent-deep" />
@@ -89,7 +89,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
           </div>
           <div className="h-2.5 w-full overflow-hidden rounded-full bg-muted">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-secondary to-secondary-deep transition-[width] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              className="h-full rounded-full bg-linear-to-r from-secondary to-secondary-deep transition-[width] duration-700 ease-out-soft"
               style={{ width: `${dailyGoal.percentage}%` }}
             />
           </div>
@@ -110,7 +110,8 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
         <RevealItem>
           <Link
             href="/lessons"
-            className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+            data-tour="practice"
+            className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
           >
             <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary-soft text-primary-deep">
               <Sparkles size={20} />
@@ -124,7 +125,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
         <RevealItem>
           <Link
             href="/vocab"
-            className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+            className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
           >
             <span className="grid h-11 w-11 place-items-center rounded-2xl bg-secondary-soft text-secondary-deep">
               <Layers size={20} />
@@ -144,7 +145,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
             <p className="mb-2 text-sm font-semibold text-muted-foreground">Continue practicing</p>
             <Link
               href={`/lessons/${recommendedLesson.slug}`}
-              className="group block rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+              className="group block rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
             >
               <div className="flex items-center justify-between gap-3">
                 <p className="font-display text-lg font-semibold text-foreground">{recommendedLesson.title}</p>
@@ -167,7 +168,7 @@ export function HomeContent({ data, isLoading, isError, hasToken }: HomeContentP
       {/* Recent XP */}
       {recentXp.length > 0 && (
         <Reveal delay={0.05}>
-          <div className="rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)]">
+          <div className="rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft)">
             <p className="mb-3 text-sm font-semibold text-muted-foreground">Recent XP</p>
             <ul className="flex flex-col divide-y divide-border">
               {recentXp.map((e, i) => (

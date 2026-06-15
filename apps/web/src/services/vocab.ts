@@ -2,6 +2,8 @@ import { apiGet, apiPost } from '@/lib/api';
 
 import type { Assessment } from './types';
 
+export type VocabCardStatus = 'new' | 'review';
+
 export interface VocabCard {
   id: string;
   word: string;
@@ -9,6 +11,7 @@ export interface VocabCard {
   ipa: string | null;
   synonyms: string[];
   exampleSentences: string[];
+  status: VocabCardStatus;
 }
 
 export function getVocabReview(token: string): Promise<VocabCard[]> {

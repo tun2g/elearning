@@ -1,11 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { levelFromXp, xpForAction, type XpAction } from '@elearning/core';
+import { isoWeekStart, levelFromXp, xpForAction, type XpAction } from '@elearning/core';
 import { Between, Repository } from 'typeorm';
 
 import { UserEntity } from 'src/modules/user/entities/user.entity';
 import { AttemptEntity } from 'src/modules/practice/entities/attempt.entity';
 
+import { levelUpContent } from '../notifications/constants/notification-messages';
+import { InAppNotificationService } from '../notifications/in-app-notification.service';
 import { XpEventEntity } from './entities/xp-event.entity';
 
 @Injectable()
@@ -16,19 +18,34 @@ export class GamificationService {
     @InjectRepository(UserEntity)
     private readonly userRepo: Repository<UserEntity>,
     @InjectRepository(AttemptEntity)
-    private readonly attemptRepo: Repository<AttemptEntity>
+    private readonly attemptRepo: Repository<AttemptEntity>,
+    private readonly inApp: InAppNotificationService
   ) {}
 
   async awardXp(userId: string, action: XpAction, sourceId?: string): Promise<number> {
     const amount = xpForAction(action);
-    const event = this.xpRepo.create({
-      user: { id: userId },
-      amount,
-      sourceType: action,
-      sourceId: sourceId ?? null,
-    });
-    await this.xpRepo.save(event);
-    await this.userRepo.update({ id: userId }, { xpTotal: () => `xp_total + ${amount}` });
+    await this.xpRepo.save(
+      this.xpRepo.create({ user: { id: userId }, amount, sourceType: action, sourceId: sourceId ?? null })
+    );
+
+    // Atomic increment (no read-modify-write race), returning the new total so
+    // we can detect a rank crossing from a consistent value.
+    const result = await this.userRepo
+      .createQueryBuilder()
+      .update(UserEntity)
+      .set({ xpTotal: () => `xp_total + ${amount}` })
+      .where('id = :id', { id: userId })
+      .returning('xp_total')
+      .execute();
+
+    const newXp = Number(result.raw[0].xp_total);
+    const previousLevel = levelFromXp(newXp - amount);
+    const newLevel = levelFromXp(newXp);
+
+    if (newLevel.rank !== previousLevel.rank) {
+      await this.userRepo.update({ id: userId }, { levelRank: newLevel.rank });
+      await this.inApp.create(userId, levelUpContent(newLevel.rank));
+    }
     return amount;
   }
 
@@ -44,7 +61,7 @@ export class GamificationService {
     });
     const today = todayEvents.reduce((s, e) => s + e.amount, 0);
 
-    const weekStart = this.getWeekStart();
+    const weekStart = isoWeekStart(new Date());
     const weekEvents = await this.xpRepo.find({
       where: { user: { id: userId }, createdAt: Between(weekStart, new Date()) },
     });
@@ -88,15 +105,5 @@ export class GamificationService {
       order: { createdAt: 'DESC' },
       take: limit,
     });
-  }
-
-  private getWeekStart(): Date {
-    const now = new Date();
-    const day = now.getUTCDay();
-    const diff = day === 0 ? -6 : 1 - day; // Monday
-    const start = new Date(now);
-    start.setUTCDate(now.getUTCDate() + diff);
-    start.setUTCHours(0, 0, 0, 0);
-    return start;
   }
 }

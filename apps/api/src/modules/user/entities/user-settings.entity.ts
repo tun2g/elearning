@@ -19,6 +19,10 @@ export class UserSettingsEntity extends AuditableEntity {
   @Column({ name: 'notification_enabled', type: 'boolean', default: true })
   notificationEnabled!: boolean;
 
+  /** Local hour (0–23) the daily reminder fires, in the user's timezone. */
+  @Column({ name: 'reminder_hour', type: 'smallint', default: 19 })
+  reminderHour!: number;
+
   @Column({ type: 'varchar', length: 60, default: 'Asia/Ho_Chi_Minh' })
   timezone!: string;
 }

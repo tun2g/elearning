@@ -14,6 +14,7 @@
     "@elearning/core": "workspace:*",
     "@elearning/theme": "workspace:*",
     "@hookform/resolvers": "5.4.0",
+    "@reactour/tour": "^3.8.0",
     "@tanstack/react-query": "5.101.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",

@@ -28,7 +28,7 @@ export function SiteHeader() {
         className={cn(
           'flex w-full max-w-6xl items-center justify-between gap-4 rounded-full px-4 py-2.5 transition-all duration-300 sm:px-5',
           scrolled
-            ? 'border border-border bg-card/80 shadow-[var(--shadow-soft)] backdrop-blur-xl'
+            ? 'border border-border bg-card/80 shadow-(--shadow-soft) backdrop-blur-xl'
             : 'border border-transparent bg-transparent'
         )}
       >
@@ -77,7 +77,7 @@ export function SiteHeader() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="absolute inset-x-4 top-20 rounded-3xl border border-border bg-card p-4 shadow-[var(--shadow-lift)] md:hidden"
+            className="absolute inset-x-4 top-20 rounded-3xl border border-border bg-card p-4 shadow-(--shadow-lift) md:hidden"
           >
             <nav className="flex flex-col">
               {nav.map((item) => (

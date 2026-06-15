@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google';
 
+import { OnboardingTour } from '@/components/onboarding/onboarding-tour';
 import { AppChrome } from '@/components/ui/app-chrome';
 import { QueryProvider } from '@/providers/query-provider';
 import { ThemeProvider } from '@/providers/theme-provider';
+import { TourProvider } from '@/providers/tour-provider';
 
 import './globals.css';
 
@@ -39,7 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <ThemeProvider>
           <QueryProvider>
-            <AppChrome>{children}</AppChrome>
+            <TourProvider>
+              <AppChrome>{children}</AppChrome>
+              <OnboardingTour />
+            </TourProvider>
           </QueryProvider>
         </ThemeProvider>
       </body>

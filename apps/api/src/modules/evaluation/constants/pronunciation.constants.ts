@@ -12,6 +12,25 @@ export const PRONUNCIATION_RESPONSE_SCHEMA = {
   additionalProperties: false,
 } as const;
 
+/** JSON Schema for the transcription-only step (no scoring). */
+export const TRANSCRIPTION_RESPONSE_SCHEMA = {
+  type: 'object',
+  properties: {
+    transcription: { type: 'string' },
+  },
+  required: ['transcription'],
+  additionalProperties: false,
+} as const;
+
+/**
+ * Prompt for verbatim transcription only. Deliberately withholds the reference
+ * sentence so the model can't "correct" toward it — we want what was actually said.
+ */
+export const TRANSCRIPTION_PROMPT =
+  `Transcribe this recording of an English learner reading aloud. ` +
+  `Return JSON with "transcription": exactly what you heard them say, verbatim and uncorrected. ` +
+  `Do not guess at or fix mistakes — write what was actually said.`;
+
 /** Build the evaluator prompt for a given reference sentence. */
 export function buildPronunciationPrompt(referenceText: string): string {
   return (

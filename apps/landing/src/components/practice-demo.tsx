@@ -76,8 +76,8 @@ export function PracticeDemo() {
 
   return (
     <div className="relative">
-      <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-secondary-soft via-card to-primary-soft blur-2xl" />
-      <div className="rounded-[2rem] border border-border bg-card p-6 shadow-[var(--shadow-lift)] sm:p-7">
+      <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-linear-to-tr from-secondary-soft via-card to-primary-soft blur-2xl" />
+      <div className="rounded-[2rem] border border-border bg-card p-6 shadow-(--shadow-lift) sm:p-7">
         <div className="flex items-center justify-between text-xs font-medium text-subtle">
           <span className="inline-flex items-center gap-1.5">
             <Volume2 size={14} className="text-primary" /> Try a real card
@@ -92,7 +92,7 @@ export function PracticeDemo() {
 
         <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-muted">
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
+            className="h-full rounded-full bg-linear-to-r from-primary to-accent"
             animate={{ width: `${progress}%` }}
             transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.6 }}
           />
@@ -106,7 +106,7 @@ export function PracticeDemo() {
             <button
               onClick={play}
               aria-label="Play sentence"
-              className="relative grid h-14 w-14 place-items-center rounded-full bg-primary text-white shadow-[var(--shadow-primary)] transition-transform hover:scale-105 active:scale-95"
+              className="relative grid h-14 w-14 place-items-center rounded-full bg-primary text-white shadow-(--shadow-primary) transition-transform hover:scale-105 active:scale-95"
             >
               <Play size={20} className="fill-current" />
             </button>

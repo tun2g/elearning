@@ -16,7 +16,7 @@ export function Testimonials() {
       <RevealGroup className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-2 [&>*]:mb-5" stagger={0.08}>
         {testimonials.map((t) => (
           <RevealItem key={t.name} className="break-inside-avoid">
-            <figure className="rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)]">
+            <figure className="rounded-3xl border border-border bg-card p-7 shadow-(--shadow-soft)">
               <Quote size={28} className="text-primary/40" aria-hidden="true" />
               <blockquote className="mt-4 font-display text-xl leading-relaxed text-foreground">“{t.quote}”</blockquote>
               <figcaption className="mt-5 flex items-center gap-3">

@@ -9,7 +9,7 @@ export function Cta() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-24 sm:py-28">
       <Reveal>
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-gradient-to-br from-primary via-primary to-primary-deep px-6 py-16 text-center shadow-[var(--shadow-lift)] sm:px-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-linear-to-br from-primary via-primary to-primary-deep px-6 py-16 text-center shadow-(--shadow-lift) sm:px-12 sm:py-20">
           <Waveform className="absolute inset-x-0 top-8 mx-auto h-10 w-40 text-white/30" bars={28} />
           <div className="pointer-events-none absolute -bottom-16 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-accent/40 blur-3xl" />
 

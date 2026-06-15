@@ -12,6 +12,7 @@ import { Github, Rate, Share, Support, Website } from '@/components/ui/icons';
 import { useAuthStore as useAuth } from '@/lib/auth/use-auth-store';
 import { translate } from '@/lib/i18n';
 import { LanguageItem } from './language-item';
+import { NotificationsItem } from './notifications-item';
 import { SettingsContainer } from './settings-container';
 import { SettingsItem } from './settings-item';
 import { ThemeItem } from './theme-item';
@@ -33,6 +34,10 @@ export function SettingsScreen() {
           <SettingsContainer title="settings.generale">
             <LanguageItem />
             <ThemeItem />
+          </SettingsContainer>
+
+          <SettingsContainer title="settings.notifications">
+            <NotificationsItem />
           </SettingsContainer>
 
           <SettingsContainer title="settings.about">

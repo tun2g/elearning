@@ -2,8 +2,18 @@ import { Injectable, Logger, ServiceUnavailableException } from '@nestjs/common'
 
 import { AiService } from 'src/shared/modules/ai/ai.service';
 
-import { buildPronunciationPrompt, PRONUNCIATION_RESPONSE_SCHEMA } from './constants/pronunciation.constants';
-import type { EvaluateInput, RawPronunciationEval } from './interfaces/pronunciation-eval.interface';
+import {
+  buildPronunciationPrompt,
+  PRONUNCIATION_RESPONSE_SCHEMA,
+  TRANSCRIPTION_PROMPT,
+  TRANSCRIPTION_RESPONSE_SCHEMA,
+} from './constants/pronunciation.constants';
+import type {
+  EvaluateInput,
+  RawPronunciationEval,
+  TranscribeInput,
+  TranscriptionResult,
+} from './interfaces/pronunciation-eval.interface';
 
 function clampScore(n: unknown): number {
   const v = typeof n === 'number' ? n : Number(n);
@@ -25,6 +35,25 @@ export class EvaluationService {
   /** Name of the active AI provider (stored on the assessment for provenance). */
   get provider(): string {
     return this.ai.providerName;
+  }
+
+  /** Verbatim transcription only — the cheap first step shown before scoring. */
+  async transcribe(input: TranscribeInput): Promise<TranscriptionResult> {
+    let raw: unknown;
+    try {
+      raw = await this.ai.generateJson({
+        prompt: TRANSCRIPTION_PROMPT,
+        media: { base64: input.audioBase64, mimeType: input.mimeType },
+        responseSchema: TRANSCRIPTION_RESPONSE_SCHEMA as unknown as Record<string, unknown>,
+      });
+    } catch (err) {
+      if (err instanceof ServiceUnavailableException) throw err;
+      this.logger.error(`Transcription failed: ${err instanceof Error ? err.message : String(err)}`);
+      throw new ServiceUnavailableException('Voice transcription is unavailable right now.');
+    }
+
+    const r = raw as Partial<TranscriptionResult>;
+    return { transcription: typeof r.transcription === 'string' ? r.transcription : '' };
   }
 
   async evaluatePronunciation(input: EvaluateInput): Promise<RawPronunciationEval> {

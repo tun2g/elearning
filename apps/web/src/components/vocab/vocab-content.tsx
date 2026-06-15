@@ -3,7 +3,7 @@
 import { Volume2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
-import { Waveform } from '@/components/ui/waveform';
+import { Preloader } from '@/components/ui/preloader';
 import { cn } from '@/lib/utils';
 import type { VocabCard } from '@/services/vocab';
 import type { Assessment } from '@/services/types';
@@ -47,12 +47,7 @@ export function VocabContent({
   const card = cards[index];
 
   if (isLoading || !hasToken) {
-    return (
-      <main className="mx-auto flex min-h-[70vh] max-w-lg flex-col items-center justify-center px-5">
-        <Waveform className="h-8 w-32 text-primary/50" />
-        <p className="mt-4 text-sm text-muted-foreground">Loading your cards…</p>
-      </main>
-    );
+    return <Preloader text="Loading your cards…" />;
   }
 
   if (done || cards.length === 0) {
@@ -79,7 +74,7 @@ export function VocabContent({
 
       <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-[width] duration-500"
+          className="h-full rounded-full bg-linear-to-r from-primary to-accent transition-[width] duration-500"
           style={{ width: `${(index / cards.length) * 100}%` }}
         />
       </div>
@@ -93,7 +88,15 @@ export function VocabContent({
           className="relative min-h-72 w-full cursor-pointer [transform-style:preserve-3d]"
         >
           {/* Front */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-8 text-center shadow-[var(--shadow-lift)] [backface-visibility:hidden]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-8 text-center shadow-(--shadow-lift) [backface-visibility:hidden]">
+            <span
+              className={cn(
+                'mb-3 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide',
+                card?.status === 'new' ? 'bg-secondary-soft text-secondary-deep' : 'bg-primary-soft text-primary-deep'
+              )}
+            >
+              {card?.status === 'new' ? 'New word' : 'Review'}
+            </span>
             <p className="font-display text-4xl font-semibold text-foreground">{card?.word}</p>
             {card?.ipa && <p className="mt-2 font-mono text-base text-secondary-deep">{card.ipa}</p>}
             <button
@@ -101,7 +104,7 @@ export function VocabContent({
                 e.stopPropagation();
                 speak(card?.word ?? '');
               }}
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-[var(--shadow-primary)] transition-transform hover:scale-105 active:scale-95"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-primary) transition-transform hover:scale-105 active:scale-95"
             >
               <Volume2 size={16} /> Listen
             </button>
@@ -109,7 +112,7 @@ export function VocabContent({
           </div>
 
           {/* Back */}
-          <div className="flex min-h-72 flex-col items-center justify-center rounded-3xl border border-border bg-card p-8 text-center shadow-[var(--shadow-lift)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <div className="flex min-h-72 flex-col items-center justify-center rounded-3xl border border-border bg-card p-8 text-center shadow-(--shadow-lift) [backface-visibility:hidden] [transform:rotateY(180deg)]">
             <p className="font-display text-2xl font-semibold text-foreground">{card?.word}</p>
             {card?.ipa && <p className="mt-1 font-mono text-sm text-secondary-deep">{card.ipa}</p>}
             <p className="mt-3 text-xl font-medium text-primary-deep">{card?.meaningVn}</p>

@@ -1,11 +1,12 @@
-import type { Sentence, VoiceAttemptResult, WordResult } from '@elearning/contracts';
+import type { Sentence, VoiceAttemptResult, VoiceTranscriptionResult, WordResult } from '@elearning/contracts';
+import type { RecordingPayload } from './use-recorder';
 import { createAudioPlayer } from 'expo-audio';
 import * as React from 'react';
+
 import { ActivityIndicator } from 'react-native';
 
 import { Pressable, Text, View } from '@/components/ui';
-
-import { useVoiceAttempt } from '@/hooks/use-lessons';
+import { useVoiceEvaluate, useVoiceTranscribe } from '@/hooks/use-lessons';
 import { useRecorder } from './use-recorder';
 
 function play(uri: string | null) {
@@ -54,6 +55,78 @@ function Word({ word }: { word: WordResult }) {
   );
 }
 
+function PlaybackButtons({ recordingUri, nativeUrl }: { recordingUri: string | null; nativeUrl: string | null }) {
+  return (
+    <View className="mt-3 flex-row gap-2">
+      {nativeUrl
+        ? (
+            <Pressable
+              onPress={() => play(nativeUrl)}
+              className="rounded-full border border-neutral-300 px-3 py-1.5 dark:border-neutral-600"
+            >
+              <Text className="text-xs font-semibold text-primary-500">▶ Native</Text>
+            </Pressable>
+          )
+        : null}
+      {recordingUri
+        ? (
+            <Pressable
+              onPress={() => play(recordingUri)}
+              className="rounded-full border border-neutral-300 px-3 py-1.5 dark:border-neutral-600"
+            >
+              <Text className="text-xs font-semibold text-accent-600">▶ You</Text>
+            </Pressable>
+          )
+        : null}
+    </View>
+  );
+}
+
+function TranscriptionCard({
+  transcript,
+  recordingUri,
+  nativeUrl,
+  onEvaluate,
+  evaluating,
+  evaluateError,
+}: {
+  transcript: VoiceTranscriptionResult;
+  recordingUri: string | null;
+  nativeUrl: string | null;
+  onEvaluate: () => void;
+  evaluating: boolean;
+  evaluateError: boolean;
+}) {
+  return (
+    <View className="mt-3 rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
+      <Text className="text-base/relaxed text-neutral-800 dark:text-neutral-100">
+        You said: “
+        {transcript.transcription || '—'}
+        ”
+      </Text>
+
+      <PlaybackButtons recordingUri={recordingUri} nativeUrl={nativeUrl} />
+
+      <Pressable
+        onPress={onEvaluate}
+        disabled={evaluating}
+        className={`mt-3 flex-row items-center self-start rounded-full bg-secondary-500 px-4 py-2 ${evaluating ? 'opacity-60' : ''}`}
+      >
+        {evaluating
+          ? <ActivityIndicator size="small" color="#fff" />
+          : <Text className="text-sm font-semibold text-white">✨ See feedback</Text>}
+      </Pressable>
+      {evaluateError
+        ? (
+            <Text className="mt-2 text-xs text-primary-500">
+              Couldn’t evaluate your speaking right now. Please try again.
+            </Text>
+          )
+        : null}
+    </View>
+  );
+}
+
 function Feedback({
   result,
   recordingUri,
@@ -93,53 +166,103 @@ function Feedback({
           )
         : null}
 
-      <View className="mt-3 flex-row gap-2">
-        {nativeUrl
-          ? (
-              <Pressable
-                onPress={() => play(nativeUrl)}
-                className="rounded-full border border-neutral-300 px-3 py-1.5 dark:border-neutral-600"
-              >
-                <Text className="text-xs font-semibold text-primary-500">▶ Native</Text>
-              </Pressable>
-            )
-          : null}
-        {recordingUri
-          ? (
-              <Pressable
-                onPress={() => play(recordingUri)}
-                className="rounded-full border border-neutral-300 px-3 py-1.5 dark:border-neutral-600"
-              >
-                <Text className="text-xs font-semibold text-accent-600">▶ You</Text>
-              </Pressable>
-            )
-          : null}
-      </View>
+      <PlaybackButtons recordingUri={recordingUri} nativeUrl={nativeUrl} />
+    </View>
+  );
+}
+
+function RecordControls({
+  recorder,
+  transcribe,
+  onStop,
+}: {
+  recorder: ReturnType<typeof useRecorder>;
+  transcribe: ReturnType<typeof useVoiceTranscribe>;
+  onStop: () => void;
+}) {
+  return (
+    <View className="mt-4 flex-row items-center gap-3">
+      {recorder.status === 'recording'
+        ? (
+            <Pressable
+              onPress={onStop}
+              className="flex-row items-center rounded-full bg-primary-500 px-4 py-2"
+            >
+              <Text className="text-sm font-semibold text-white">■ Stop</Text>
+            </Pressable>
+          )
+        : (
+            <Pressable
+              onPress={recorder.start}
+              disabled={transcribe.isPending}
+              className={`flex-row items-center rounded-full bg-primary-500 px-4 py-2 ${transcribe.isPending ? 'opacity-60' : ''}`}
+            >
+              {transcribe.isPending
+                ? <ActivityIndicator size="small" color="#fff" />
+                : <Text className="text-sm font-semibold text-white">● Speak</Text>}
+            </Pressable>
+          )}
+      {transcribe.isPending
+        ? <Text className="text-sm text-neutral-500">Transcribing…</Text>
+        : null}
+      {recorder.error
+        ? <Text className="text-xs text-primary-500">{recorder.error}</Text>
+        : null}
+      {transcribe.isError
+        ? (
+            <Text className="text-xs text-primary-500">
+              Couldn’t transcribe your speaking right now. Please try again.
+            </Text>
+          )
+        : null}
     </View>
   );
 }
 
 function VoiceSentenceCard({ sentence }: { sentence: Sentence }) {
   const recorder = useRecorder();
-  const voice = useVoiceAttempt();
+  const transcribe = useVoiceTranscribe();
+  const evaluate = useVoiceEvaluate();
+  const [payload, setPayload] = React.useState<RecordingPayload | null>(null);
+  const [transcript, setTranscript] = React.useState<VoiceTranscriptionResult | null>(null);
   const [result, setResult] = React.useState<VoiceAttemptResult | null>(null);
 
-  const evaluate = async () => {
-    const payload = await recorder.stop();
-    if (!payload)
+  const stopAndTranscribe = async () => {
+    const p = await recorder.stop();
+    if (!p)
+      return;
+    setPayload(p);
+    try {
+      const res = await transcribe.mutateAsync({ sentenceId: sentence.id, ...p });
+      setTranscript(res);
+    }
+    catch {
+      // surfaced via transcribe.isError
+    }
+  };
+
+  const seeFeedback = async () => {
+    if (!payload || !transcript)
       return;
     try {
-      const res = await voice.mutateAsync({ sentenceId: sentence.id, ...payload });
+      const res = await evaluate.mutateAsync({
+        attemptId: transcript.attemptId,
+        sentenceId: sentence.id,
+        ...payload,
+      });
       setResult(res);
     }
     catch {
-      // surfaced via voice.isError
+      // surfaced via evaluate.isError
     }
   };
 
   const retry = () => {
+    setPayload(null);
+    setTranscript(null);
     setResult(null);
-    voice.reset();
+    transcribe.reset();
+    evaluate.reset();
     recorder.reset();
   };
 
@@ -150,47 +273,24 @@ function VoiceSentenceCard({ sentence }: { sentence: Sentence }) {
         ? <Text className="mt-1 text-sm text-secondary-600">{sentence.ipa}</Text>
         : null}
 
-      {!result && (
-        <View className="mt-4 flex-row items-center gap-3">
-          {recorder.status === 'recording'
-            ? (
-                <Pressable
-                  onPress={evaluate}
-                  className="flex-row items-center rounded-full bg-primary-500 px-4 py-2"
-                >
-                  <Text className="text-sm font-semibold text-white">■ Stop & check</Text>
-                </Pressable>
-              )
-            : (
-                <Pressable
-                  onPress={recorder.start}
-                  disabled={voice.isPending}
-                  className={`flex-row items-center rounded-full bg-primary-500 px-4 py-2 ${voice.isPending ? 'opacity-60' : ''}`}
-                >
-                  {voice.isPending
-                    ? <ActivityIndicator size="small" color="#fff" />
-                    : <Text className="text-sm font-semibold text-white">● Speak</Text>}
-                </Pressable>
-              )}
-          {voice.isPending
-            ? <Text className="text-sm text-neutral-500">Analyzing…</Text>
-            : null}
-          {recorder.error
-            ? <Text className="text-xs text-primary-500">{recorder.error}</Text>
-            : null}
-          {voice.isError
-            ? (
-                <Text className="text-xs text-primary-500">
-                  Couldn’t check your speaking right now. Please try again.
-                </Text>
-              )
-            : null}
-        </View>
+      {!transcript && (
+        <RecordControls recorder={recorder} transcribe={transcribe} onStop={stopAndTranscribe} />
       )}
 
-      {result && (
+      {transcript && (
         <>
-          <Feedback result={result} recordingUri={recorder.uri} nativeUrl={sentence.audioUrl} />
+          {result
+            ? <Feedback result={result} recordingUri={recorder.uri} nativeUrl={sentence.audioUrl} />
+            : (
+                <TranscriptionCard
+                  transcript={transcript}
+                  recordingUri={recorder.uri}
+                  nativeUrl={sentence.audioUrl}
+                  onEvaluate={seeFeedback}
+                  evaluating={evaluate.isPending}
+                  evaluateError={evaluate.isError}
+                />
+              )}
           <Pressable onPress={retry} className="mt-3">
             <Text className="text-sm font-semibold text-neutral-500">↺ Try again</Text>
           </Pressable>

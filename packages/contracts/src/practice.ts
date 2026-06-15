@@ -68,7 +68,31 @@ export const VoiceAttemptCreateDtoSchema = z.object({
 });
 export type VoiceAttemptCreateDto = z.infer<typeof VoiceAttemptCreateDtoSchema>;
 
-/** Response for a spoken attempt: the assessment plus the derived SRS state. */
+/**
+ * Response for the transcribe step: what the recognizer heard, plus the id of
+ * the saved attempt. Scoring is deferred — call the evaluate endpoint with this
+ * `attemptId` (and the audio re-sent) to get a full {@link VoiceAttemptResult}.
+ */
+export const VoiceTranscriptionResultSchema = z.object({
+  attemptId: z.string(),
+  /** What the recognizer heard the user say, verbatim. */
+  transcription: z.string(),
+});
+export type VoiceTranscriptionResult = z.infer<typeof VoiceTranscriptionResultSchema>;
+
+/**
+ * Request to score a previously-transcribed attempt. The audio is re-sent
+ * (it is never stored server-side) and the saved attempt is updated in place.
+ */
+export const VoiceEvaluateDtoSchema = z.object({
+  attemptId: z.string(),
+  sentenceId: z.string(),
+  audioBase64: z.string(),
+  mimeType: z.string(),
+});
+export type VoiceEvaluateDto = z.infer<typeof VoiceEvaluateDtoSchema>;
+
+/** Response for the evaluate step: the assessment plus the (re-derived) SRS state. */
 export const VoiceAttemptResultSchema = z.object({
   assessment: PronunciationAssessmentSchema,
   /** SRS grade derived from `overall` (the user does not self-rate in voice mode). */

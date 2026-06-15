@@ -11,6 +11,12 @@ import Env from './env';
 const EXPO_ACCOUNT_OWNER = '';
 const EAS_PROJECT_ID = '';
 
+// Resolve Inter font files via the package so it works regardless of where
+// pnpm hoists @expo-google-fonts/inter in the monorepo's node_modules.
+function interFont(variant: string) {
+  return require.resolve(`@expo-google-fonts/inter/${variant}/Inter_${variant}.ttf`);
+}
+
 const appIconBadgeConfig: AppIconBadgeConfig = {
   enabled: Env.EXPO_PUBLIC_APP_ENV !== 'production',
   badges: [
@@ -78,10 +84,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       {
         ios: {
           fonts: [
-            'node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.ttf',
-            'node_modules/@expo-google-fonts/inter/500Medium/Inter_500Medium.ttf',
-            'node_modules/@expo-google-fonts/inter/600SemiBold/Inter_600SemiBold.ttf',
-            'node_modules/@expo-google-fonts/inter/700Bold/Inter_700Bold.ttf',
+            interFont('400Regular'),
+            interFont('500Medium'),
+            interFont('600SemiBold'),
+            interFont('700Bold'),
           ],
         },
         android: {
@@ -90,19 +96,19 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
               fontFamily: 'Inter',
               fontDefinitions: [
                 {
-                  path: 'node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.ttf',
+                  path: interFont('400Regular'),
                   weight: 400,
                 },
                 {
-                  path: 'node_modules/@expo-google-fonts/inter/500Medium/Inter_500Medium.ttf',
+                  path: interFont('500Medium'),
                   weight: 500,
                 },
                 {
-                  path: 'node_modules/@expo-google-fonts/inter/600SemiBold/Inter_600SemiBold.ttf',
+                  path: interFont('600SemiBold'),
                   weight: 600,
                 },
                 {
-                  path: 'node_modules/@expo-google-fonts/inter/700Bold/Inter_700Bold.ttf',
+                  path: interFont('700Bold'),
                   weight: 700,
                 },
               ],
@@ -113,6 +119,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     ],
     'expo-localization',
     'expo-router',
+    'expo-notifications',
     ['app-icon-badge', appIconBadgeConfig],
     ['react-native-edge-to-edge'],
   ],

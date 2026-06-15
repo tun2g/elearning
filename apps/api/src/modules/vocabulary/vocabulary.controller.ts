@@ -19,9 +19,9 @@ export class VocabularyController {
   }
 
   @Get('review')
-  @ApiOperation({ summary: 'Get SRS vocabulary cards due for review (max 20)' })
+  @ApiOperation({ summary: 'Get a study session: due review cards plus new cards to learn' })
   getReview(@CurrentUser() user: RequestUser) {
-    return this.vocabularyService.getReviewQueue(user.id);
+    return this.vocabularyService.getStudySession(user.id);
   }
 
   @Post('attempt')

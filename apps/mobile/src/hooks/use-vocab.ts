@@ -4,6 +4,8 @@ import { createMutation, createQuery } from 'react-query-kit';
 import { client } from '@/lib/api/client';
 import { queryKeys } from '@/lib/api/query-keys';
 
+export type VocabCardStatus = 'new' | 'review';
+
 export type VocabCard = {
   id: string;
   word: string;
@@ -12,6 +14,7 @@ export type VocabCard = {
   synonyms: string[];
   exampleSentences: string[];
   level: string;
+  status: VocabCardStatus;
 };
 
 export const useVocabReview = createQuery<VocabCard[], void, AxiosError>({

@@ -10,4 +10,8 @@ export const queryKeys = {
   lessonDetail: ['lessons', 'detail'],
   vocabReview: ['vocab', 'review'],
   posts: ['posts'],
+  leaderboard: ['leaderboard'],
+  me: ['auth', 'me'],
+  settings: ['settings'],
+  notifications: ['notifications'],
 } as const;

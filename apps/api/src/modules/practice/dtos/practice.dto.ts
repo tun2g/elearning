@@ -16,3 +16,12 @@ export class VoiceAttemptDto {
   @ApiProperty() @IsString() audioBase64!: string;
   @ApiProperty() @IsString() mimeType!: string;
 }
+
+export class VoiceEvaluateDto {
+  /** The attempt created by the transcribe step, updated in place with the score. */
+  @ApiProperty() @IsString() attemptId!: string;
+  @ApiProperty() @IsString() sentenceId!: string;
+  /** Base64-encoded recording, re-sent for scoring. Analyzed transiently and never stored. */
+  @ApiProperty() @IsString() audioBase64!: string;
+  @ApiProperty() @IsString() mimeType!: string;
+}

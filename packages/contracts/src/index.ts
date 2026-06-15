@@ -3,5 +3,7 @@ export * from './common';
 export * from './content-import';
 export * from './gamification';
 export * from './lesson';
+export * from './notification';
 export * from './practice';
+export * from './user';
 export * from './vocabulary';

@@ -1,19 +1,20 @@
 'use client';
 
-import { House, Library, LogOut, Layers } from 'lucide-react';
+import { House, Library, Layers, Trophy } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
 
+import { NotificationBell } from '@/components/notifications/notification-bell';
 import { Logo, LogoMark } from '@/components/ui/logo';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
-import { logout } from '@/lib/auth';
+import { UserMenu } from '@/components/user/user-menu';
 import { cn } from '@/lib/utils';
 
 const TABS = [
   { href: '/home', label: 'Home', icon: House },
   { href: '/lessons', label: 'Lessons', icon: Library },
   { href: '/vocab', label: 'Vocab', icon: Layers },
+  { href: '/leaderboard', label: 'Ranks', icon: Trophy },
 ] as const;
 
 const BARE_ROUTES = ['/login', '/register'];
@@ -24,17 +25,11 @@ function useActive(pathname: string) {
 
 export function AppChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter();
   const isActive = useActive(pathname);
 
   if (BARE_ROUTES.some((r) => pathname.startsWith(r))) {
     return <>{children}</>;
   }
-
-  const signOut = () => {
-    logout();
-    router.push('/login');
-  };
 
   return (
     <div className="min-h-screen">
@@ -64,15 +59,9 @@ export function AppChrome({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-1">
-            <ThemeToggle />
-            <button
-              onClick={signOut}
-              className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            >
-              <LogOut size={17} />
-              <span className="hidden sm:inline">Sign out</span>
-            </button>
+          <div className="flex items-center gap-1.5">
+            <NotificationBell />
+            <UserMenu />
           </div>
         </div>
       </header>

@@ -36,7 +36,7 @@ export function LessonsContent({ lessons, isLoading, level, levels, filtered, on
                 className={cn(
                   'rounded-full px-4 py-1.5 text-sm font-medium capitalize transition-colors',
                   level === lv
-                    ? 'bg-primary text-white shadow-[var(--shadow-primary)]'
+                    ? 'bg-primary text-white shadow-(--shadow-primary)'
                     : 'border border-border bg-card text-muted-foreground hover:border-border-strong hover:text-foreground'
                 )}
               >
@@ -60,7 +60,7 @@ export function LessonsContent({ lessons, isLoading, level, levels, filtered, on
           <RevealItem key={lesson.id}>
             <Link
               href={`/lessons/${lesson.slug}`}
-              className="group block rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+              className="group block rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1 hover:shadow-(--shadow-lift)"
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">

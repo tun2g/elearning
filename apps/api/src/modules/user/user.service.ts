@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
+import { UpdateSettingsDto } from './dtos/settings.dto';
 import { UserSettingsEntity } from './entities/user-settings.entity';
 import { UserEntity } from './entities/user.entity';
 
@@ -40,5 +41,23 @@ export class UserService {
     const user = await this.findById(id);
     if (!user) throw new NotFoundException('User not found');
     return user;
+  }
+
+  async getSettings(userId: string): Promise<UserSettingsEntity> {
+    let settings = await this.settingsRepo.findOne({ where: { user: { id: userId } } });
+    if (!settings) {
+      settings = await this.settingsRepo.save(this.settingsRepo.create({ user: { id: userId } }));
+    }
+    return settings;
+  }
+
+  async updateSettings(userId: string, dto: UpdateSettingsDto): Promise<UserSettingsEntity> {
+    const settings = await this.getSettings(userId);
+    if (dto.dailyGoalSentences !== undefined) settings.dailyGoalSentences = dto.dailyGoalSentences;
+    if (dto.pushToken !== undefined) settings.pushToken = dto.pushToken;
+    if (dto.notificationEnabled !== undefined) settings.notificationEnabled = dto.notificationEnabled;
+    if (dto.reminderHour !== undefined) settings.reminderHour = dto.reminderHour;
+    if (dto.timezone !== undefined) settings.timezone = dto.timezone;
+    return this.settingsRepo.save(settings);
   }
 }

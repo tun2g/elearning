@@ -78,9 +78,9 @@ export function Hero() {
         className="relative w-full max-w-sm flex-1 lg:max-w-md"
       >
         {/* glow */}
-        <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary-soft via-accent-soft to-secondary-soft blur-2xl" />
+        <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-linear-to-br from-primary-soft via-accent-soft to-secondary-soft blur-2xl" />
 
-        <div className="rounded-[2rem] border border-border bg-card p-6 shadow-[var(--shadow-lift)]">
+        <div className="rounded-[2rem] border border-border bg-card p-6 shadow-(--shadow-lift)">
           <div className="flex items-center justify-between">
             <span className="rounded-full bg-secondary-soft px-3 py-1 text-xs font-semibold text-secondary-deep">
               Everyday English · A2
@@ -94,7 +94,7 @@ export function Hero() {
               <span className="absolute inset-0 rounded-full bg-primary/40 animate-[pulse-ring_2.4s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
               <button
                 aria-label="Play sentence"
-                className="relative grid h-14 w-14 place-items-center rounded-full bg-primary text-white shadow-[var(--shadow-primary)]"
+                className="relative grid h-14 w-14 place-items-center rounded-full bg-primary text-white shadow-(--shadow-primary)"
               >
                 <Play size={20} className="fill-current" />
               </button>
@@ -127,7 +127,7 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -left-6 -top-5 flex items-center gap-2.5 rounded-2xl border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)]"
+          className="absolute -left-6 -top-5 flex items-center gap-2.5 rounded-2xl border border-border bg-card px-4 py-3 shadow-(--shadow-soft)"
         >
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary-soft">
             <Flame size={18} className="text-primary" />
@@ -147,7 +147,7 @@ export function Hero() {
             ease: 'easeInOut',
             delay: 0.6,
           }}
-          className="absolute -bottom-6 -right-5 w-44 rounded-2xl border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)]"
+          className="absolute -bottom-6 -right-5 w-44 rounded-2xl border border-border bg-card px-4 py-3 shadow-(--shadow-soft)"
         >
           <div className="flex items-center justify-between text-xs font-medium">
             <span className="text-muted-foreground">Daily goal</span>
@@ -159,7 +159,7 @@ export function Hero() {
               whileInView={{ width: '80%' }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease, delay: 0.4 }}
-              className="h-full rounded-full bg-gradient-to-r from-secondary to-secondary-deep"
+              className="h-full rounded-full bg-linear-to-r from-secondary to-secondary-deep"
             />
           </div>
           <p className="mt-1.5 text-[0.65rem] text-subtle">16 / 20 sentences</p>

@@ -31,8 +31,8 @@ export function Marquee() {
     <div className="mx-auto max-w-6xl px-5 py-2">
       <div className="relative flex overflow-hidden rounded-full border border-border bg-card/70 py-4">
         {/* edge fades so the text dissolves into the band instead of hard-clipping */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-card to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-card to-transparent" />
         <Track />
         <Track ariaHidden />
       </div>

@@ -107,7 +107,7 @@ export function PracticeContent({
                   className={cn(
                     'rounded-full px-4 py-1.5 text-sm font-semibold transition-colors',
                     mode === m.key
-                      ? 'bg-primary text-white shadow-[var(--shadow-primary)]'
+                      ? 'bg-primary text-white shadow-(--shadow-primary)'
                       : 'text-muted-foreground hover:text-primary'
                   )}
                 >
@@ -130,7 +130,7 @@ export function PracticeContent({
                   </div>
                   <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-muted">
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                      className="h-full rounded-full bg-linear-to-r from-primary to-accent transition-[width] duration-500 ease-out-soft"
                       style={{ width: `${progress}%` }}
                     />
                   </div>
@@ -146,7 +146,7 @@ export function PracticeContent({
                       <li
                         key={s.id}
                         className={cn(
-                          'rounded-3xl border p-5 shadow-[var(--shadow-soft)] transition-colors',
+                          'rounded-3xl border p-5 shadow-(--shadow-soft) transition-colors',
                           assessed === 'easy'
                             ? 'border-secondary/40 bg-secondary-soft/40'
                             : assessed === 'hard'
@@ -164,7 +164,7 @@ export function PracticeContent({
                             <button
                               onClick={() => onPlay(s.id, s.text, s.audioUrl)}
                               aria-label="Play sentence"
-                              className="relative grid h-12 w-12 place-items-center rounded-full bg-primary text-white shadow-[var(--shadow-primary)] transition-transform hover:scale-105 active:scale-95"
+                              className="relative grid h-12 w-12 place-items-center rounded-full bg-primary text-white shadow-(--shadow-primary) transition-transform hover:scale-105 active:scale-95"
                             >
                               <Volume2 size={18} />
                             </button>

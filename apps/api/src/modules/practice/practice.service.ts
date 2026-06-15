@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { alignWords, scoreToGrade, srsDueDate, SRS_DEFAULTS, srsNextInterval } from '@elearning/core';
-import type { PronunciationAssessment, VoiceAttemptResult } from '@elearning/contracts';
-import { Repository } from 'typeorm';
+import type { PronunciationAssessment, VoiceAttemptResult, VoiceTranscriptionResult } from '@elearning/contracts';
+import { Not, Repository } from 'typeorm';
 
 import { SentenceEntity } from 'src/modules/content/entities/sentence.entity';
 import { LessonEntity } from 'src/modules/content/entities/lesson.entity';
@@ -13,7 +13,7 @@ import { EvaluationService } from 'src/modules/evaluation/evaluation.service';
 import type { SelfAssessment } from './entities/attempt.entity';
 import { AttemptEntity } from './entities/attempt.entity';
 import { UserLessonProgressEntity } from './entities/user-lesson-progress.entity';
-import { CreateAttemptDto, VoiceAttemptDto } from './dtos/practice.dto';
+import { CreateAttemptDto, VoiceAttemptDto, VoiceEvaluateDto } from './dtos/practice.dto';
 import type { LessonState } from './interfaces/lesson-state.interface';
 
 @Injectable()
@@ -62,35 +62,26 @@ export class PracticeService {
   }
 
   /**
-   * Evaluate a spoken sentence and persist the attempt. The audio is analyzed
-   * transiently (sent to the evaluator, then discarded) — only the resulting
-   * assessment is stored. The user does not self-rate: the SRS grade is derived
-   * from the score and feeds the same SM-2 scheduler as listen/shadow attempts.
+   * Transcribe a spoken sentence and persist the attempt. The audio is analyzed
+   * transiently (sent to the recognizer, then discarded). Scoring is deferred —
+   * the learner sees only the transcription and may request a full evaluation
+   * later via {@link evaluateVoiceAttempt}. Since there is no score yet (and the
+   * user doesn't self-rate voice), the attempt is scheduled with a neutral
+   * 'hard' grade; it counts toward XP and lesson progress immediately.
    */
-  async saveVoiceAttempt(userId: string, dto: VoiceAttemptDto): Promise<VoiceAttemptResult> {
+  async transcribeVoiceAttempt(userId: string, dto: VoiceAttemptDto): Promise<VoiceTranscriptionResult> {
     const sentence = await this.sentenceRepo.findOne({
       where: { id: dto.sentenceId },
       relations: { lesson: true },
     });
     if (!sentence) throw new NotFoundException('Sentence not found');
 
-    const evaluation = await this.evaluationService.evaluatePronunciation({
+    const { transcription } = await this.evaluationService.transcribe({
       audioBase64: dto.audioBase64,
       mimeType: dto.mimeType,
-      referenceText: sentence.text,
     });
 
-    const assessment: PronunciationAssessment = {
-      transcription: evaluation.transcription,
-      overall: evaluation.overall,
-      fluency: evaluation.fluency,
-      completeness: evaluation.completeness,
-      words: alignWords(sentence.text, evaluation.transcription),
-      coachingNote: evaluation.coachingNote,
-      provider: this.evaluationService.provider,
-    };
-
-    const grade = scoreToGrade(assessment.overall);
+    const grade: SelfAssessment = 'hard';
     const next = await this.nextSrs(userId, dto.sentenceId, grade);
     const today = new Date();
     const dueAt = srsDueDate(today, next.interval);
@@ -103,30 +94,83 @@ export class PracticeService {
       srsInterval: next.interval,
       srsEase: next.ease,
       srsDueAt: dueAt,
-      aiScore: assessment,
       attemptedAt: today,
     });
     const saved = await this.attemptRepo.save(attempt);
 
     await this.recordSideEffects(userId, sentence.lesson.id, saved.id);
 
+    return { attemptId: saved.id, transcription };
+  }
+
+  /**
+   * Score a previously-transcribed attempt on demand. The audio is re-sent and
+   * analyzed transiently; the existing attempt is updated in place with the
+   * assessment, and its SRS schedule is re-derived from the real score. No XP or
+   * progress is re-awarded — that already happened at the transcribe step.
+   */
+  async evaluateVoiceAttempt(userId: string, dto: VoiceEvaluateDto): Promise<VoiceAttemptResult> {
+    const attempt = await this.attemptRepo.findOne({
+      where: { id: dto.attemptId, user: { id: userId } },
+      relations: { sentence: true },
+    });
+    if (!attempt) throw new NotFoundException('Attempt not found');
+
+    const evaluation = await this.evaluationService.evaluatePronunciation({
+      audioBase64: dto.audioBase64,
+      mimeType: dto.mimeType,
+      referenceText: attempt.sentence.text,
+    });
+
+    const assessment: PronunciationAssessment = {
+      transcription: evaluation.transcription,
+      overall: evaluation.overall,
+      fluency: evaluation.fluency,
+      completeness: evaluation.completeness,
+      words: alignWords(attempt.sentence.text, evaluation.transcription),
+      coachingNote: evaluation.coachingNote,
+      provider: this.evaluationService.provider,
+    };
+
+    // Re-grade from the score, recomputing SRS from the state *before* this
+    // attempt (it was already scheduled with the fallback grade, so exclude it).
+    const grade = scoreToGrade(assessment.overall);
+    const next = await this.nextSrs(userId, attempt.sentence.id, grade, attempt.id);
+    const dueAt = srsDueDate(attempt.attemptedAt, next.interval);
+
+    attempt.selfAssessment = grade;
+    attempt.srsInterval = next.interval;
+    attempt.srsEase = next.ease;
+    attempt.srsDueAt = dueAt;
+    attempt.aiScore = assessment;
+    await this.attemptRepo.save(attempt);
+
     return {
       assessment,
       grade,
       srsIntervalDays: next.interval,
       srsDueAt: dueAt.toISOString(),
-      attemptedAt: today.toISOString(),
+      attemptedAt: attempt.attemptedAt.toISOString(),
     };
   }
 
-  /** Compute the next SRS interval/ease from the user's latest attempt on this sentence. */
+  /**
+   * Compute the next SRS interval/ease from the user's latest attempt on this
+   * sentence. `excludeAttemptId` skips a specific attempt (used when re-grading
+   * an attempt in place, so it doesn't read its own provisional state as the base).
+   */
   private async nextSrs(
     userId: string,
     sentenceId: string,
-    grade: SelfAssessment
+    grade: SelfAssessment,
+    excludeAttemptId?: string
   ): Promise<{ interval: number; ease: number }> {
     const latest = await this.attemptRepo.findOne({
-      where: { user: { id: userId }, sentence: { id: sentenceId } },
+      where: {
+        user: { id: userId },
+        sentence: { id: sentenceId },
+        ...(excludeAttemptId ? { id: Not(excludeAttemptId) } : {}),
+      },
       order: { createdAt: 'DESC' },
     });
     const current = latest ? { interval: latest.srsInterval, ease: latest.srsEase } : SRS_DEFAULTS;

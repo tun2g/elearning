@@ -4,10 +4,17 @@ import { MotiView } from 'moti';
 import * as React from 'react';
 
 import { Pressable, ScrollView, View } from 'react-native';
+import { CopilotStep, walkthroughable } from 'react-native-copilot';
 
+import { NotificationBell } from '@/components/notifications/notification-bell';
 import { FocusAwareStatusBar, Text } from '@/components/ui';
+import { useHomeTour } from '@/hooks/use-home-tour';
+import { useLeaderboard } from '@/hooks/use-leaderboard';
+import { useMe } from '@/hooks/use-me';
 
 const SOURCE_RE = /_/g;
+const MEDALS: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' };
+const WalkthroughView = walkthroughable(View);
 
 function greeting() {
   const h = new Date().getHours();
@@ -100,14 +107,22 @@ function DailyGoalCard({ goal }: { goal: HomeData['dailyGoal'] }) {
 function QuickActions() {
   return (
     <Card delay={210} className="mx-4 mb-4 flex-row gap-3">
-      <Link href="/lessons" asChild>
-        <Pressable className="flex-1 rounded-3xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
-          <View className="size-11 items-center justify-center rounded-2xl bg-primary-100">
-            <Text className="text-xl">🎤</Text>
-          </View>
-          <Text className="mt-4 font-semibold">Practice</Text>
-        </Pressable>
-      </Link>
+      <CopilotStep
+        order={1}
+        name="practice"
+        text="Start here — listen to a native line, shadow it, and speak it back. This is your daily loop."
+      >
+        <WalkthroughView className="flex-1">
+          <Link href="/lessons" asChild>
+            <Pressable className="flex-1 rounded-3xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
+              <View className="size-11 items-center justify-center rounded-2xl bg-primary-100">
+                <Text className="text-xl">🎤</Text>
+              </View>
+              <Text className="mt-4 font-semibold">Practice</Text>
+            </Pressable>
+          </Link>
+        </WalkthroughView>
+      </CopilotStep>
       <Link href="/vocab" asChild>
         <Pressable className="flex-1 rounded-3xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <View className="size-11 items-center justify-center rounded-2xl bg-secondary-100">
@@ -181,16 +196,61 @@ function RecentXpCard({ recentXp }: { recentXp: HomeData['recentXp'] }) {
   );
 }
 
+function LeaderboardCard() {
+  const { data: entries } = useLeaderboard();
+  const { data: me } = useMe();
+
+  if (!entries || entries.length === 0)
+    return null;
+
+  return (
+    <Card
+      delay={300}
+      className="mx-4 mb-4 rounded-3xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800"
+    >
+      <Text className="mb-2 text-xs font-semibold text-neutral-500">
+        Weekly leaderboard
+      </Text>
+      {entries.slice(0, 5).map((entry) => {
+        const isMe = entry.userId === me?.id;
+        return (
+          <View
+            key={entry.userId}
+            className={`flex-row items-center border-t border-neutral-100 py-2.5 dark:border-neutral-700 ${
+              isMe ? 'rounded-xl bg-primary-50 dark:bg-primary-900/30' : ''
+            }`}
+          >
+            <Text className="w-7 text-sm font-semibold text-neutral-500">
+              {MEDALS[entry.rank] ?? entry.rank}
+            </Text>
+            <Text className="flex-1 text-sm font-medium" numberOfLines={1}>
+              {entry.displayName}
+              {isMe ? ' · You' : ''}
+            </Text>
+            <Text className="text-sm font-semibold text-primary-600">
+              {`${entry.xpThisWeek.toLocaleString()} XP`}
+            </Text>
+          </View>
+        );
+      })}
+    </Card>
+  );
+}
+
 export function HomeContent({ data }: { data: HomeData }) {
+  useHomeTour();
   return (
     <View className="flex-1 bg-neutral-50 dark:bg-neutral-900">
       <FocusAwareStatusBar />
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
-        <View className="px-4 pt-6 pb-2">
-          <Text className="text-sm font-medium text-neutral-500">
-            {`${greeting()} 👋`}
-          </Text>
-          <Text className="mt-1 text-3xl font-extrabold">Ready to speak?</Text>
+        <View className="flex-row items-start justify-between px-4 pt-6 pb-2">
+          <View className="flex-1">
+            <Text className="text-sm font-medium text-neutral-500">
+              {`${greeting()} 👋`}
+            </Text>
+            <Text className="mt-1 text-3xl font-extrabold">Ready to speak?</Text>
+          </View>
+          <NotificationBell />
         </View>
 
         <StreakHero streak={data.streak} />
@@ -199,6 +259,7 @@ export function HomeContent({ data }: { data: HomeData }) {
         {data.recommendedLesson && (
           <RecommendedCard lesson={data.recommendedLesson} />
         )}
+        <LeaderboardCard />
         {data.recentXp.length > 0 && <RecentXpCard recentXp={data.recentXp} />}
       </ScrollView>
     </View>

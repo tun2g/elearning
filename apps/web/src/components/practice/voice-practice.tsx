@@ -1,13 +1,13 @@
 'use client';
 
 import type { Sentence } from '@elearning/contracts';
-import { Loader2, Mic, RotateCcw, Square, Volume2 } from 'lucide-react';
+import { Loader2, Mic, RotateCcw, Sparkles, Square, Volume2 } from 'lucide-react';
 import { useState } from 'react';
 
 import { Waveform } from '@/components/ui/waveform';
-import { useVoiceAttempt } from '@/hooks/use-practice';
-import { useRecorder } from './use-recorder';
-import type { VoiceAttemptResult, WordResult } from '@/services/practice';
+import { useVoiceEvaluate, useVoiceTranscribe } from '@/hooks/use-practice';
+import { useRecorder, type RecordingPayload } from './use-recorder';
+import type { VoiceAttemptResult, VoiceTranscriptionResult, WordResult } from '@/services/practice';
 import { cn } from '@/lib/utils';
 
 function play(url: string | null) {
@@ -40,6 +40,69 @@ function Word({ word }: { word: WordResult }) {
   return <span className="text-foreground">{word.text} </span>;
 }
 
+function PlaybackButtons({ recordingUrl, nativeUrl }: { recordingUrl: string | null; nativeUrl: string | null }) {
+  return (
+    <div className="mt-3 flex gap-2">
+      {nativeUrl && (
+        <button
+          onClick={() => play(nativeUrl)}
+          className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold text-primary-deep transition-colors hover:border-primary"
+        >
+          <Volume2 size={13} /> Native
+        </button>
+      )}
+      {recordingUrl && (
+        <button
+          onClick={() => play(recordingUrl)}
+          className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold text-accent-deep transition-colors hover:border-accent"
+        >
+          <Volume2 size={13} /> You
+        </button>
+      )}
+    </div>
+  );
+}
+
+/** Step 1 result: what the learner said, with a button to request the AI evaluation. */
+function TranscriptionCard({
+  transcript,
+  recordingUrl,
+  nativeUrl,
+  onEvaluate,
+  evaluating,
+  evaluateError,
+}: {
+  transcript: VoiceTranscriptionResult;
+  recordingUrl: string | null;
+  nativeUrl: string | null;
+  onEvaluate: () => void;
+  evaluating: boolean;
+  evaluateError: boolean;
+}) {
+  return (
+    <div className="mt-4 rounded-2xl border border-border bg-card/70 p-4">
+      <p className="text-base leading-relaxed">
+        <span className="text-muted-foreground">You said:</span> “{transcript.transcription || '—'}”
+      </p>
+
+      <PlaybackButtons recordingUrl={recordingUrl} nativeUrl={nativeUrl} />
+
+      <button
+        onClick={onEvaluate}
+        disabled={evaluating}
+        className="mt-3 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-soft) transition-transform hover:scale-[1.02] active:scale-95 disabled:opacity-60"
+      >
+        {evaluating ? <Loader2 size={15} className="animate-spin" /> : <Sparkles size={15} />}
+        {evaluating ? 'Evaluating…' : 'See feedback'}
+      </button>
+      {evaluateError && (
+        <p className="mt-2 text-xs text-primary">Couldn’t evaluate your speaking right now. Please try again.</p>
+      )}
+    </div>
+  );
+}
+
+/** Step 2 result: the full pronunciation evaluation. */
 function Feedback({
   result,
   recordingUrl,
@@ -75,54 +138,58 @@ function Feedback({
         </p>
       )}
 
-      <div className="mt-3 flex gap-2">
-        {nativeUrl && (
-          <button
-            onClick={() => play(nativeUrl)}
-            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold text-primary-deep transition-colors hover:border-primary"
-          >
-            <Volume2 size={13} /> Native
-          </button>
-        )}
-        {recordingUrl && (
-          <button
-            onClick={() => play(recordingUrl)}
-            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold text-accent-deep transition-colors hover:border-accent"
-          >
-            <Volume2 size={13} /> You
-          </button>
-        )}
-      </div>
+      <PlaybackButtons recordingUrl={recordingUrl} nativeUrl={nativeUrl} />
     </div>
   );
 }
 
 function VoiceSentenceCard({ sentence }: { sentence: Sentence }) {
   const recorder = useRecorder();
-  const voice = useVoiceAttempt();
+  const transcribe = useVoiceTranscribe();
+  const evaluate = useVoiceEvaluate();
+  const [payload, setPayload] = useState<RecordingPayload | null>(null);
+  const [transcript, setTranscript] = useState<VoiceTranscriptionResult | null>(null);
   const [result, setResult] = useState<VoiceAttemptResult | null>(null);
 
-  const evaluate = async () => {
-    const payload = await recorder.stop();
-    if (!payload) return;
+  const stopAndTranscribe = async () => {
+    const p = await recorder.stop();
+    if (!p) return;
+    setPayload(p);
     try {
-      const res = await voice.mutateAsync({ sentenceId: sentence.id, ...payload });
+      const res = await transcribe.mutateAsync({ sentenceId: sentence.id, ...p });
+      setTranscript(res);
+    } catch {
+      // error surfaced via transcribe.isError below
+    }
+  };
+
+  const seeFeedback = async () => {
+    if (!payload || !transcript) return;
+    try {
+      const res = await evaluate.mutateAsync({
+        attemptId: transcript.attemptId,
+        sentenceId: sentence.id,
+        ...payload,
+      });
       setResult(res);
     } catch {
-      // error surfaced via voice.isError below
+      // error surfaced via evaluate.isError below
     }
   };
 
   const retry = () => {
+    setPayload(null);
+    setTranscript(null);
     setResult(null);
-    voice.reset();
+    transcribe.reset();
+    evaluate.reset();
     recorder.reset();
   };
 
-  const busy = voice.isPending;
+  const busy = transcribe.isPending;
 
   return (
-    <li className="rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)]">
+    <li className="rounded-3xl border border-border bg-card p-5 shadow-(--shadow-soft)">
       <div className="flex items-start gap-4">
         <button
           onClick={() => play(sentence.audioUrl)}
@@ -136,36 +203,49 @@ function VoiceSentenceCard({ sentence }: { sentence: Sentence }) {
           <p className="font-display text-lg font-medium leading-snug text-foreground">{sentence.text}</p>
           {sentence.ipa && <p className="mt-1 font-mono text-sm text-secondary-deep">{sentence.ipa}</p>}
 
-          {!result && (
+          {!transcript && (
             <div className="mt-4 flex items-center gap-3">
               {recorder.status === 'recording' ? (
                 <button
-                  onClick={evaluate}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-[var(--shadow-primary)]"
+                  onClick={stopAndTranscribe}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-primary)"
                 >
-                  <Square size={15} /> Stop &amp; check
+                  <Square size={15} /> Stop
                 </button>
               ) : (
                 <button
                   onClick={recorder.start}
                   disabled={busy}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-[var(--shadow-primary)] transition-transform hover:scale-[1.02] active:scale-95 disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-primary) transition-transform hover:scale-[1.02] active:scale-95 disabled:opacity-60"
                 >
                   {busy ? <Loader2 size={15} className="animate-spin" /> : <Mic size={15} />}
-                  {busy ? 'Analyzing…' : 'Speak'}
+                  {busy ? 'Transcribing…' : 'Speak'}
                 </button>
               )}
               {recorder.status === 'recording' && <Waveform className="h-5 w-24 text-primary" />}
               {recorder.error && <span className="text-xs text-primary">{recorder.error}</span>}
-              {voice.isError && (
-                <span className="text-xs text-primary">Couldn’t check your speaking right now. Please try again.</span>
+              {transcribe.isError && (
+                <span className="text-xs text-primary">
+                  Couldn’t transcribe your speaking right now. Please try again.
+                </span>
               )}
             </div>
           )}
 
-          {result && (
+          {transcript && (
             <>
-              <Feedback result={result} recordingUrl={recorder.audioUrl} nativeUrl={sentence.audioUrl} />
+              {result ? (
+                <Feedback result={result} recordingUrl={recorder.audioUrl} nativeUrl={sentence.audioUrl} />
+              ) : (
+                <TranscriptionCard
+                  transcript={transcript}
+                  recordingUrl={recorder.audioUrl}
+                  nativeUrl={sentence.audioUrl}
+                  onEvaluate={seeFeedback}
+                  evaluating={evaluate.isPending}
+                  evaluateError={evaluate.isError}
+                />
+              )}
               <button
                 onClick={retry}
                 className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"

@@ -4,7 +4,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CurrentUser } from 'src/shared/decorators/current-user.decorator';
 import { RequestUser } from 'src/shared/modules/http-request-context/interfaces/request-user.interface';
 
-import { CreateAttemptDto, VoiceAttemptDto } from './dtos/practice.dto';
+import { CreateAttemptDto, VoiceAttemptDto, VoiceEvaluateDto } from './dtos/practice.dto';
 import { PracticeService } from './practice.service';
 
 @ApiTags('practice')
@@ -19,9 +19,15 @@ export class PracticeController {
   }
 
   @Post('voice-attempt')
-  @ApiOperation({ summary: 'Evaluate a spoken sentence and save the attempt (auth required)' })
-  saveVoiceAttempt(@CurrentUser() user: RequestUser, @Body() dto: VoiceAttemptDto) {
-    return this.practiceService.saveVoiceAttempt(user.id, dto);
+  @ApiOperation({ summary: 'Transcribe a spoken sentence and save the attempt (auth required)' })
+  transcribeVoiceAttempt(@CurrentUser() user: RequestUser, @Body() dto: VoiceAttemptDto) {
+    return this.practiceService.transcribeVoiceAttempt(user.id, dto);
+  }
+
+  @Post('voice-attempt/evaluate')
+  @ApiOperation({ summary: 'Score a previously-transcribed attempt on demand (auth required)' })
+  evaluateVoiceAttempt(@CurrentUser() user: RequestUser, @Body() dto: VoiceEvaluateDto) {
+    return this.practiceService.evaluateVoiceAttempt(user.id, dto);
   }
 
   @Get('due')

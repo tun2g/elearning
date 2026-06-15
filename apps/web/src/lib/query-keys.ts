@@ -12,5 +12,8 @@ export const queryKeys = {
   lessonDetail: ['lessons', 'detail'],
   lessonState: ['practice', 'lesson-state'],
   vocabReview: ['vocab', 'review'],
+  leaderboard: ['leaderboard'],
+  settings: ['settings'],
+  notifications: ['notifications'],
   me: ['auth', 'me'],
 } as const;

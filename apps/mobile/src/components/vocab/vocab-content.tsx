@@ -28,6 +28,15 @@ function CardFront({ card }: { card: VocabCard }) {
       animate={{ opacity: 1, scale: 1 }}
       className="items-center gap-2"
     >
+      <View
+        className={`mb-1 rounded-full px-3 py-1 ${card.status === 'new' ? 'bg-secondary-500/15' : 'bg-primary-500/15'}`}
+      >
+        <Text
+          className={`text-xs font-semibold uppercase ${card.status === 'new' ? 'text-secondary-400' : 'text-primary-400'}`}
+        >
+          {card.status === 'new' ? 'New word' : 'Review'}
+        </Text>
+      </View>
       <Text className="text-4xl font-extrabold">{card.word}</Text>
       {card.ipa
         ? <Text className="text-base text-secondary-600">{card.ipa}</Text>

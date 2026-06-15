@@ -1,4 +1,4 @@
-import type { LessonDetail, LessonSummary, VoiceAttemptResult } from '@elearning/contracts';
+import type { LessonDetail, LessonSummary, VoiceAttemptResult, VoiceTranscriptionResult } from '@elearning/contracts';
 import type { AxiosError } from 'axios';
 import { createMutation, createQuery } from 'react-query-kit';
 
@@ -17,17 +17,31 @@ export const useLesson = createQuery<LessonDetail, { slug: string }, AxiosError>
     client.get<LessonDetail>(`/lessons/${slug}`).then(r => r.data),
 });
 
-export const useVoiceAttempt = createMutation<
-  VoiceAttemptResult,
+export const useVoiceTranscribe = createMutation<
+  VoiceTranscriptionResult,
   { sentenceId: string; audioBase64: string; mimeType: string },
   AxiosError
 >({
   mutationFn: (input) => {
-    // Voice evaluation is gated to authenticated users (it costs an API call).
+    // Voice practice is gated to authenticated users (it costs an API call).
     if (!getToken()?.access)
       return Promise.reject(new Error('Sign in to use speaking practice'));
     return client
-      .post<VoiceAttemptResult>('/practice/voice-attempt', input)
+      .post<VoiceTranscriptionResult>('/practice/voice-attempt', input)
+      .then(r => r.data);
+  },
+});
+
+export const useVoiceEvaluate = createMutation<
+  VoiceAttemptResult,
+  { attemptId: string; sentenceId: string; audioBase64: string; mimeType: string },
+  AxiosError
+>({
+  mutationFn: (input) => {
+    if (!getToken()?.access)
+      return Promise.reject(new Error('Sign in to use speaking practice'));
+    return client
+      .post<VoiceAttemptResult>('/practice/voice-attempt/evaluate', input)
       .then(r => r.data);
   },
 });

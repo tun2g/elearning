@@ -1,6 +1,7 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
+import { ScheduleModule } from '@nestjs/schedule';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerModule } from 'nestjs-pino';
 
@@ -10,7 +11,10 @@ import { AuthModule } from './modules/auth/auth.module';
 import { ContentModule } from './modules/content/content.module';
 import { GamificationModule } from './modules/gamification/gamification.module';
 import { HomeModule } from './modules/home/home.module';
+import { LeaderboardModule } from './modules/leaderboard/leaderboard.module';
 import { MediaModule } from './modules/media/media.module';
+import { InAppNotificationModule } from './modules/notifications/in-app-notification.module';
+import { NotificationsModule } from './modules/notifications/notifications.module';
 import { PracticeModule } from './modules/practice/practice.module';
 import { ProgressModule } from './modules/progress/progress.module';
 import { UserModule } from './modules/user/user.module';
@@ -36,6 +40,7 @@ import { StorageModule } from './shared/modules/storage/storage.module';
       },
     }),
     TypeOrmModule.forRootAsync({ useClass: TypeOrmConfigService }),
+    ScheduleModule.forRoot(),
 
     // Global context module must be imported first
     HttpRequestContextModule,
@@ -50,6 +55,9 @@ import { StorageModule } from './shared/modules/storage/storage.module';
     HomeModule,
     VocabularyModule,
     MediaModule,
+    LeaderboardModule,
+    InAppNotificationModule,
+    NotificationsModule,
 
     // Shared infrastructure
     StorageModule,
